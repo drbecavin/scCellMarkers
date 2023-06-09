@@ -1,0 +1,390 @@
+digraph {
+	root [label=root color=black layer=lv_0]
+	subgraph cluster_Immune {
+		color=lavender label="IMMUNE-COPD_lvl0"
+		subgraph cluster_Immune {
+			color=lightblue label="IMMUNE-HLCA_lvl1"
+			Immune [label=Immune color=black layer=lv_0]
+		}
+	}
+	root -> Immune
+	subgraph cluster_HEMATOPOIETIC__STEM__CELLS {
+		color=teal label="HEMATOPOIETIC__STEM__CELLS-sikkema_discovair"
+		HEMATOPOIETIC__STEM__CELLS [label=HEMATOPOIETIC__STEM__CELLS color=black layer=lv_1]
+	}
+	Immune -> HEMATOPOIETIC__STEM__CELLS
+	Immune -> ERYTHROID
+	subgraph cluster_ERYTHROCYTE {
+		color=olive label="ERYTHROCYTE-maddi_discovair"
+		ERYTHROCYTE [label=ERYTHROCYTE color=black layer=lv_2]
+	}
+	ERYTHROID -> ERYTHROCYTE
+	subgraph cluster_MEGAKARYOCYTE {
+		color=olive label="MEGAKARYOCYTE-maddi_discovair"
+		subgraph cluster_MEGAKARYOCYTE {
+			color=blue label="MEGAK-HTAP_Yvon"
+			MEGAKARYOCYTE [label=MEGAKARYOCYTE color=black layer=lv_2]
+		}
+	}
+	ERYTHROID -> MEGAKARYOCYTE
+	subgraph cluster_Lymphoid {
+		color=lightblue label="LYMPHOID-HLCA_lvl2"
+		Lymphoid [label=Lymphoid color=black layer=lv_1]
+	}
+	Immune -> Lymphoid
+	subgraph "cluster_B cell lineage" {
+		color=lightblue label="B__CELL__LINEAGE-HLCA_lvl3"
+		"B cell lineage" [label="B cell lineage" color=black layer=lv_2]
+	}
+	Lymphoid -> "B cell lineage"
+	subgraph "cluster_B cells" {
+		color=red label="B__CELL-ref_redcap"
+		subgraph "cluster_B cells" {
+			color=blue label="B__CELLS-HTAP_Yvon"
+			subgraph "cluster_B cells" {
+				color=green label="B_CELLS-GenomeBiology_Maddi"
+				subgraph "cluster_B cells" {
+					color=brown label="B__CELLS-AJRCCM_Deprez"
+					subgraph "cluster_B cells" {
+						color=lightblue label="B__CELLS-HLCA_lvl4"
+						subgraph "cluster_B cells" {
+							color=lavender label="B__CELLS-COPD_lvl1"
+							"B cells" [label="B cells" color=black layer=lv_3]
+						}
+					}
+				}
+			}
+		}
+	}
+	"B cell lineage" -> "B cells"
+	subgraph "cluster_Plasma cells" {
+		color=red label="PLASMA__CELL-ref_redcap"
+		subgraph "cluster_Plasma cells" {
+			color=blue label="PLASMA__CELLS-HTAP_Yvon"
+			subgraph "cluster_Plasma cells" {
+				color=green label="PLASMA_CELLS-GenomeBiology_Maddi"
+				subgraph "cluster_Plasma cells" {
+					color=brown label="PLASMA__CELLS-AJRCCM_Deprez"
+					subgraph "cluster_Plasma cells" {
+						color=lightblue label="PLASMA__CELLS-HLCA_lvl4"
+						subgraph "cluster_Plasma cells" {
+							color=lavender label="PLASMA__CELLS-COPD_lvl1"
+							subgraph "cluster_Plasma cells" {
+								color=lavender label="B__PLASMA-COPD_lvl2"
+								"Plasma cells" [label="Plasma cells" color=black layer=lv_3]
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	"B cell lineage" -> "Plasma cells"
+	subgraph "cluster_Innate lymphoid cell NK" {
+		color=red label="INNATE__LYMPHOID__CELL-ref_redcap"
+		subgraph "cluster_Innate lymphoid cell NK" {
+			color=lightblue label="INNATE__LYMPHOID__CELL__NK-HLCA_lvl3"
+			"Innate lymphoid cell NK" [label="Innate lymphoid cell NK" color=black layer=lv_2]
+		}
+	}
+	Lymphoid -> "Innate lymphoid cell NK"
+	subgraph "cluster_NK cells" {
+		color=red label="NATURAL__KILLER__CELL-ref_redcap"
+		subgraph "cluster_NK cells" {
+			color=blue label="NK-HTAP_Yvon"
+			subgraph "cluster_NK cells" {
+				color=blue label="NKT-HTAP_Yvon"
+				subgraph "cluster_NK cells" {
+					color=green label="NK-GenomeBiology_Maddi"
+					subgraph "cluster_NK cells" {
+						color=brown label="LT/NK-AJRCCM_Deprez"
+						subgraph "cluster_NK cells" {
+							color=lightblue label="NK__CELLS-HLCA_lvl4"
+							subgraph "cluster_NK cells" {
+								color=lavender label="LT_NK-COPD_lvl1"
+								subgraph "cluster_NK cells" {
+									color=lavender label="NK-COPD_lvl2"
+									"NK cells" [label="NK cells" color=black layer=lv_3]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	"Innate lymphoid cell NK" -> "NK cells"
+	subgraph "cluster_T cell lineage" {
+		color=lightblue label="T__CELL__LINEAGE-HLCA_lvl3"
+		subgraph "cluster_T cell lineage" {
+			color=lavender label="T__CELLS-COPD_lvl2"
+			"T cell lineage" [label="T cell lineage" color=black layer=lv_2]
+		}
+	}
+	Lymphoid -> "T cell lineage"
+	subgraph "cluster_CD4 T cells" {
+		color=red label="CD4-POSITIVE,__ALPHA-BETA__T__CELL-ref_redcap"
+		subgraph "cluster_CD4 T cells" {
+			color=blue label="CD4__T-HTAP_Yvon"
+			subgraph "cluster_CD4 T cells" {
+				color=green label="T_CD4-GenomeBiology_Maddi"
+				subgraph "cluster_CD4 T cells" {
+					color=lightblue label="CD4__T__CELLS-HLCA_lvl4"
+					subgraph "cluster_CD4 T cells" {
+						color=lavender label="CD4__T-COPD_lvl2"
+						"CD4 T cells" [label="CD4 T cells" color=black layer=lv_3]
+					}
+				}
+			}
+		}
+	}
+	"T cell lineage" -> "CD4 T cells"
+	subgraph "cluster_CD8 T cells" {
+		color=red label="CD8-POSITIVE,__ALPHA-BETA__T__CELL-ref_redcap"
+		subgraph "cluster_CD8 T cells" {
+			color=olive label="CD8-maddi_discovair"
+			subgraph "cluster_CD8 T cells" {
+				color=blue label="CD8__T-HTAP_Yvon"
+				subgraph "cluster_CD8 T cells" {
+					color=green label="T_CD8_CYTT-GenomeBiology_Maddi"
+					subgraph "cluster_CD8 T cells" {
+						color=lightblue label="CD8__T__CELLS-HLCA_lvl4"
+						"CD8 T cells" [label="CD8 T cells" color=black layer=lv_3]
+					}
+				}
+			}
+		}
+	}
+	"T cell lineage" -> "CD8 T cells"
+	subgraph "cluster_T cells proliferating" {
+		color=lightblue label="T__CELLS__PROLIFERATING-HLCA_lvl4"
+		subgraph "cluster_T cells proliferating" {
+			color=green label="T_CELLS_DIVIDING-GenomeBiology_Maddi"
+			"T cells proliferating" [label="T cells proliferating" color=black layer=lv_3]
+		}
+	}
+	"T cell lineage" -> "T cells proliferating"
+	subgraph cluster_Myeloid {
+		color=lightblue label="MYELOID-HLCA_lvl2"
+		Myeloid [label=Myeloid color=black layer=lv_1]
+	}
+	Immune -> Myeloid
+	subgraph "cluster_Dendritic cells" {
+		color=brown label="DENDITRIC-AJRCCM_Deprez"
+		subgraph "cluster_Dendritic cells" {
+			color=lightblue label="DENDRITIC__CELLS-HLCA_lvl3"
+			subgraph "cluster_Dendritic cells" {
+				color=lavender label="DENDRITIC__CELLS-COPD_lvl1"
+				"Dendritic cells" [label="Dendritic cells" color=black layer=lv_2]
+			}
+		}
+	}
+	Myeloid -> "Dendritic cells"
+	subgraph cluster_DC1 {
+		color=red label="CONVENTIONAL__DENDRITIC__CELL__1-ref_redcap"
+		subgraph cluster_DC1 {
+			color=green label="DC_1-GenomeBiology_Maddi"
+			subgraph cluster_DC1 {
+				color=lightblue label="DC1-HLCA_lvl4"
+				subgraph cluster_DC1 {
+					color=green label="DC_ACTIVATED-GenomeBiology_Maddi"
+					DC1 [label=DC1 color=black layer=lv_3]
+				}
+			}
+		}
+	}
+	"Dendritic cells" -> DC1
+	subgraph cluster_DC2 {
+		color=red label="CONVENTIONAL__DENDRITIC__CELL__2-ref_redcap"
+		subgraph cluster_DC2 {
+			color=blue label="DC2-HTAP_Yvon"
+			subgraph cluster_DC2 {
+				color=green label="DC_2-GenomeBiology_Maddi"
+				subgraph cluster_DC2 {
+					color=lightblue label="DC2-HLCA_lvl4"
+					DC2 [label=DC2 color=black layer=lv_3]
+				}
+			}
+		}
+	}
+	"Dendritic cells" -> DC2
+	subgraph "cluster_Migratory DCs" {
+		color=red label="MIGRATORY__DENDRITIC__CELL-ref_redcap"
+		subgraph "cluster_Migratory DCs" {
+			color=blue label="MIGRATORY__DCS-HTAP_Yvon"
+			subgraph "cluster_Migratory DCs" {
+				color=lightblue label="MIGRATORY__DCS-HLCA_lvl4"
+				subgraph "cluster_Migratory DCs" {
+					color=lavender label="MIGRATORY__DC-COPD_lvl2"
+					"Migratory DCs" [label="Migratory DCs" color=black layer=lv_3]
+				}
+			}
+		}
+	}
+	"Dendritic cells" -> "Migratory DCs"
+	subgraph "cluster_Plasmacytoid DCs" {
+		color=red label="PLASMACYTOID__DENDRITIC__CELL-ref_redcap"
+		subgraph "cluster_Plasmacytoid DCs" {
+			color=blue label="PDC-HTAP_Yvon"
+			subgraph "cluster_Plasmacytoid DCs" {
+				color=green label="DC_PLASMACYTOID-GenomeBiology_Maddi"
+				subgraph "cluster_Plasmacytoid DCs" {
+					color=lightblue label="PLASMACYTOID__DCS-HLCA_lvl4"
+					subgraph "cluster_Plasmacytoid DCs" {
+						color=lavender label="DC_PLASMACYTOID-COPD_lvl2"
+						"Plasmacytoid DCs" [label="Plasmacytoid DCs" color=black layer=lv_3]
+					}
+				}
+			}
+		}
+	}
+	"Dendritic cells" -> "Plasmacytoid DCs"
+	subgraph cluster_Macrophages {
+		color=brown label="MACROPHAGE-AJRCCM_Deprez"
+		subgraph cluster_Macrophages {
+			color=lightblue label="MACROPHAGES-HLCA_lvl3"
+			subgraph cluster_Macrophages {
+				color=lavender label="MACROPHAGES-COPD_lvl2"
+				subgraph cluster_Macrophages {
+					color=lavender label="MACROPHAGES_1-COPD_lvl2"
+					Macrophages [label=Macrophages color=black layer=lv_2]
+				}
+			}
+		}
+	}
+	Myeloid -> Macrophages
+	subgraph cluster_MACROPHAGE_MARCOPOS {
+		color=green label="MACROPHAGE_MARCOPOS-GenomeBiology_Maddi"
+		subgraph cluster_MACROPHAGE_MARCOPOS {
+			color=lavender label="MACROPHAGE__MARCO+-COPD_lvl2"
+			MACROPHAGE_MARCOPOS [label=MACROPHAGE_MARCOPOS color=black layer=lv_3]
+		}
+	}
+	Macrophages -> MACROPHAGE_MARCOPOS
+	subgraph cluster_MACROPHAGE_MARCONEG {
+		color=green label="MACROPHAGE_MARCONEG-GenomeBiology_Maddi"
+		MACROPHAGE_MARCONEG [label=MACROPHAGE_MARCONEG color=black layer=lv_3]
+	}
+	Macrophages -> MACROPHAGE_MARCONEG
+	subgraph "cluster_Alveolar macrophages" {
+		color=red label="ALVEOLAR__MACROPHAGE-ref_redcap"
+		subgraph "cluster_Alveolar macrophages" {
+			color=lightblue label="ALVEOLAR__MACROPHAGES-HLCA_lvl4"
+			"Alveolar macrophages" [label="Alveolar macrophages" color=black layer=lv_3]
+		}
+	}
+	Macrophages -> "Alveolar macrophages"
+	subgraph "cluster_Alveolar Mφ CCL3+" {
+		color=lightblue label="ALVEOLAR__MΦ__CCL3+-HLCA_lvl5"
+		"Alveolar Mφ CCL3+" [label="Alveolar Mφ CCL3+" color=black layer=lv_4]
+	}
+	"Alveolar macrophages" -> "Alveolar Mφ CCL3+"
+	subgraph "cluster_Alveolar Mφ MT-positive" {
+		color=lightblue label="ALVEOLAR__MΦ__MT-POSITIVE-HLCA_lvl5"
+		"Alveolar Mφ MT-positive" [label="Alveolar Mφ MT-positive" color=black layer=lv_4]
+	}
+	"Alveolar macrophages" -> "Alveolar Mφ MT-positive"
+	subgraph "cluster_Alveolar Mφ proliferating" {
+		color=lightblue label="ALVEOLAR__MΦ__PROLIFERATING-HLCA_lvl5"
+		"Alveolar Mφ proliferating" [label="Alveolar Mφ proliferating" color=black layer=lv_4]
+	}
+	"Alveolar macrophages" -> "Alveolar Mφ proliferating"
+	subgraph "cluster_Interstitial macrophages" {
+		color=red label="INTERSTITIAL__MACROPHAGE-ref_redcap"
+		subgraph "cluster_Interstitial macrophages" {
+			color=lightblue label="INTERSTITIAL__MACROPHAGES-HLCA_lvl4"
+			subgraph "cluster_Interstitial macrophages" {
+				color=lavender label="MACROPHAGE__INTERSTITIAL-COPD_lvl2"
+				"Interstitial macrophages" [label="Interstitial macrophages" color=black layer=lv_3]
+			}
+		}
+	}
+	Macrophages -> "Interstitial macrophages"
+	subgraph "cluster_Interstitial Mφ perivascular" {
+		color=blue label="INTERSTITIAL__MAC__PERIVASCULAR-HTAP_Yvon"
+		subgraph "cluster_Interstitial Mφ perivascular" {
+			color=lightblue label="INTERSTITIAL__MΦ__PERIVASCULAR-HLCA_lvl5"
+			"Interstitial Mφ perivascular" [label="Interstitial Mφ perivascular" color=black layer=lv_4]
+		}
+	}
+	"Interstitial macrophages" -> "Interstitial Mφ perivascular"
+	subgraph "cluster_Monocyte-derived Mφ" {
+		color=blue label="MONOCYTE-DERIV__MAC-HTAP_Yvon"
+		subgraph "cluster_Monocyte-derived Mφ" {
+			color=lightblue label="MONOCYTE-DERIVED__MΦ-HLCA_lvl5"
+			"Monocyte-derived Mφ" [label="Monocyte-derived Mφ" color=black layer=lv_4]
+		}
+	}
+	"Interstitial macrophages" -> "Monocyte-derived Mφ"
+	subgraph cluster_MACROPHAGE_DIVIDING {
+		color=green label="MACROPHAGE_DIVIDING-GenomeBiology_Maddi"
+		MACROPHAGE_DIVIDING [label=MACROPHAGE_DIVIDING color=black layer=lv_3]
+	}
+	Macrophages -> MACROPHAGE_DIVIDING
+	subgraph cluster_INFLAMMATORY__MACROPHAGES {
+		color=lavender label="INFLAMMATORY__MACROPHAGES-COPD_lvl2"
+		INFLAMMATORY__MACROPHAGES [label=INFLAMMATORY__MACROPHAGES color=black layer=lv_3]
+	}
+	Macrophages -> INFLAMMATORY__MACROPHAGES
+	subgraph "cluster_Mast cells" {
+		color=red label="MUCOSAL__TYPE__MAST__CELL-ref_redcap"
+		subgraph "cluster_Mast cells" {
+			color=blue label="MAST__CELLS-HTAP_Yvon"
+			subgraph "cluster_Mast cells" {
+				color=green label="MAST_CELLS-GenomeBiology_Maddi"
+				subgraph "cluster_Mast cells" {
+					color=brown label="MAST__CELLS-AJRCCM_Deprez"
+					subgraph "cluster_Mast cells" {
+						color=lightblue label="MAST__CELLS-HLCA_lvl3"
+						subgraph "cluster_Mast cells" {
+							color=lavender label="MAST__CELLS-COPD_lvl2"
+							"Mast cells" [label="Mast cells" color=black layer=lv_2]
+						}
+					}
+				}
+			}
+		}
+	}
+	Myeloid -> "Mast cells"
+	subgraph cluster_Monocytes {
+		color=green label="MONOCYTE-GenomeBiology_Maddi"
+		subgraph cluster_Monocytes {
+			color=brown label="MONOCYTE-AJRCCM_Deprez"
+			subgraph cluster_Monocytes {
+				color=lightblue label="MONOCYTES-HLCA_lvl3"
+				subgraph cluster_Monocytes {
+					color=lavender label="MONOCYTES-COPD_lvl2"
+					Monocytes [label=Monocytes color=black layer=lv_2]
+				}
+			}
+		}
+	}
+	Myeloid -> Monocytes
+	subgraph "cluster_Classical monocytes" {
+		color=blue label="CMONOCYTES-HTAP_Yvon"
+		subgraph "cluster_Classical monocytes" {
+			color=lightblue label="CLASSICAL__MONOCYTES-HLCA_lvl4"
+			"Classical monocytes" [label="Classical monocytes" color=black layer=lv_3]
+		}
+	}
+	Monocytes -> "Classical monocytes"
+	subgraph "cluster_Non-classical monocytes" {
+		color=blue label="NCMONOCYTES-HTAP_Yvon"
+		subgraph "cluster_Non-classical monocytes" {
+			color=red label="PATROLLING__MONOCYTE-ref_redcap"
+			subgraph "cluster_Non-classical monocytes" {
+				color=lightblue label="NON-CLASSICAL__MONOCYTES-HLCA_lvl4"
+				"Non-classical monocytes" [label="Non-classical monocytes" color=black layer=lv_3]
+			}
+		}
+	}
+	Monocytes -> "Non-classical monocytes"
+	subgraph cluster_NEUTROPHIL {
+		color=red label="NEUTROPHIL-ref_redcap"
+		subgraph cluster_NEUTROPHIL {
+			color=lavender label="NEUTROPHILS-COPD_lvl2"
+			NEUTROPHIL [label=NEUTROPHIL color=black layer=lv_2]
+		}
+	}
+	Myeloid -> NEUTROPHIL
+}

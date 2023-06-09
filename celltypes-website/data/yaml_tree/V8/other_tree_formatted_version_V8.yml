@@ -1,0 +1,17 @@
+root:
+    OTHER:
+        ## Please note we do not have here markers for nervous
+        - NERVOUS:
+            - SCHWANN:
+                - 'SCHWANN; maddi_discovair'
+                - MYELINATING__SCHWANN:
+                    - 'MYELINATING__SCHWANN; maddi_discovair'
+                - NON-MYELINATING__SCHWANN:
+                    - 'NON-MYELINATING__SCHWANN; maddi_discovair'
+            - NAF1__ENDONEURIAL:
+                - 'NAF1__ENDONEURIAL; maddi_discovair'
+            - NAF2__PERI/EPINEURIAL:
+                - 'NAF2__PERI/EPINEURIAL; maddi_discovair'
+
+
+

@@ -1,0 +1,47 @@
+root:
+    Endothelial: 
+        - 'ENDOTHELIAL; AJRCCM_Deprez'
+        - 'ENDOTHELIAL; COPD_lvl0'
+        - 'ENDOTHELIAL; HLCA_lvl1'
+        - Blood vessels EC: 
+            - 'BLOOD_VESSEL; GenomeBiology_Maddi'
+            - 'BLOOD__VESSELS; HLCA_lvl2'
+            - EC arterial: 
+                - 'EC__ARTERIAL; HTAP_Yvon'
+                - 'PULMONARY__ARTERY__ENDOTHELIAL__CELL; ref_redcap'
+                - 'EC__ARTERIAL; HLCA_lvl3'
+                - 'ARTERIAL; COPD_lvl2'
+            - EC capillary: 
+                - 'EC__CAPILLARY; HLCA_lvl3'
+                - 'CAPILLARY; COPD_lvl2'
+                - EC aerocyte capillary: 
+                    - 'EC__ACAP; HTAP_Yvon'
+                    - 'EC__AEROCYTE__CAPILLARY; HLCA_lvl4'
+                    - 'ALVEOLAR__CAPILLARY__TYPE__2__ENDOTHELIAL__CELL; ref_redcap'
+                - EC general capillary: 
+                    - 'EC__GCAP; HTAP_Yvon'
+                    - 'EC__GENERAL__CAPILLARY; HLCA_lvl4'
+                    - 'ALVEOLAR__CAPILLARY__TYPE__1__ENDOTHELIAL__CELL; ref_redcap'
+            - EC venous: 
+                - 'EC__VENOUS; HLCA_lvl3'
+                - 'VEINOUS; COPD_lvl2'
+                - EC venous pulmonary: 
+                    - 'ENDOTHELIAL__CELL__OF__PULMONARY__VEIN; ref_redcap'
+                    - 'EC__VENOUS__PULMONARY; HTAP_Yvon'
+                    - 'EC__VENOUS__PULMONARY; HLCA_lvl4'
+                - EC venous systemic: 
+                    - 'ENDOTHELIAL__CELL__OF__SYSTEMIC__VEINS__OF__LUNG; ref_redcap'
+                    - 'EC__VENOUS__SYSTEMIC; HTAP_Yvon'
+                    - 'EC__VENOUS__SYSTEMIC; HLCA_lvl4'
+        - Lymphatic EC: 
+            - 'EC__LYMPHATICS; HTAP_Yvon'
+            - 'LYMPH_VESSEL; GenomeBiology_Maddi'
+            - 'LYMPHATIC__EC; HLCA_lvl2'
+            - 'LYMPHATIC; COPD_lvl2'
+            - Lymphatic EC differentiating: 
+                - 'LYMPHATIC__EC__DIFFERENTIATING; HLCA_lvl3'
+            - Lymphatic EC mature: 
+                - 'ENDOTHELIAL__CELL__OF__RESPIRATORY__SYSTEM__LYMPHATIC__VESSEL; ref_redcap'
+                - 'LYMPHATIC__EC__MATURE; HLCA_lvl3'
+            - Lymphatic EC proliferating: 
+                - 'LYMPHATIC__EC__PROLIFERATING; HLCA_lvl3'

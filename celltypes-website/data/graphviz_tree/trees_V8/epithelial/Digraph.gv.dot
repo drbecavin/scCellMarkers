@@ -1,0 +1,1272 @@
+digraph {
+	graph [bb="0,0,5962,1088"];
+	node [label="\N"];
+	subgraph cluster_Epithelial {
+		graph [bb="3290,930,3491,1044",
+			color=lavender,
+			label="EPITHELIAL-COPD_lvl0",
+			lheight=0.21,
+			lp="3390.5,1032.5",
+			lwidth=2.38
+		];
+		subgraph cluster_Epithelial {
+			graph [bb="3298,938,3483,1013",
+				color=lightblue,
+				label="EPITHELIAL-HLCA_lvl1",
+				lheight=0.21,
+				lp="3390.5,1001.5",
+				lwidth=2.35
+			];
+			Epithelial	[color=black,
+				height=0.5,
+				label=Epithelial,
+				layer=lv_0,
+				pos="3390,964",
+				width=1.5526];
+		}
+	}
+	subgraph cluster_MYOEPITHELIAL {
+		graph [bb="3017,847,3278,922",
+			color=olive,
+			label="MYOEPITHELIAL-maddi_discovair",
+			lheight=0.21,
+			lp="3147.5,910.5",
+			lwidth=3.40
+		];
+		MYOEPITHELIAL	[color=black,
+			height=0.5,
+			label=MYOEPITHELIAL,
+			layer=lv_1,
+			pos="3178,873",
+			width=2.5456];
+	}
+	subgraph "cluster_Airway epithelium" {
+		graph [bb="3286,847,3550,922",
+			color=lightblue,
+			label="AIRWAY__EPITHELIUM-HLCA_lvl2",
+			lheight=0.21,
+			lp="3418,910.5",
+			lwidth=3.44
+		];
+		"Airway epithelium"	[color=black,
+			height=0.5,
+			label="Airway epithelium",
+			layer=lv_1,
+			pos="3390,873",
+			width=2.6539];
+	}
+	subgraph cluster_SQUAMOUS {
+		graph [bb="2328,663,2601,777",
+			color=lavender,
+			label="SQUAMOUS-COPD_lvl1",
+			lheight=0.21,
+			lp="2464.5,765.5",
+			lwidth=2.36
+		];
+		subgraph cluster_SQUAMOUS {
+			graph [bb="2336,671,2593,746",
+				color=teal,
+				label="HILLOCK-LIKE-sikkema_discovair",
+				lheight=0.21,
+				lp="2464.5,734.5",
+				lwidth=3.35
+			];
+			SQUAMOUS	[color=black,
+				height=0.5,
+				label=SQUAMOUS,
+				layer=lv_2,
+				pos="2516,697",
+				width=1.9137];
+		}
+	}
+	subgraph cluster_Basal {
+		graph [bb="515,447,719,639",
+			color=blue,
+			label="BASAL-HTAP_Yvon",
+			lheight=0.21,
+			lp="617,627.5",
+			lwidth=1.88
+		];
+		subgraph cluster_Basal {
+			graph [bb="523,455,711,608",
+				color=brown,
+				label="BASAL-AJRCCM_Deprez",
+				lheight=0.21,
+				lp="617,596.5",
+				lwidth=2.39
+			];
+			subgraph cluster_Basal {
+				graph [bb="536,463,698,577",
+					color=lightblue,
+					label="BASAL-HLCA_lvl3",
+					lheight=0.21,
+					lp="617,565.5",
+					lwidth=1.78
+				];
+				subgraph cluster_Basal {
+					graph [bb="544,471,690,546",
+						color=lavender,
+						label="BASAL-COPD_lvl1",
+						lheight=0.21,
+						lp="617,534.5",
+						lwidth=1.81
+					];
+					Basal	[color=black,
+						height=0.5,
+						label=Basal,
+						layer=lv_3,
+						pos="617,497",
+						width=1.011];
+				}
+			}
+		}
+	}
+	subgraph cluster_CYCLING__BASAL {
+		graph [bb="8,240,235,315",
+			color=lavender,
+			label="CYCLING__BASAL-COPD_lvl2",
+			lheight=0.21,
+			lp="121.5,303.5",
+			lwidth=2.93
+		];
+		CYCLING__BASAL	[color=black,
+			height=0.5,
+			label=CYCLING__BASAL,
+			layer=lv_4,
+			pos="132,266",
+			width=2.6359];
+	}
+	subgraph "cluster_Basal resting" {
+		graph [bb="243,240,469,315",
+			color=lightblue,
+			label="BASAL__RESTING-HLCA_lvl4",
+			lheight=0.21,
+			lp="356,303.5",
+			lwidth=2.92
+		];
+		"Basal resting"	[color=black,
+			height=0.5,
+			label="Basal resting",
+			layer=lv_4,
+			pos="389,266",
+			width=2.004];
+	}
+	subgraph cluster_BASAL__REGENERATING {
+		graph [bb="477,240,758,315",
+			color=lavender,
+			label="BASAL__REGENERATING-COPD_lvl2",
+			lheight=0.21,
+			lp="617.5,303.5",
+			lwidth=3.68
+		];
+		BASAL__REGENERATING	[color=black,
+			height=0.5,
+			label=BASAL__REGENERATING,
+			layer=lv_4,
+			pos="617,266",
+			width=3.6288];
+	}
+	subgraph cluster_BASAL_TH2 {
+		graph [bb="766,240,948,315",
+			color=lavender,
+			label="BASAL_TH2-COPD_lvl2",
+			lheight=0.21,
+			lp="857,303.5",
+			lwidth=2.31
+		];
+		BASAL_TH2	[color=black,
+			height=0.5,
+			label=BASAL_TH2,
+			layer=lv_4,
+			pos="840,266",
+			width=1.8415];
+	}
+	subgraph cluster_Suprabasal {
+		graph [bb="1460,447,1716,639",
+			color=red,
+			label="SUPRABASAL-ref_redcap",
+			lheight=0.21,
+			lp="1588,627.5",
+			lwidth=2.51
+		];
+		subgraph cluster_Suprabasal {
+			graph [bb="1468,455,1708,608",
+				color=brown,
+				label="SUPRABASAL-AJRCCM_Deprez",
+				lheight=0.21,
+				lp="1588,596.5",
+				lwidth=3.11
+			];
+			subgraph cluster_Suprabasal {
+				graph [bb="1481,463,1694,577",
+					color=lightblue,
+					label="SUPRABASAL-HLCA_lvl4",
+					lheight=0.21,
+					lp="1587.5,565.5",
+					lwidth=2.50
+				];
+				subgraph cluster_Suprabasal {
+					graph [bb="1489,471,1686,546",
+						color=lavender,
+						label="SUPRABASAL-COPD_lvl2",
+						lheight=0.21,
+						lp="1587.5,534.5",
+						lwidth=2.51
+					];
+					Suprabasal	[color=black,
+						height=0.5,
+						label=Suprabasal,
+						layer=lv_3,
+						pos="1587,497",
+						width=1.7512];
+				}
+			}
+		}
+	}
+	subgraph "cluster_SUPRABASAL__(NASAL)" {
+		graph [bb="956,240,1270,315",
+			color=brown,
+			label="SUPRABASAL__(NASAL)-AJRCCM_Deprez",
+			lheight=0.21,
+			lp="1113,303.5",
+			lwidth=4.14
+		];
+		"SUPRABASAL__(NASAL)"	[color=black,
+			height=0.5,
+			label="SUPRABASAL__(NASAL)",
+			layer=lv_4,
+			pos="1138,266",
+			width=3.4483];
+	}
+	subgraph cluster_INTERMEDIATE__SUPRABASAL {
+		graph [bb="1278,240,1616,315",
+			color=lavender,
+			label="INTERMEDIATE__SUPRABASAL-COPD_lvl2",
+			lheight=0.21,
+			lp="1447,303.5",
+			lwidth=4.33
+		];
+		INTERMEDIATE__SUPRABASAL	[color=black,
+			height=0.5,
+			label=INTERMEDIATE__SUPRABASAL,
+			layer=lv_4,
+			pos="1447,266",
+			width=4.4774];
+	}
+	subgraph cluster_SUPRABASAL__IF {
+		graph [bb="1624,240,1849,315",
+			color=lavender,
+			label="SUPRABASAL__IF-COPD_lvl2",
+			lheight=0.21,
+			lp="1736.5,303.5",
+			lwidth=2.90
+		];
+		SUPRABASAL__IF	[color=black,
+			height=0.5,
+			label=SUPRABASAL__IF,
+			layer=lv_4,
+			pos="1727,266",
+			width=2.6359];
+	}
+	subgraph "cluster_Multiciliated lineage" {
+		graph [bb="2112,471,2408,546",
+			color=lightblue,
+			label="MULTICILIATED__LINEAGE-HLCA_lvl3",
+			lheight=0.21,
+			lp="2260,534.5",
+			lwidth=3.89
+		];
+		"Multiciliated lineage"	[color=black,
+			height=0.5,
+			label="Multiciliated lineage",
+			layer=lv_3,
+			pos="2260,497",
+			width=2.9608];
+	}
+	subgraph cluster_Deuterosomal {
+		graph [bb="1857,216,2142,408",
+			color=red,
+			label="DEUTEROSOMAL-ref_redcap",
+			lheight=0.21,
+			lp="1999.5,396.5",
+			lwidth=2.92
+		];
+		subgraph cluster_Deuterosomal {
+			graph [bb="1865,224,2134,377",
+				color=brown,
+				label="DEUTEROSOMAL-AJRCCM_Deprez",
+				lheight=0.21,
+				lp="1999.5,365.5",
+				lwidth=3.51
+			];
+			subgraph cluster_Deuterosomal {
+				graph [bb="1884,232,2126,346",
+					color=lightblue,
+					label="DEUTEROSOMAL-HLCA_lvl4",
+					lheight=0.21,
+					lp="2005,334.5",
+					lwidth=2.89
+				];
+				subgraph cluster_Deuterosomal {
+					graph [bb="1892,240,2118,315",
+						color=lavender,
+						label="DEUTEROSOMAL-COPD_lvl2",
+						lheight=0.21,
+						lp="2005,303.5",
+						lwidth=2.92
+					];
+					Deuterosomal	[color=black,
+						height=0.5,
+						label=Deuterosomal,
+						layer=lv_4,
+						pos="2035,266",
+						width=2.0943];
+				}
+			}
+		}
+	}
+	subgraph cluster_Multiciliated {
+		graph [bb="2150,208,2440,439",
+			color=blue,
+			label="MCC-HTAP_Yvon",
+			lheight=0.21,
+			lp="2295,427.5",
+			lwidth=1.68
+		];
+		subgraph cluster_Multiciliated {
+			graph [bb="2158,216,2432,408",
+				color=green,
+				label="CILIATED-GenomeBiology_Maddi",
+				lheight=0.21,
+				lp="2295,396.5",
+				lwidth=3.31
+			];
+			subgraph cluster_Multiciliated {
+				graph [bb="2166,224,2424,377",
+					color=brown,
+					label="MULTICILIATED-AJRCCM_Deprez",
+					lheight=0.21,
+					lp="2295,365.5",
+					lwidth=3.36
+				];
+				subgraph cluster_Multiciliated {
+					graph [bb="2174,232,2405,346",
+						color=lightblue,
+						label="MULTICILIATED-HLCA_lvl4",
+						lheight=0.21,
+						lp="2289.5,334.5",
+						lwidth=2.75
+					];
+					subgraph cluster_Multiciliated {
+						graph [bb="2182,240,2397,315",
+							color=lavender,
+							label="MULTICILIATED-COPD_lvl2",
+							lheight=0.21,
+							lp="2289.5,303.5",
+							lwidth=2.76
+						];
+						Multiciliated	[color=black,
+							height=0.5,
+							label=Multiciliated,
+							layer=lv_4,
+							pos="2260,266",
+							width=1.9318];
+					}
+				}
+			}
+		}
+	}
+	subgraph "cluster_Multiciliated (nasal)" {
+		graph [bb="1316,24,1648,138",
+			color=brown,
+			label="MULTICILIATED__(NASAL)-AJRCCM_Deprez",
+			lheight=0.21,
+			lp="1482,126.5",
+			lwidth=4.39
+		];
+		subgraph "cluster_Multiciliated (nasal)" {
+			graph [bb="1352,32,1640,107",
+				color=lightblue,
+				label="MULTICILIATED__(NASAL)-HLCA_lvl5",
+				lheight=0.21,
+				lp="1496,95.5",
+				lwidth=3.78
+			];
+			"Multiciliated (nasal)"	[color=black,
+				height=0.5,
+				label="Multiciliated (nasal)",
+				layer=lv_5,
+				pos="1528,58",
+				width=2.8886];
+		}
+	}
+	subgraph "cluster_Multiciliated (non-nasal)" {
+		graph [bb="1656,24,2000,138",
+			color=red,
+			label="MULTI-CILIATED__CELL-ref_redcap",
+			lheight=0.21,
+			lp="1828,126.5",
+			lwidth=3.56
+		];
+		subgraph "cluster_Multiciliated (non-nasal)" {
+			graph [bb="1664,32,1992,107",
+				color=lightblue,
+				label="MULTICILIATED__(NON-NASAL)-HLCA_lvl5",
+				lheight=0.21,
+				lp="1828,95.5",
+				lwidth=4.33
+			];
+			"Multiciliated (non-nasal)"	[color=black,
+				height=0.5,
+				label="Multiciliated (non-nasal)",
+				layer=lv_5,
+				pos="1860,58",
+				width=3.4483];
+		}
+	}
+	subgraph cluster_Rare {
+		graph [bb="2433,463,2676,577",
+			color=brown,
+			label="RARE__CELLS-AJRCCM_Deprez",
+			lheight=0.21,
+			lp="2554.5,565.5",
+			lwidth=3.15
+		];
+		subgraph cluster_Rare {
+			graph [bb="2483,471,2620,546",
+				color=lightblue,
+				label="RARE-HLCA_lvl3",
+				lheight=0.21,
+				lp="2551.5,534.5",
+				lwidth=1.68
+			];
+			Rare	[color=black,
+				height=0.5,
+				label=Rare,
+				layer=lv_3,
+				pos="2562,497",
+				width=0.9027];
+		}
+	}
+	subgraph cluster_PRECURSOR {
+		graph [bb="2448,240,2640,315",
+			color=lavender,
+			label="PRECURSOR-COPD_lvl2",
+			lheight=0.21,
+			lp="2544,303.5",
+			lwidth=2.44
+		];
+		PRECURSOR	[color=black,
+			height=0.5,
+			label=PRECURSOR,
+			layer=lv_4,
+			pos="2547,266",
+			width=2.022];
+	}
+	subgraph cluster_Ionocyte {
+		graph [bb="2008,16,2293,169",
+			color=red,
+			label="PULMONARY__IONOCYTE-ref_redcap",
+			lheight=0.21,
+			lp="2150.5,157.5",
+			lwidth=3.74
+		];
+		subgraph cluster_Ionocyte {
+			graph [bb="2093,24,2285,138",
+				color=lightblue,
+				label="IONOCYTE-HLCA_lvl4",
+				lheight=0.21,
+				lp="2189,126.5",
+				lwidth=2.19
+			];
+			subgraph cluster_Ionocyte {
+				graph [bb="2101,32,2277,107",
+					color=lavender,
+					label="IONOCYTE-COPD_lvl2",
+					lheight=0.21,
+					lp="2189,95.5",
+					lwidth=2.22
+				];
+				Ionocyte	[color=black,
+					height=0.5,
+					label=Ionocyte,
+					layer=lv_5,
+					pos="2219,58",
+					width=1.3902];
+			}
+		}
+	}
+	subgraph cluster_Neuroendocrine {
+		graph [bb="2301,8,2657,200",
+			color=red,
+			label="LUNG__NEUROENDOCRINE__CELL-ref_redcap",
+			lheight=0.21,
+			lp="2479,188.5",
+			lwidth=4.72
+		];
+		subgraph cluster_Neuroendocrine {
+			graph [bb="2388,16,2649,169",
+				color=blue,
+				label="PNEC-HTAP_Yvon",
+				lheight=0.21,
+				lp="2518.5,157.5",
+				lwidth=1.79
+			];
+			subgraph cluster_Neuroendocrine {
+				graph [bb="2396,24,2641,138",
+					color=lightblue,
+					label="NEUROENDOCRINE-HLCA_lvl4",
+					lheight=0.21,
+					lp="2518.5,126.5",
+					lwidth=3.18
+				];
+				subgraph cluster_Neuroendocrine {
+					graph [bb="2447,32,2633,107",
+						color=lavender,
+						label="PNEC-COPD_lvl2",
+						lheight=0.21,
+						lp="2540,95.5",
+						lwidth=1.72
+					];
+					Neuroendocrine	[color=black,
+						height=0.5,
+						label=Neuroendocrine,
+						layer=lv_5,
+						pos="2540,58",
+						width=2.3651];
+				}
+			}
+		}
+	}
+	subgraph cluster_Tuft {
+		graph [bb="2665,24,2854,138",
+			color=red,
+			label="TUFT__CELL-ref_redcap",
+			lheight=0.21,
+			lp="2759.5,126.5",
+			lwidth=2.40
+		];
+		subgraph cluster_Tuft {
+			graph [bb="2673,32,2807,107",
+				color=lightblue,
+				label="TUFT-HLCA_lvl4",
+				lheight=0.21,
+				lp="2740,95.5",
+				lwidth=1.64
+			];
+			Tuft	[color=black,
+				height=0.5,
+				label=Tuft,
+				layer=lv_5,
+				pos="2711,58",
+				width=0.83048];
+		}
+	}
+	subgraph cluster_Secretory {
+		graph [bb="2765,447,3010,639",
+			color=blue,
+			label="SECRETORY-HTAP_Yvon",
+			lheight=0.21,
+			lp="2887.5,627.5",
+			lwidth=2.43
+		];
+		subgraph cluster_Secretory {
+			graph [bb="2773,455,3002,608",
+				color=brown,
+				label="SECRETORY-AJRCCM_Deprez",
+				lheight=0.21,
+				lp="2887.5,596.5",
+				lwidth=2.96
+			];
+			subgraph cluster_Secretory {
+				graph [bb="2792,463,2994,577",
+					color=lightblue,
+					label="SECRETORY-HLCA_lvl3",
+					lheight=0.21,
+					lp="2893,565.5",
+					lwidth=2.35
+				];
+				subgraph cluster_Secretory {
+					graph [bb="2800,471,2986,546",
+						color=lavender,
+						label="SECRETORY-COPD_lvl1",
+						lheight=0.21,
+						lp="2893,534.5",
+						lwidth=2.36
+					];
+					Secretory	[color=black,
+						height=0.5,
+						label=Secretory,
+						layer=lv_3,
+						pos="2922,497",
+						width=1.5526];
+				}
+			}
+		}
+	}
+	subgraph "cluster_PRE-TB__SECRETORY" {
+		graph [bb="2648,232,2956,346",
+			color=teal,
+			label="PRE-TB__SECRETORY-sikkema_discovair",
+			lheight=0.21,
+			lp="2802,334.5",
+			lwidth=4.06
+		];
+		subgraph "cluster_PRE-TB__SECRETORY" {
+			graph [bb="2704,240,2948,315",
+				color=blue,
+				label="PRE-TB-SEC-HTAP_Yvon",
+				lheight=0.21,
+				lp="2826,303.5",
+				lwidth=2.44
+			];
+			"PRE-TB__SECRETORY"	[color=black,
+				height=0.5,
+				label="PRE-TB__SECRETORY",
+				layer=lv_4,
+				pos="2826,266",
+				width=3.1775];
+		}
+	}
+	subgraph "cluster_TRB-SC" {
+		graph [bb="2964,240,3121,315",
+			color=blue,
+			label="TRB-SC-HTAP_Yvon",
+			lheight=0.21,
+			lp="3042.5,303.5",
+			lwidth=1.96
+		];
+		"TRB-SC"	[color=black,
+			height=0.5,
+			label="TRB-SC",
+			layer=lv_4,
+			pos="3018,266",
+			width=1.2818];
+	}
+	subgraph cluster_Club {
+		graph [bb="3129,232,3283,346",
+			color=lightblue,
+			label="CLUB-HLCA_lvl4",
+			lheight=0.21,
+			lp="3206,334.5",
+			lwidth=1.68
+		];
+		subgraph cluster_Club {
+			graph [bb="3137,240,3275,315",
+				color=lavender,
+				label="CLUB-COPD_lvl2",
+				lheight=0.21,
+				lp="3206,303.5",
+				lwidth=1.69
+			];
+			Club	[color=black,
+				height=0.5,
+				label=Club,
+				layer=lv_4,
+				pos="3177,266",
+				width=0.9027];
+		}
+	}
+	subgraph "cluster_Club (nasal)" {
+		graph [bb="2862,32,3073,107",
+			color=lightblue,
+			label="CLUB__(NASAL)-HLCA_lvl5",
+			lheight=0.21,
+			lp="2967.5,95.5",
+			lwidth=2.71
+		];
+		"Club (nasal)"	[color=black,
+			height=0.5,
+			label="Club (nasal)",
+			layer=lv_5,
+			pos="2999,58",
+			width=1.8415];
+	}
+	subgraph "cluster_Club (non-nasal)" {
+		graph [bb="3081,24,3348,138",
+			color=red,
+			label="CLUB-ref_redcap",
+			lheight=0.21,
+			lp="3214.5,126.5",
+			lwidth=1.69
+		];
+		subgraph "cluster_Club (non-nasal)" {
+			graph [bb="3089,32,3340,107",
+				color=lightblue,
+				label="CLUB__(NON-NASAL)-HLCA_lvl5",
+				lheight=0.21,
+				lp="3214.5,95.5",
+				lwidth=3.26
+			];
+			"Club (non-nasal)"	[color=black,
+				height=0.5,
+				label="Club (non-nasal)",
+				layer=lv_5,
+				pos="3183,58",
+				width=2.4012];
+		}
+	}
+	subgraph cluster_Goblet {
+		graph [bb="3547,232,3720,346",
+			color=lightblue,
+			label="GOBLET-HLCA_lvl4",
+			lheight=0.21,
+			lp="3633.5,334.5",
+			lwidth=1.93
+		];
+		subgraph cluster_Goblet {
+			graph [bb="3555,240,3712,315",
+				color=lavender,
+				label="GOBLET-COPD_lvl2",
+				lheight=0.21,
+				lp="3633.5,303.5",
+				lwidth=1.96
+			];
+			Goblet	[color=black,
+				height=0.5,
+				label=Goblet,
+				layer=lv_4,
+				pos="3634,266",
+				width=1.1555];
+		}
+	}
+	subgraph "cluster_Goblet (bronchial)" {
+		graph [bb="3356,24,3644,138",
+			color=red,
+			label="LUNG__GOBLET__CELL-ref_redcap",
+			lheight=0.21,
+			lp="3500,126.5",
+			lwidth=3.50
+		];
+		subgraph "cluster_Goblet (bronchial)" {
+			graph [bb="3364,32,3636,107",
+				color=lightblue,
+				label="GOBLET__(BRONCHIAL)-HLCA_lvl5",
+				lheight=0.21,
+				lp="3500,95.5",
+				lwidth=3.56
+			];
+			"Goblet (bronchial)"	[color=black,
+				height=0.5,
+				label="Goblet (bronchial)",
+				layer=lv_5,
+				pos="3533,58",
+				width=2.6359];
+		}
+	}
+	subgraph "cluster_Goblet (nasal)" {
+		graph [bb="3652,32,3883,107",
+			color=lightblue,
+			label="GOBLET__(NASAL)-HLCA_lvl5",
+			lheight=0.21,
+			lp="3767.5,95.5",
+			lwidth=2.99
+		];
+		"Goblet (nasal)"	[color=black,
+			height=0.5,
+			label="Goblet (nasal)",
+			layer=lv_5,
+			pos="3735,58",
+			width=2.0943];
+	}
+	subgraph "cluster_Goblet (subsegmental)" {
+		graph [bb="3891,32,4199,107",
+			color=lightblue,
+			label="GOBLET__(SUBSEGMENTAL)-HLCA_lvl5",
+			lheight=0.21,
+			lp="4045,95.5",
+			lwidth=4.06
+		];
+		"Goblet (subsegmental)"	[color=black,
+			height=0.5,
+			label="Goblet (subsegmental)",
+			layer=lv_5,
+			pos="4015,58",
+			width=3.2317];
+	}
+	subgraph "cluster_Transitional Club-AT2" {
+		graph [bb="3018,455,3344,608",
+			color=blue,
+			label="TRANS-CLUB-AT2-HTAP_Yvon",
+			lheight=0.21,
+			lp="3181,596.5",
+			lwidth=2.97
+		];
+		subgraph "cluster_Transitional Club-AT2" {
+			graph [bb="3026,463,3336,577",
+				color=red,
+				label="TRANSITIONAL__CLUB-AT2-ref_redcap",
+				lheight=0.21,
+				lp="3181,565.5",
+				lwidth=3.89
+			];
+			subgraph "cluster_Transitional Club-AT2" {
+				graph [bb="3034,471,3328,546",
+					color=lightblue,
+					label="TRANSITIONAL__CLUB-AT2-HLCA_lvl4",
+					lheight=0.21,
+					lp="3181,534.5",
+					lwidth=3.86
+				];
+				"Transitional Club-AT2"	[color=black,
+					height=0.5,
+					label="Transitional Club-AT2",
+					layer=lv_3,
+					pos="3153,497",
+					width=3.0872];
+			}
+		}
+	}
+	subgraph "cluster_Submucosal airway epithelium" {
+		graph [bb="3994,671,4316,746",
+			color=lightblue,
+			label="SUBMUCOSAL__GLAND-HLCA_lvl2",
+			lheight=0.21,
+			lp="4155,734.5",
+			lwidth=3.54
+		];
+		"Submucosal airway epithelium"	[color=black,
+			height=0.5,
+			label="Submucosal airway epithelium",
+			layer=lv_2,
+			pos="4155,697",
+			width=4.2607];
+	}
+	subgraph "cluster_Submucosal Secretory" {
+		graph [bb="3876,471,4183,546",
+			color=lightblue,
+			label="SUBMUCOSAL__SECRETORY-HLCA_lvl3",
+			lheight=0.21,
+			lp="4029.5,534.5",
+			lwidth=4.04
+		];
+		"Submucosal Secretory"	[color=black,
+			height=0.5,
+			label="Submucosal Secretory",
+			layer=lv_3,
+			pos="4060,497",
+			width=3.1955];
+	}
+	subgraph "cluster_SMG serous" {
+		graph [bb="3911,224,4152,377",
+			color=brown,
+			label="SEROUS-AJRCCM_Deprez",
+			lheight=0.21,
+			lp="4031.5,365.5",
+			lwidth=2.60
+		];
+		subgraph "cluster_SMG serous" {
+			graph [bb="3919,232,4144,346",
+				color=lightblue,
+				label="SMG__SEROUS-HLCA_lvl4",
+				lheight=0.21,
+				lp="4031.5,334.5",
+				lwidth=2.67
+			];
+			subgraph "cluster_SMG serous" {
+				graph [bb="3927,240,4136,315",
+					color=lavender,
+					label="SMG__SEROUS-COPD_lvl1",
+					lheight=0.21,
+					lp="4031.5,303.5",
+					lwidth=2.68
+				];
+				"SMG serous"	[color=black,
+					height=0.5,
+					label="SMG serous",
+					layer=lv_4,
+					pos="4060,266",
+					width=1.8776];
+			}
+		}
+	}
+	subgraph "cluster_SMG serous (bronchial)" {
+		graph [bb="4207,24,4547,138",
+			color=lightblue,
+			label="SMG__SEROUS__(BRONCHIAL)-HLCA_lvl5",
+			lheight=0.21,
+			lp="4377,126.5",
+			lwidth=4.26
+		];
+		subgraph "cluster_SMG serous (bronchial)" {
+			graph [bb="4215,32,4539,107",
+				color=lavender,
+				label="SMG__SEROUS__(BRONCHIAL)-COPD_lvl2",
+				lheight=0.21,
+				lp="4377,95.5",
+				lwidth=4.28
+			];
+			"SMG serous (bronchial)"	[color=black,
+				height=0.5,
+				label="SMG serous (bronchial)",
+				layer=lv_5,
+				pos="4343,58",
+				width=3.34];
+		}
+	}
+	subgraph "cluster_SMG serous (nasal)" {
+		graph [bb="4555,24,4855,138",
+			color=lightblue,
+			label="SMG__SEROUS__(NASAL)-HLCA_lvl5",
+			lheight=0.21,
+			lp="4705,126.5",
+			lwidth=3.69
+		];
+		subgraph "cluster_SMG serous (nasal)" {
+			graph [bb="4563,32,4847,107",
+				color=lavender,
+				label="SMG__SEROUS__(NASAL)-COPD_lvl2",
+				lheight=0.21,
+				lp="4705,95.5",
+				lwidth=3.72
+			];
+			"SMG serous (nasal)"	[color=black,
+				height=0.5,
+				label="SMG serous (nasal)",
+				layer=lv_5,
+				pos="4672,58",
+				width=2.8164];
+		}
+	}
+	subgraph "cluster_SMG mucous" {
+		graph [bb="4160,224,4450,377",
+			color=lightblue,
+			label="SMG__MUCOUS-HLCA_lvl4",
+			lheight=0.21,
+			lp="4305,365.5",
+			lwidth=2.75
+		];
+		subgraph "cluster_SMG mucous" {
+			graph [bb="4168,232,4442,346",
+				color=lavender,
+				label="SMG__MUCOUS-COPD_lvl2",
+				lheight=0.21,
+				lp="4305,334.5",
+				lwidth=2.76
+			];
+			subgraph "cluster_SMG mucous" {
+				graph [bb="4176,240,4434,315",
+					color=brown,
+					label="SMG__MUCOUS-AJRCCM_Deprez",
+					lheight=0.21,
+					lp="4305,303.5",
+					lwidth=3.36
+				];
+				"SMG mucous"	[color=black,
+					height=0.5,
+					label="SMG mucous",
+					layer=lv_4,
+					pos="4256,266",
+					width=2.004];
+			}
+		}
+	}
+	subgraph "cluster_SMG duct" {
+		graph [bb="4191,463,4394,577",
+			color=lightblue,
+			label="SMG__DUCT-HLCA_lvl4",
+			lheight=0.21,
+			lp="4292.5,565.5",
+			lwidth=2.35
+		];
+		subgraph "cluster_SMG duct" {
+			graph [bb="4199,471,4386,546",
+				color=lavender,
+				label="SMG__DUCT-COPD_lvl2",
+				lheight=0.21,
+				lp="4292.5,534.5",
+				lwidth=2.38
+			];
+			"SMG duct"	[color=black,
+				height=0.5,
+				label="SMG duct",
+				layer=lv_3,
+				pos="4264,497",
+				width=1.5887];
+		}
+	}
+	subgraph cluster_SMG__BASAL {
+		graph [bb="4402,471,4596,546",
+			color=lavender,
+			label="SMG__BASAL-COPD_lvl2",
+			lheight=0.21,
+			lp="4499,534.5",
+			lwidth=2.47
+		];
+		SMG__BASAL	[color=black,
+			height=0.5,
+			label=SMG__BASAL,
+			layer=lv_3,
+			pos="4499,497",
+			width=2.0582];
+	}
+	subgraph "cluster_BASAL-SMOOTH__MUSCLE" {
+		graph [bb="4458,240,4756,315",
+			color=lavender,
+			label="BASAL-SMOOTH__MUSCLE-COPD_lvl2",
+			lheight=0.21,
+			lp="4607,303.5",
+			lwidth=3.90
+		];
+		"BASAL-SMOOTH__MUSCLE"	[color=black,
+			height=0.5,
+			label="BASAL-SMOOTH__MUSCLE",
+			layer=lv_4,
+			pos="4607,266",
+			width=3.9177];
+	}
+	subgraph "cluster_Alveolar epithelium" {
+		graph [bb="4471,847,4755,922",
+			color=lightblue,
+			label="ALVEOLAR__EPITHELIUM-HLCA_lvl2",
+			lheight=0.21,
+			lp="4613,910.5",
+			lwidth=3.72
+		];
+		"Alveolar epithelium"	[color=black,
+			height=0.5,
+			label="Alveolar epithelium",
+			layer=lv_1,
+			pos="4596,873",
+			width=2.8164];
+	}
+	subgraph cluster_AT0 {
+		graph [bb="4402,671,4580,746",
+			color=teal,
+			label="AT0-sikkema_discovair",
+			lheight=0.21,
+			lp="4491,734.5",
+			lwidth=2.25
+		];
+		AT0	[color=black,
+			height=0.5,
+			label=AT0,
+			layer=lv_2,
+			pos="4543,697",
+			width=0.79437];
+	}
+	subgraph cluster_AT1 {
+		graph [bb="4588,647,4953,839",
+			color=red,
+			label="TYPE__1__PNEUMOCYTE-ref_redcap",
+			lheight=0.21,
+			lp="4770.5,827.5",
+			lwidth=3.67
+		];
+		subgraph cluster_AT1 {
+			graph [bb="4596,655,4945,808",
+				color=blue,
+				label="AT1-HTAP_Yvon",
+				lheight=0.21,
+				lp="4770.5,796.5",
+				lwidth=1.57
+			];
+			subgraph cluster_AT1 {
+				graph [bb="4604,663,4937,777",
+					color=lightblue,
+					label="AT1-HLCA_lvl3",
+					lheight=0.21,
+					lp="4770.5,765.5",
+					lwidth=1.47
+				];
+				subgraph cluster_AT1 {
+					graph [bb="4612,671,4929,746",
+						color=green,
+						label="ALVEOLAR_TYPE1-GenomeBiology_Maddi",
+						lheight=0.21,
+						lp="4770.5,734.5",
+						lwidth=4.18
+					];
+					AT1	[color=black,
+						height=0.5,
+						label=AT1,
+						layer=lv_2,
+						pos="4649,697",
+						width=0.79437];
+				}
+			}
+		}
+	}
+	subgraph cluster_AT2 {
+		graph [bb="5000,655,5349,808",
+			color=red,
+			label="TYPE__2__PNEUMOCYTE-ref_redcap",
+			lheight=0.21,
+			lp="5174.5,796.5",
+			lwidth=3.67
+		];
+		subgraph cluster_AT2 {
+			graph [bb="5008,663,5341,777",
+				color=lightblue,
+				label="AT2-HLCA_lvl3",
+				lheight=0.21,
+				lp="5174.5,765.5",
+				lwidth=1.47
+			];
+			subgraph cluster_AT2 {
+				graph [bb="5016,671,5333,746",
+					color=green,
+					label="ALVEOLAR_TYPE2-GenomeBiology_Maddi",
+					lheight=0.21,
+					lp="5174.5,734.5",
+					lwidth=4.18
+				];
+				AT2	[color=black,
+					height=0.5,
+					label=AT2,
+					layer=lv_2,
+					pos="5073,697",
+					width=0.79437];
+			}
+		}
+	}
+	subgraph "cluster_AT2 proliferating" {
+		graph [bb="4604,471,4863,546",
+			color=lightblue,
+			label="AT2__PROLIFERATING-HLCA_lvl4",
+			lheight=0.21,
+			lp="4733.5,534.5",
+			lwidth=3.38
+		];
+		"AT2 proliferating"	[color=black,
+			height=0.5,
+			label="AT2 proliferating",
+			layer=lv_3,
+			pos="4765,497",
+			width=2.4914];
+	}
+	subgraph cluster_SIGNALING__AT2 {
+		graph [bb="4871,471,5099,546",
+			color=blue,
+			label="SIGNALING__AT2-HTAP_Yvon",
+			lheight=0.21,
+			lp="4985,534.5",
+			lwidth=2.94
+		];
+		SIGNALING__AT2	[color=black,
+			height=0.5,
+			label=SIGNALING__AT2,
+			layer=lv_3,
+			pos="4998,497",
+			width=2.5817];
+	}
+	subgraph cluster_AT2A {
+		graph [bb="5107,471,5246,546",
+			color=blue,
+			label="AT2A-HTAP_Yvon",
+			lheight=0.21,
+			lp="5176.5,534.5",
+			lwidth=1.71
+		];
+		AT2A	[color=black,
+			height=0.5,
+			label=AT2A,
+			layer=lv_3,
+			pos="5149,497",
+			width=0.95686];
+	}
+	subgraph cluster_AT2B {
+		graph [bb="5254,471,5394,546",
+			color=blue,
+			label="AT2B-HTAP_Yvon",
+			lheight=0.21,
+			lp="5324,534.5",
+			lwidth=1.72
+		];
+		AT2B	[color=black,
+			height=0.5,
+			label=AT2B,
+			layer=lv_3,
+			pos="5297,497",
+			width=0.97491];
+	}
+	subgraph "cluster_RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)" {
+		graph [bb="5402,471,5954,546",
+			color=red,
+			label="RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)-ref_redcap",
+			lheight=0.21,
+			lp="5678,534.5",
+			lwidth=6.64
+		];
+		"RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)"	[color=black,
+			height=0.5,
+			label="RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)",
+			layer=lv_3,
+			pos="5678,497",
+			width=7.4563];
+	}
+	root	[color=black,
+		height=0.5,
+		label=root,
+		layer=lv_0,
+		pos="3390,1070",
+		width=0.83048];
+	root -> Epithelial	[pos="e,3390,982.2 3390,1051.8 3390,1035.6 3390,1011.1 3390,992.27"];
+	Epithelial -> MYOEPITHELIAL	[pos="e,3211,889.94 3354.2,950.14 3333.1,942.35 3305.9,932.02 3282,922 3261.5,913.37 3239,903.1 3220.2,894.27"];
+	Epithelial -> "Airway epithelium"	[pos="e,3390,891.11 3390,945.84 3390,933.28 3390,915.98 3390,901.5"];
+	Epithelial -> "Alveolar epithelium"	[pos="e,4504.2,880.78 3443.8,959.03 3629.9,945.3 4248.5,899.65 4494.2,881.52"];
+	"Airway epithelium" -> SQUAMOUS	[pos="e,2520.4,715.4 3338.8,857.76 3320.9,853.44 3300.7,849.25 3282,847 3263.2,844.74 2616.4,848.46 2600,839 2557.3,814.38 2533.9,758.59 \
+2523.3,725.04"];
+	"Surface airway epithelium"	[height=0.5,
+		pos="2742,697",
+		width=3.7011];
+	"Airway epithelium" -> "Surface airway epithelium"	[pos="e,2799.1,713.34 3337.5,857.91 3220.5,826.49 2938.3,750.72 2808.9,715.97"];
+	"Airway epithelium" -> "Submucosal airway epithelium"	[pos="e,4088.1,713.21 3448.4,858.71 3585.1,827.63 3925.3,750.24 4078.3,715.44"];
+	"Surface airway epithelium" -> Basal	[pos="e,649.49,505.14 2704.7,679.71 2675.9,668.05 2634.7,653.34 2597,647 2536.1,636.76 1546.6,644.19 1485,639 1165,612.02 784.88,534.19 \
+659.46,507.28"];
+	"Surface airway epithelium" -> Suprabasal	[pos="e,1624.2,511.53 2704.4,679.69 2675.6,668.1 2634.6,653.49 2597,647 2489.9,628.49 2215.6,654.2 2108,639 1929.1,613.73 1724.2,546.57 \
+1633.9,514.93"];
+	"Surface airway epithelium" -> "Multiciliated lineage"	[pos="e,2278.8,514.91 2703.1,679.77 2674.3,668.55 2633.9,654.35 2597,647 2545.4,636.72 2528.9,655.53 2479,639 2402.1,613.51 2325.5,554.59 \
+2286.5,521.55"];
+	"Surface airway epithelium" -> Rare	[pos="e,2576.1,513.46 2726.7,679.12 2694.4,643.61 2619.4,561.16 2582.8,520.92"];
+	"Surface airway epithelium" -> Secretory	[pos="e,2906.9,514.56 2757.3,679.12 2789.3,643.96 2863.1,562.79 2900.1,522.13"];
+	"Surface airway epithelium" -> "Transitional Club-AT2"	[pos="e,3138.7,514.87 2840,684.73 2887.2,676.54 2943.5,662.59 2990,639 3048.4,609.35 3103.2,554.26 3132,522.43"];
+	Basal -> CYCLING__BASAL	[pos="e,137.21,284.13 580.8,494.36 497.47,490 294.93,475.8 239,439 185.87,404.04 154.41,332.64 140.52,293.73"];
+	Basal -> "Basal resting"	[pos="e,392.93,284.15 583.25,489.95 551.42,482.71 504.08,467.76 473,439 429.53,398.77 405.87,331.18 395.51,293.83"];
+	Basal -> BASAL__REGENERATING	[pos="e,617,284.1 617,478.79 617,439.32 617,342.03 617,294.3"];
+	Basal -> BASAL_TH2	[pos="e,836.72,284.14 650.86,490.28 683.04,483.25 731.02,468.44 762,439 804.19,398.92 825.37,331.74 834.39,294.3"];
+	Suprabasal -> "SUPRABASAL__(NASAL)"	[pos="e,1146.1,284.04 1528.3,490.29 1449.9,481.83 1316,464.21 1274,439 1214.7,403.4 1171.1,331.75 1150.8,293.11"];
+	Suprabasal -> INTERMEDIATE__SUPRABASAL	[pos="e,1457.5,284.17 1576.7,479.16 1552.5,439.56 1491.8,340.28 1462.8,292.92"];
+	Suprabasal -> SUPRABASAL__IF	[pos="e,1716.5,284.17 1597.3,479.16 1621.5,439.56 1682.2,340.28 1711.2,292.92"];
+	"Multiciliated lineage" -> Deuterosomal	[pos="e,2046.7,283.92 2232.4,479.48 2215.8,468.92 2194.7,454.35 2178,439 2127.1,392.29 2077.9,327.43 2052.6,292.2"];
+	"Multiciliated lineage" -> Multiciliated	[pos="e,2260,284.1 2260,478.79 2260,439.32 2260,342.03 2260,294.3"];
+	Multiciliated -> "Multiciliated (nasal)"	[pos="e,1537.6,76.133 2231.4,249.46 2204.2,235.58 2161.6,216.21 2122,208 2096.9,202.79 1683.5,210.42 1660,200 1606.2,176.12 1564.1,118.72 \
+1543,84.974"];
+	Multiciliated -> "Multiciliated (non-nasal)"	[pos="e,1883.9,75.736 2226.3,250.16 2198.5,238.17 2158,221.18 2122,208 2111,203.99 2107.6,204.79 2097,200 2020.1,165.35 1936.7,111.57 \
+1892.3,81.436"];
+	Rare -> PRECURSOR	[pos="e,2548.1,284.1 2560.9,478.79 2558.3,439.32 2551.9,342.03 2548.8,294.3"];
+	PRECURSOR -> Ionocyte	[pos="e,2242.9,74.05 2521.3,249 2500.3,235.85 2469.7,216.74 2443,200 2374.7,157.17 2294.8,106.83 2251.3,79.387"];
+	PRECURSOR -> Neuroendocrine	[pos="e,2540.6,76.015 2546.4,247.79 2545.2,211.95 2542.4,129.09 2540.9,86.047"];
+	PRECURSOR -> Tuft	[pos="e,2705.2,75.695 2575.2,249.36 2594.4,237.67 2619.4,220.24 2637,200 2667.4,164.91 2689.8,115.15 2701.6,85.085"];
+	Secretory -> "PRE-TB__SECRETORY"	[pos="e,2833.2,284.1 2914.8,478.79 2898.1,439.07 2856.9,340.8 2837.1,293.4"];
+	Secretory -> "TRB-SC"	[pos="e,3012.3,283.87 2931.6,479.05 2937.8,467.85 2945.8,452.75 2952,439 2974.8,388.57 2997,327.7 3008.9,293.57"];
+	Secretory -> Club	[pos="e,3177.6,284.03 2948.1,481.07 2969.4,469.66 3000.7,454.63 3030,447 3050.5,441.66 3108.5,452.33 3125,439 3168.7,403.65 3176.6,332.93 \
+3177.5,294.09"];
+	Secretory -> Goblet	[pos="e,3612.4,281.53 2947.6,480.89 2968.9,469.21 3000.3,453.92 3030,447 3083.9,434.43 3225.2,452.25 3279,439 3407.7,407.28 3544.7,325.19 \
+3603.9,287.04"];
+	Club -> "Club (nasal)"	[pos="e,3004.3,76.058 3166.6,248.86 3157.3,235.75 3142.5,217.88 3125,208 3109.2,199.08 3099.9,210.39 3085,200 3044.7,171.83 3019.8,118.15 \
+3007.8,85.765"];
+	Club -> "Club (non-nasal)"	[pos="e,3182.5,76.015 3177.5,247.79 3178.5,211.95 3181,129.09 3182.2,86.047"];
+	Goblet -> "Goblet (bronchial)"	[pos="e,3541.4,76.091 3625.7,248.14 3608.1,212.23 3566.8,127.97 3545.8,85.074"];
+	Goblet -> "Goblet (nasal)"	[pos="e,3726.6,76.091 3642.3,248.14 3659.9,212.23 3701.2,127.97 3722.2,85.074"];
+	Goblet -> "Goblet (subsegmental)"	[pos="e,4004.3,76.289 3674.9,261.76 3727.4,256.04 3819.6,240.63 3887,200 3935.9,170.51 3977.1,116.61 3998.7,84.675"];
+	"Submucosal airway epithelium" -> "Submucosal Secretory"	[pos="e,4068.2,515.04 4146.7,678.78 4130.1,644.02 4092.3,565.32 4072.6,524.17"];
+	"Submucosal airway epithelium" -> "SMG duct"	[pos="e,4254.8,514.96 4164.7,678.82 4171.1,667.52 4179.6,652.4 4187,639 4209.2,598.88 4234.7,552.14 4250,523.82"];
+	"Submucosal airway epithelium" -> SMG__BASAL	[pos="e,4490.8,514.91 4266.7,684.65 4307.9,676.55 4353.5,662.7 4390,639 4434.7,610.01 4468.6,556.23 4486,524.12"];
+	"Submucosal Secretory" -> "SMG serous"	[pos="e,4060,284.1 4060,478.79 4060,439.32 4060,342.03 4060,294.3"];
+	"Submucosal Secretory" -> "SMG mucous"	[pos="e,4247.2,284.08 4088.2,479.47 4104.5,469.11 4124.6,454.75 4140,439 4184.5,393.3 4223,328.48 4242.4,292.89"];
+	"SMG serous" -> "SMG serous (bronchial)"	[pos="e,4330.9,76.253 4086.9,249.23 4109.1,236.69 4141.8,219.43 4172,208 4185.3,202.97 4190.7,207.08 4203,200 4254.7,170.35 4300.4,116.51 \
+4324.6,84.624"];
+	"SMG serous" -> "SMG serous (nasal)"	[pos="e,4662.7,76.099 4083.7,248.96 4105.5,235.15 4139.4,216.19 4172,208 4212,197.95 4505.4,217.03 4543,200 4596,175.95 4637,118.61 4657.5,\
+84.925"];
+	SMG__BASAL -> "BASAL-SMOOTH__MUSCLE"	[pos="e,4598.9,284.1 4507.1,478.79 4525.8,439.07 4572.2,340.8 4594.5,293.4"];
+	"Alveolar epithelium" -> AT0	[pos="e,4548.1,714.81 4590.8,855 4581.6,824.65 4562.2,760.92 4551.1,724.68"];
+	"Alveolar epithelium" -> AT1	[pos="e,4643.9,714.81 4601.2,855 4610.4,824.65 4629.8,760.92 4640.9,724.68"];
+	"Alveolar epithelium" -> AT2	[pos="e,5062.7,714.23 4696,869.64 4779.9,866.31 4892.4,858.29 4933,839 4988,812.9 5033.7,755.81 5056.8,722.84"];
+	AT2 -> "AT2 proliferating"	[pos="e,4771.8,514.99 5049.7,686.09 5022.3,674.84 4975.1,656.81 4933,647 4904.2,640.3 4892.5,654 4867,639 4821.9,612.45 4791.2,557.34 \
+4776,524.43"];
+	AT2 -> SIGNALING__AT2	[pos="e,5004.5,515.12 5066.6,679.12 5053.5,644.65 5023.7,565.93 5008.1,524.55"];
+	AT2 -> AT2A	[pos="e,5144.4,515.27 5082.4,679.89 5088.7,668.67 5097,653.21 5103,639 5119.3,600.34 5133.5,553.76 5141.7,525.01"];
+	AT2 -> AT2B	[pos="e,5296.1,515.34 5101.6,694.55 5140.3,691.06 5209.4,679.2 5250,639 5280.8,608.47 5291.4,557.21 5295.1,525.62"];
+	AT2 -> "RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)"	[pos="e,5651,515.03 5101.5,693.82 5158.9,688.82 5292,674.15 5398,639 5490.4,608.39 5590.3,551.77 5642.1,520.4"];
+}

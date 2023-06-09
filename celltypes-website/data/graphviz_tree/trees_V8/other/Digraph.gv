@@ -1,0 +1,30 @@
+digraph {
+	root [label=root color=black layer=lv_0]
+	root -> OTHER
+	OTHER -> NERVOUS
+	subgraph cluster_SCHWANN {
+		color=olive label="SCHWANN-maddi_discovair"
+		SCHWANN [label=SCHWANN color=black layer=lv_2]
+	}
+	NERVOUS -> SCHWANN
+	subgraph cluster_MYELINATING__SCHWANN {
+		color=olive label="MYELINATING__SCHWANN-maddi_discovair"
+		MYELINATING__SCHWANN [label=MYELINATING__SCHWANN color=black layer=lv_3]
+	}
+	SCHWANN -> MYELINATING__SCHWANN
+	subgraph "cluster_NON-MYELINATING__SCHWANN" {
+		color=olive label="NON-MYELINATING__SCHWANN-maddi_discovair"
+		"NON-MYELINATING__SCHWANN" [label="NON-MYELINATING__SCHWANN" color=black layer=lv_3]
+	}
+	SCHWANN -> "NON-MYELINATING__SCHWANN"
+	subgraph cluster_NAF1__ENDONEURIAL {
+		color=olive label="NAF1__ENDONEURIAL-maddi_discovair"
+		NAF1__ENDONEURIAL [label=NAF1__ENDONEURIAL color=black layer=lv_2]
+	}
+	NERVOUS -> NAF1__ENDONEURIAL
+	subgraph "cluster_NAF2__PERI/EPINEURIAL" {
+		color=olive label="NAF2__PERI/EPINEURIAL-maddi_discovair"
+		"NAF2__PERI/EPINEURIAL" [label="NAF2__PERI/EPINEURIAL" color=black layer=lv_2]
+	}
+	NERVOUS -> "NAF2__PERI/EPINEURIAL"
+}

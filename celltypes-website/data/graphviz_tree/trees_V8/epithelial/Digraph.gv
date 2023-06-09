@@ -1,0 +1,402 @@
+digraph {
+	root [label=root color=black layer=lv_0]
+	subgraph cluster_Epithelial {
+		color=lavender label="EPITHELIAL-COPD_lvl0"
+		subgraph cluster_Epithelial {
+			color=lightblue label="EPITHELIAL-HLCA_lvl1"
+			Epithelial [label=Epithelial color=black layer=lv_0]
+		}
+	}
+	root -> Epithelial
+	subgraph cluster_MYOEPITHELIAL {
+		color=olive label="MYOEPITHELIAL-maddi_discovair"
+		MYOEPITHELIAL [label=MYOEPITHELIAL color=black layer=lv_1]
+	}
+	Epithelial -> MYOEPITHELIAL
+	subgraph "cluster_Airway epithelium" {
+		color=lightblue label="AIRWAY__EPITHELIUM-HLCA_lvl2"
+		"Airway epithelium" [label="Airway epithelium" color=black layer=lv_1]
+	}
+	Epithelial -> "Airway epithelium"
+	subgraph cluster_SQUAMOUS {
+		color=lavender label="SQUAMOUS-COPD_lvl1"
+		subgraph cluster_SQUAMOUS {
+			color=teal label="HILLOCK-LIKE-sikkema_discovair"
+			SQUAMOUS [label=SQUAMOUS color=black layer=lv_2]
+		}
+	}
+	"Airway epithelium" -> SQUAMOUS
+	"Airway epithelium" -> "Surface airway epithelium"
+	subgraph cluster_Basal {
+		color=blue label="BASAL-HTAP_Yvon"
+		subgraph cluster_Basal {
+			color=brown label="BASAL-AJRCCM_Deprez"
+			subgraph cluster_Basal {
+				color=lightblue label="BASAL-HLCA_lvl3"
+				subgraph cluster_Basal {
+					color=lavender label="BASAL-COPD_lvl1"
+					Basal [label=Basal color=black layer=lv_3]
+				}
+			}
+		}
+	}
+	"Surface airway epithelium" -> Basal
+	subgraph cluster_CYCLING__BASAL {
+		color=lavender label="CYCLING__BASAL-COPD_lvl2"
+		CYCLING__BASAL [label=CYCLING__BASAL color=black layer=lv_4]
+	}
+	Basal -> CYCLING__BASAL
+	subgraph "cluster_Basal resting" {
+		color=lightblue label="BASAL__RESTING-HLCA_lvl4"
+		"Basal resting" [label="Basal resting" color=black layer=lv_4]
+	}
+	Basal -> "Basal resting"
+	subgraph cluster_BASAL__REGENERATING {
+		color=lavender label="BASAL__REGENERATING-COPD_lvl2"
+		BASAL__REGENERATING [label=BASAL__REGENERATING color=black layer=lv_4]
+	}
+	Basal -> BASAL__REGENERATING
+	subgraph cluster_BASAL_TH2 {
+		color=lavender label="BASAL_TH2-COPD_lvl2"
+		BASAL_TH2 [label=BASAL_TH2 color=black layer=lv_4]
+	}
+	Basal -> BASAL_TH2
+	subgraph cluster_Suprabasal {
+		color=red label="SUPRABASAL-ref_redcap"
+		subgraph cluster_Suprabasal {
+			color=brown label="SUPRABASAL-AJRCCM_Deprez"
+			subgraph cluster_Suprabasal {
+				color=lightblue label="SUPRABASAL-HLCA_lvl4"
+				subgraph cluster_Suprabasal {
+					color=lavender label="SUPRABASAL-COPD_lvl2"
+					Suprabasal [label=Suprabasal color=black layer=lv_3]
+				}
+			}
+		}
+	}
+	"Surface airway epithelium" -> Suprabasal
+	subgraph "cluster_SUPRABASAL__(NASAL)" {
+		color=brown label="SUPRABASAL__(NASAL)-AJRCCM_Deprez"
+		"SUPRABASAL__(NASAL)" [label="SUPRABASAL__(NASAL)" color=black layer=lv_4]
+	}
+	Suprabasal -> "SUPRABASAL__(NASAL)"
+	subgraph cluster_INTERMEDIATE__SUPRABASAL {
+		color=lavender label="INTERMEDIATE__SUPRABASAL-COPD_lvl2"
+		INTERMEDIATE__SUPRABASAL [label=INTERMEDIATE__SUPRABASAL color=black layer=lv_4]
+	}
+	Suprabasal -> INTERMEDIATE__SUPRABASAL
+	subgraph cluster_SUPRABASAL__IF {
+		color=lavender label="SUPRABASAL__IF-COPD_lvl2"
+		SUPRABASAL__IF [label=SUPRABASAL__IF color=black layer=lv_4]
+	}
+	Suprabasal -> SUPRABASAL__IF
+	subgraph "cluster_Multiciliated lineage" {
+		color=lightblue label="MULTICILIATED__LINEAGE-HLCA_lvl3"
+		"Multiciliated lineage" [label="Multiciliated lineage" color=black layer=lv_3]
+	}
+	"Surface airway epithelium" -> "Multiciliated lineage"
+	subgraph cluster_Deuterosomal {
+		color=red label="DEUTEROSOMAL-ref_redcap"
+		subgraph cluster_Deuterosomal {
+			color=brown label="DEUTEROSOMAL-AJRCCM_Deprez"
+			subgraph cluster_Deuterosomal {
+				color=lightblue label="DEUTEROSOMAL-HLCA_lvl4"
+				subgraph cluster_Deuterosomal {
+					color=lavender label="DEUTEROSOMAL-COPD_lvl2"
+					Deuterosomal [label=Deuterosomal color=black layer=lv_4]
+				}
+			}
+		}
+	}
+	"Multiciliated lineage" -> Deuterosomal
+	subgraph cluster_Multiciliated {
+		color=blue label="MCC-HTAP_Yvon"
+		subgraph cluster_Multiciliated {
+			color=green label="CILIATED-GenomeBiology_Maddi"
+			subgraph cluster_Multiciliated {
+				color=brown label="MULTICILIATED-AJRCCM_Deprez"
+				subgraph cluster_Multiciliated {
+					color=lightblue label="MULTICILIATED-HLCA_lvl4"
+					subgraph cluster_Multiciliated {
+						color=lavender label="MULTICILIATED-COPD_lvl2"
+						Multiciliated [label=Multiciliated color=black layer=lv_4]
+					}
+				}
+			}
+		}
+	}
+	"Multiciliated lineage" -> Multiciliated
+	subgraph "cluster_Multiciliated (nasal)" {
+		color=brown label="MULTICILIATED__(NASAL)-AJRCCM_Deprez"
+		subgraph "cluster_Multiciliated (nasal)" {
+			color=lightblue label="MULTICILIATED__(NASAL)-HLCA_lvl5"
+			"Multiciliated (nasal)" [label="Multiciliated (nasal)" color=black layer=lv_5]
+		}
+	}
+	Multiciliated -> "Multiciliated (nasal)"
+	subgraph "cluster_Multiciliated (non-nasal)" {
+		color=red label="MULTI-CILIATED__CELL-ref_redcap"
+		subgraph "cluster_Multiciliated (non-nasal)" {
+			color=lightblue label="MULTICILIATED__(NON-NASAL)-HLCA_lvl5"
+			"Multiciliated (non-nasal)" [label="Multiciliated (non-nasal)" color=black layer=lv_5]
+		}
+	}
+	Multiciliated -> "Multiciliated (non-nasal)"
+	subgraph cluster_Rare {
+		color=brown label="RARE__CELLS-AJRCCM_Deprez"
+		subgraph cluster_Rare {
+			color=lightblue label="RARE-HLCA_lvl3"
+			Rare [label=Rare color=black layer=lv_3]
+		}
+	}
+	"Surface airway epithelium" -> Rare
+	subgraph cluster_PRECURSOR {
+		color=lavender label="PRECURSOR-COPD_lvl2"
+		PRECURSOR [label=PRECURSOR color=black layer=lv_4]
+	}
+	Rare -> PRECURSOR
+	subgraph cluster_Ionocyte {
+		color=red label="PULMONARY__IONOCYTE-ref_redcap"
+		subgraph cluster_Ionocyte {
+			color=lightblue label="IONOCYTE-HLCA_lvl4"
+			subgraph cluster_Ionocyte {
+				color=lavender label="IONOCYTE-COPD_lvl2"
+				Ionocyte [label=Ionocyte color=black layer=lv_5]
+			}
+		}
+	}
+	PRECURSOR -> Ionocyte
+	subgraph cluster_Neuroendocrine {
+		color=red label="LUNG__NEUROENDOCRINE__CELL-ref_redcap"
+		subgraph cluster_Neuroendocrine {
+			color=blue label="PNEC-HTAP_Yvon"
+			subgraph cluster_Neuroendocrine {
+				color=lightblue label="NEUROENDOCRINE-HLCA_lvl4"
+				subgraph cluster_Neuroendocrine {
+					color=lavender label="PNEC-COPD_lvl2"
+					Neuroendocrine [label=Neuroendocrine color=black layer=lv_5]
+				}
+			}
+		}
+	}
+	PRECURSOR -> Neuroendocrine
+	subgraph cluster_Tuft {
+		color=red label="TUFT__CELL-ref_redcap"
+		subgraph cluster_Tuft {
+			color=lightblue label="TUFT-HLCA_lvl4"
+			Tuft [label=Tuft color=black layer=lv_5]
+		}
+	}
+	PRECURSOR -> Tuft
+	subgraph cluster_Secretory {
+		color=blue label="SECRETORY-HTAP_Yvon"
+		subgraph cluster_Secretory {
+			color=brown label="SECRETORY-AJRCCM_Deprez"
+			subgraph cluster_Secretory {
+				color=lightblue label="SECRETORY-HLCA_lvl3"
+				subgraph cluster_Secretory {
+					color=lavender label="SECRETORY-COPD_lvl1"
+					Secretory [label=Secretory color=black layer=lv_3]
+				}
+			}
+		}
+	}
+	"Surface airway epithelium" -> Secretory
+	subgraph "cluster_PRE-TB__SECRETORY" {
+		color=teal label="PRE-TB__SECRETORY-sikkema_discovair"
+		subgraph "cluster_PRE-TB__SECRETORY" {
+			color=blue label="PRE-TB-SEC-HTAP_Yvon"
+			"PRE-TB__SECRETORY" [label="PRE-TB__SECRETORY" color=black layer=lv_4]
+		}
+	}
+	Secretory -> "PRE-TB__SECRETORY"
+	subgraph "cluster_TRB-SC" {
+		color=blue label="TRB-SC-HTAP_Yvon"
+		"TRB-SC" [label="TRB-SC" color=black layer=lv_4]
+	}
+	Secretory -> "TRB-SC"
+	subgraph cluster_Club {
+		color=lightblue label="CLUB-HLCA_lvl4"
+		subgraph cluster_Club {
+			color=lavender label="CLUB-COPD_lvl2"
+			Club [label=Club color=black layer=lv_4]
+		}
+	}
+	Secretory -> Club
+	subgraph "cluster_Club (nasal)" {
+		color=lightblue label="CLUB__(NASAL)-HLCA_lvl5"
+		"Club (nasal)" [label="Club (nasal)" color=black layer=lv_5]
+	}
+	Club -> "Club (nasal)"
+	subgraph "cluster_Club (non-nasal)" {
+		color=red label="CLUB-ref_redcap"
+		subgraph "cluster_Club (non-nasal)" {
+			color=lightblue label="CLUB__(NON-NASAL)-HLCA_lvl5"
+			"Club (non-nasal)" [label="Club (non-nasal)" color=black layer=lv_5]
+		}
+	}
+	Club -> "Club (non-nasal)"
+	subgraph cluster_Goblet {
+		color=lightblue label="GOBLET-HLCA_lvl4"
+		subgraph cluster_Goblet {
+			color=lavender label="GOBLET-COPD_lvl2"
+			Goblet [label=Goblet color=black layer=lv_4]
+		}
+	}
+	Secretory -> Goblet
+	subgraph "cluster_Goblet (bronchial)" {
+		color=red label="LUNG__GOBLET__CELL-ref_redcap"
+		subgraph "cluster_Goblet (bronchial)" {
+			color=lightblue label="GOBLET__(BRONCHIAL)-HLCA_lvl5"
+			"Goblet (bronchial)" [label="Goblet (bronchial)" color=black layer=lv_5]
+		}
+	}
+	Goblet -> "Goblet (bronchial)"
+	subgraph "cluster_Goblet (nasal)" {
+		color=lightblue label="GOBLET__(NASAL)-HLCA_lvl5"
+		"Goblet (nasal)" [label="Goblet (nasal)" color=black layer=lv_5]
+	}
+	Goblet -> "Goblet (nasal)"
+	subgraph "cluster_Goblet (subsegmental)" {
+		color=lightblue label="GOBLET__(SUBSEGMENTAL)-HLCA_lvl5"
+		"Goblet (subsegmental)" [label="Goblet (subsegmental)" color=black layer=lv_5]
+	}
+	Goblet -> "Goblet (subsegmental)"
+	subgraph "cluster_Transitional Club-AT2" {
+		color=blue label="TRANS-CLUB-AT2-HTAP_Yvon"
+		subgraph "cluster_Transitional Club-AT2" {
+			color=red label="TRANSITIONAL__CLUB-AT2-ref_redcap"
+			subgraph "cluster_Transitional Club-AT2" {
+				color=lightblue label="TRANSITIONAL__CLUB-AT2-HLCA_lvl4"
+				"Transitional Club-AT2" [label="Transitional Club-AT2" color=black layer=lv_3]
+			}
+		}
+	}
+	"Surface airway epithelium" -> "Transitional Club-AT2"
+	subgraph "cluster_Submucosal airway epithelium" {
+		color=lightblue label="SUBMUCOSAL__GLAND-HLCA_lvl2"
+		"Submucosal airway epithelium" [label="Submucosal airway epithelium" color=black layer=lv_2]
+	}
+	"Airway epithelium" -> "Submucosal airway epithelium"
+	subgraph "cluster_Submucosal Secretory" {
+		color=lightblue label="SUBMUCOSAL__SECRETORY-HLCA_lvl3"
+		"Submucosal Secretory" [label="Submucosal Secretory" color=black layer=lv_3]
+	}
+	"Submucosal airway epithelium" -> "Submucosal Secretory"
+	subgraph "cluster_SMG serous" {
+		color=brown label="SEROUS-AJRCCM_Deprez"
+		subgraph "cluster_SMG serous" {
+			color=lightblue label="SMG__SEROUS-HLCA_lvl4"
+			subgraph "cluster_SMG serous" {
+				color=lavender label="SMG__SEROUS-COPD_lvl1"
+				"SMG serous" [label="SMG serous" color=black layer=lv_4]
+			}
+		}
+	}
+	"Submucosal Secretory" -> "SMG serous"
+	subgraph "cluster_SMG serous (bronchial)" {
+		color=lightblue label="SMG__SEROUS__(BRONCHIAL)-HLCA_lvl5"
+		subgraph "cluster_SMG serous (bronchial)" {
+			color=lavender label="SMG__SEROUS__(BRONCHIAL)-COPD_lvl2"
+			"SMG serous (bronchial)" [label="SMG serous (bronchial)" color=black layer=lv_5]
+		}
+	}
+	"SMG serous" -> "SMG serous (bronchial)"
+	subgraph "cluster_SMG serous (nasal)" {
+		color=lightblue label="SMG__SEROUS__(NASAL)-HLCA_lvl5"
+		subgraph "cluster_SMG serous (nasal)" {
+			color=lavender label="SMG__SEROUS__(NASAL)-COPD_lvl2"
+			"SMG serous (nasal)" [label="SMG serous (nasal)" color=black layer=lv_5]
+		}
+	}
+	"SMG serous" -> "SMG serous (nasal)"
+	subgraph "cluster_SMG mucous" {
+		color=lightblue label="SMG__MUCOUS-HLCA_lvl4"
+		subgraph "cluster_SMG mucous" {
+			color=lavender label="SMG__MUCOUS-COPD_lvl2"
+			subgraph "cluster_SMG mucous" {
+				color=brown label="SMG__MUCOUS-AJRCCM_Deprez"
+				"SMG mucous" [label="SMG mucous" color=black layer=lv_4]
+			}
+		}
+	}
+	"Submucosal Secretory" -> "SMG mucous"
+	subgraph "cluster_SMG duct" {
+		color=lightblue label="SMG__DUCT-HLCA_lvl4"
+		subgraph "cluster_SMG duct" {
+			color=lavender label="SMG__DUCT-COPD_lvl2"
+			"SMG duct" [label="SMG duct" color=black layer=lv_3]
+		}
+	}
+	"Submucosal airway epithelium" -> "SMG duct"
+	subgraph cluster_SMG__BASAL {
+		color=lavender label="SMG__BASAL-COPD_lvl2"
+		SMG__BASAL [label=SMG__BASAL color=black layer=lv_3]
+	}
+	"Submucosal airway epithelium" -> SMG__BASAL
+	subgraph "cluster_BASAL-SMOOTH__MUSCLE" {
+		color=lavender label="BASAL-SMOOTH__MUSCLE-COPD_lvl2"
+		"BASAL-SMOOTH__MUSCLE" [label="BASAL-SMOOTH__MUSCLE" color=black layer=lv_4]
+	}
+	SMG__BASAL -> "BASAL-SMOOTH__MUSCLE"
+	subgraph "cluster_Alveolar epithelium" {
+		color=lightblue label="ALVEOLAR__EPITHELIUM-HLCA_lvl2"
+		"Alveolar epithelium" [label="Alveolar epithelium" color=black layer=lv_1]
+	}
+	Epithelial -> "Alveolar epithelium"
+	subgraph cluster_AT0 {
+		color=teal label="AT0-sikkema_discovair"
+		AT0 [label=AT0 color=black layer=lv_2]
+	}
+	"Alveolar epithelium" -> AT0
+	subgraph cluster_AT1 {
+		color=red label="TYPE__1__PNEUMOCYTE-ref_redcap"
+		subgraph cluster_AT1 {
+			color=blue label="AT1-HTAP_Yvon"
+			subgraph cluster_AT1 {
+				color=lightblue label="AT1-HLCA_lvl3"
+				subgraph cluster_AT1 {
+					color=green label="ALVEOLAR_TYPE1-GenomeBiology_Maddi"
+					AT1 [label=AT1 color=black layer=lv_2]
+				}
+			}
+		}
+	}
+	"Alveolar epithelium" -> AT1
+	subgraph cluster_AT2 {
+		color=red label="TYPE__2__PNEUMOCYTE-ref_redcap"
+		subgraph cluster_AT2 {
+			color=lightblue label="AT2-HLCA_lvl3"
+			subgraph cluster_AT2 {
+				color=green label="ALVEOLAR_TYPE2-GenomeBiology_Maddi"
+				AT2 [label=AT2 color=black layer=lv_2]
+			}
+		}
+	}
+	"Alveolar epithelium" -> AT2
+	subgraph "cluster_AT2 proliferating" {
+		color=lightblue label="AT2__PROLIFERATING-HLCA_lvl4"
+		"AT2 proliferating" [label="AT2 proliferating" color=black layer=lv_3]
+	}
+	AT2 -> "AT2 proliferating"
+	subgraph cluster_SIGNALING__AT2 {
+		color=blue label="SIGNALING__AT2-HTAP_Yvon"
+		SIGNALING__AT2 [label=SIGNALING__AT2 color=black layer=lv_3]
+	}
+	AT2 -> SIGNALING__AT2
+	subgraph cluster_AT2A {
+		color=blue label="AT2A-HTAP_Yvon"
+		AT2A [label=AT2A color=black layer=lv_3]
+	}
+	AT2 -> AT2A
+	subgraph cluster_AT2B {
+		color=blue label="AT2B-HTAP_Yvon"
+		AT2B [label=AT2B color=black layer=lv_3]
+	}
+	AT2 -> AT2B
+	subgraph "cluster_RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)" {
+		color=red label="RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)-ref_redcap"
+		"RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)" [label="RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)" color=black layer=lv_3]
+	}
+	AT2 -> "RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC)"
+}

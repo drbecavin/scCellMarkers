@@ -1,0 +1,166 @@
+root:
+    Epithelial:
+        - 'EPITHELIAL; COPD_lvl0'
+        - 'EPITHELIAL; HLCA_lvl1'
+        - MYOEPITHELIAL:
+            - 'MYOEPITHELIAL; maddi_discovair'
+        - Airway epithelium: 
+            - 'AIRWAY__EPITHELIUM; HLCA_lvl2'
+            - SQUAMOUS:
+                - 'SQUAMOUS; COPD_lvl1'
+                - 'HILLOCK-LIKE; sikkema_discovair'
+            - Surface airway epithelium:
+                - Basal: 
+                    - 'BASAL; HTAP_Yvon'
+                    - 'BASAL; AJRCCM_Deprez'
+                    - 'BASAL; HLCA_lvl3'
+                    - 'BASAL; COPD_lvl1'
+                    - CYCLING__BASAL:
+                        - 'CYCLING__BASAL; COPD_lvl2'
+                    - Basal resting: 
+                        - 'BASAL__RESTING; HLCA_lvl4'
+                    - BASAL__REGENERATING:
+                        - 'BASAL__REGENERATING; COPD_lvl2'
+                    - BASAL_TH2:
+                        - 'BASAL_TH2; COPD_lvl2'
+                - Suprabasal: 
+                    - 'SUPRABASAL; ref_redcap'
+                    - 'SUPRABASAL; AJRCCM_Deprez'
+                    - 'SUPRABASAL; HLCA_lvl4'
+                    - 'SUPRABASAL; COPD_lvl2' 
+                    - SUPRABASAL__(NASAL):
+                        - 'SUPRABASAL__(NASAL); AJRCCM_Deprez'
+                    - INTERMEDIATE__SUPRABASAL:
+                        - 'INTERMEDIATE__SUPRABASAL; COPD_lvl2'
+                    - SUPRABASAL__IF:
+                        - 'SUPRABASAL__IF; COPD_lvl2'
+                - Multiciliated lineage: 
+                    - 'MULTICILIATED__LINEAGE; HLCA_lvl3'
+                    - Deuterosomal: 
+                        - 'DEUTEROSOMAL; ref_redcap'
+                        - 'DEUTEROSOMAL; AJRCCM_Deprez'
+                        - 'DEUTEROSOMAL; HLCA_lvl4'
+                        - 'DEUTEROSOMAL; COPD_lvl2'
+                    - Multiciliated: 
+                        - 'MCC; HTAP_Yvon'
+                        - 'CILIATED; GenomeBiology_Maddi'
+                        - 'MULTICILIATED; AJRCCM_Deprez'
+                        - 'MULTICILIATED; HLCA_lvl4'
+                        - 'MULTICILIATED; COPD_lvl2'
+                        - Multiciliated (nasal): 
+                            - 'MULTICILIATED__(NASAL); AJRCCM_Deprez'
+                            - 'MULTICILIATED__(NASAL); HLCA_lvl5'
+                        # MULTI-CILIATED__CELL; ref_redcap is in Multiciliated (non-nasal) 
+                        # because among its redcap synonyms I found: Multiciliated (non-nasal), 
+                        # so I figured we were talking about non-nasal cells
+                        - Multiciliated (non-nasal): 
+                            - 'MULTI-CILIATED__CELL; ref_redcap'
+                            - 'MULTICILIATED__(NON-NASAL); HLCA_lvl5'
+                - Rare:
+                    - 'RARE__CELLS; AJRCCM_Deprez'
+                    - 'RARE; HLCA_lvl3'
+                    - PRECURSOR:
+                        - 'PRECURSOR; COPD_lvl2'
+                        - Ionocyte: 
+                            - 'PULMONARY__IONOCYTE; ref_redcap'
+                            - 'IONOCYTE; HLCA_lvl4'
+                            - 'IONOCYTE; COPD_lvl2'
+                        # NB: Pulmonary neuroendocrine cells (PNECs) 
+                        - Neuroendocrine: 
+                            - 'LUNG__NEUROENDOCRINE__CELL; ref_redcap'
+                            - 'PNEC; HTAP_Yvon'
+                            - 'NEUROENDOCRINE; HLCA_lvl4'
+                            - 'PNEC; COPD_lvl2'
+                        - Tuft: 
+                            - 'TUFT__CELL; ref_redcap'
+                            - 'TUFT; HLCA_lvl4'
+                - Secretory: 
+                    - 'SECRETORY; HTAP_Yvon'
+                    - 'SECRETORY; AJRCCM_Deprez'
+                    - 'SECRETORY; HLCA_lvl3'
+                    - 'SECRETORY; COPD_lvl1'
+                    - PRE-TB__SECRETORY:
+                        - 'PRE-TB__SECRETORY; sikkema_discovair'
+                        - 'PRE-TB-SEC; HTAP_Yvon'
+                    - TRB-SC:
+                        - 'TRB-SC; HTAP_Yvon'
+                    - Club:           
+                        - 'CLUB; HLCA_lvl4'
+                        - 'CLUB; COPD_lvl2'
+                        - Club (nasal): 
+                            - 'CLUB__(NASAL); HLCA_lvl5'
+                        # CLUB; ref_redcap is in Club (non-nasal) because
+                        # among its redcap synonyms I found: club (non-nasal), 
+                        # so I figured we were talking about non-nasal cells
+                        - Club (non-nasal): 
+                            - 'CLUB; ref_redcap'
+                            - 'CLUB__(NON-NASAL); HLCA_lvl5'
+                    - Goblet: 
+                        - 'GOBLET; HLCA_lvl4'
+                        - 'GOBLET; COPD_lvl2'
+                        # LUNG__GOBLET__CELL; ref_redcap is in Goblet (bronchial) because
+                        # among its redcap synonyms I found: Goblet (bronchial), 
+                        # so I figured we were  talking about bronchial cells ()
+                        - Goblet (bronchial): 
+                            - 'LUNG__GOBLET__CELL; ref_redcap'
+                            - 'GOBLET__(BRONCHIAL); HLCA_lvl5'
+                        - Goblet (nasal): 
+                            - 'GOBLET__(NASAL); HLCA_lvl5'
+                        - Goblet (subsegmental): 
+                            - 'GOBLET__(SUBSEGMENTAL); HLCA_lvl5'
+                - Transitional Club-AT2: 
+                    - 'TRANS-CLUB-AT2; HTAP_Yvon'
+                    - 'TRANSITIONAL__CLUB-AT2; ref_redcap'
+                    - 'TRANSITIONAL__CLUB-AT2; HLCA_lvl4' 
+            - Submucosal airway epithelium:
+                - 'SUBMUCOSAL__GLAND; HLCA_lvl2'
+                - Submucosal Secretory:
+                    - 'SUBMUCOSAL__SECRETORY; HLCA_lvl3'
+                    - SMG serous: 
+                        - 'SEROUS; AJRCCM_Deprez'
+                        - 'SMG__SEROUS; HLCA_lvl4'
+                        - 'SMG__SEROUS; COPD_lvl1'
+                        - SMG serous (bronchial): 
+                            - 'SMG__SEROUS__(BRONCHIAL); HLCA_lvl5'
+                            - 'SMG__SEROUS__(BRONCHIAL); COPD_lvl2'
+                        - SMG serous (nasal): 
+                            - 'SMG__SEROUS__(NASAL); HLCA_lvl5'
+                            - 'SMG__SEROUS__(NASAL); COPD_lvl2'
+                    - SMG mucous: 
+                        - 'SMG__MUCOUS; HLCA_lvl4'
+                        - 'SMG__MUCOUS; COPD_lvl2'
+                        - 'SMG__MUCOUS; AJRCCM_Deprez'
+                - SMG duct: 
+                    - 'SMG__DUCT; HLCA_lvl4'
+                    - 'SMG__DUCT; COPD_lvl2'
+                - SMG__BASAL:
+                    - 'SMG__BASAL; COPD_lvl2'
+                    - BASAL-SMOOTH__MUSCLE:
+                        - 'BASAL-SMOOTH__MUSCLE; COPD_lvl2'
+
+                     
+        - Alveolar epithelium:
+            - 'ALVEOLAR__EPITHELIUM; HLCA_lvl2'
+            - AT0:
+                - 'AT0; sikkema_discovair'
+            - AT1: 
+                - 'TYPE__1__PNEUMOCYTE; ref_redcap'
+                - 'AT1; HTAP_Yvon'
+                - 'AT1; HLCA_lvl3'
+                - 'ALVEOLAR_TYPE1; GenomeBiology_Maddi'
+            - AT2: 
+                - 'TYPE__2__PNEUMOCYTE; ref_redcap'
+                - 'AT2; HLCA_lvl3'
+                - 'ALVEOLAR_TYPE2; GenomeBiology_Maddi'
+                - AT2 proliferating: 
+                    - 'AT2__PROLIFERATING; HLCA_lvl4'
+                - SIGNALING__AT2:
+                    - 'SIGNALING__AT2; HTAP_Yvon'
+                - AT2A:
+                    - 'AT2A; HTAP_Yvon'
+                - AT2B:
+                    - 'AT2B; HTAP_Yvon'
+                - RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC):
+                    - 'RESPIRATORY__AIRWAY__SECRETORY__CELL__(RASC); ref_redcap'
+                        
+        

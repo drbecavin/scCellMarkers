@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Network</title>
+    <style>
+        svg {
+            top:0;
+            left: 0;
+            width: 75%;
+            height: auto;
+            cursor: move;
+            border-style: groove;
+        }
+        #info-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25%;
+            height: 100%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .controls {
+            top: 200;
+            left: 0;
+            width: 75%;
+            height: auto;
+            position: fixed;
+            padding: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="graph-container">
+        <h1>Cell types hierarchical visualisation and markers genes information</h1>
+        <h2>Choose cell compartment</h2>
+        <!-- Add section to choose tree to upload-->
+        <div>
+            <form method="POST" action="/">
+                <label for="compartment">Compartiment</label>
+                <select name="compart" id="compartment">
+                    <option value="epithelial" {% if selected_compart == "epithelial" %}selected{% endif %}>epithelial</option>
+                    <option value="endothelial" {% if selected_compart == "endothelial" %}selected{% endif %}>endothelial</option>
+                    <option value="immune" {% if selected_compart == "immune" %}selected{% endif %}>immune</option>
+                    <option value="stromal" {% if selected_compart == "stromal" %}selected{% endif %}>stromal</option>
+                </select>    
+                <button type="submit">Submit</button>            
+            </form>
+        </div>
+        <!--Add section to get the svg image (the tree)-->
+        <div id="graph">
+            {{ graph_svg | safe }}
+        </div>
+        <!-- Add a div to control: pan and zoom-->
+        <div class=".controls">
+            <div class="info">
+                <h3>Options</h3>
+                <ul>
+                    <li>Mouse wheel - zoom</li>
+                    <li>Left click - move </li>
+                    <li>Left click on node - node information</li>
+                    <li>Double left click not on node - zoom in</li>
+                </ul>
+            </div>
+            <button id="reset">Reset Zoom and Pan</button>
+        </div>
+        <!--Add section with the scripts to perform interactive actions with the graph and the table-->
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+        <script type="text/javascript">
+            // obtaining the svg image
+            // argument in querySelector should contain CSS
+            // sekectir of my SVG element
+            var svg = document.getElementById("graph").querySelector("svg");
+            var panZoom = svgPanZoom(svg);
+            document.getElementById("reset").addEventListener("click", function() {
+                console.log("Reset button clicked");
+                panZoom.resetZoom();
+                panZoom.resetPan();
+            });
+        </script>
+    </div>
+
+    <!-- Add a div to display dynamic information about the selected node -->
+    <div id="info-container">
+        <h2>Information about the node</h2>
+        <p>Select a node in the graph to display information.</p>
+    </div>
+
+
+    <!-- Include jQuery and your JavaScript file at the bottom of the HTML body -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            // Get all the nodes in the SVG
+            var nodes = $("svg g.node");
+
+            // Add click event listener to all nodes
+            nodes.click(function(event) {
+                var node_name = $(this).find("title").text();
+                console.log("Clicked node:", node_name);
+                
+                // Send an AJAX request to your Flask server to get the node info
+                $.ajax({
+                    url: "/node_info",
+                    type: "GET",
+                    data: {
+                        node_name: node_name
+                    },
+                    success: function(response) {
+                        console.log("Response:", response);
+                        // Do something with the response
+                        var infoContainer = document.getElementById('info-container');
+                        infoContainer.innerHTML = '<h2>Information about the node</h2>' + '<h3>' + response + '<h3>'; 
+                    },
+                    error: function(error) {
+                        console.log("Error:", error);
+                    }
+                }); 
+
+                // Send another AJAX request to get the filtered table based on the selected node
+                $.ajax({
+                    url: "/get_filtered_table",
+                    type: "GET",
+                    data: {
+                        node_name: node_name
+                    },
+                    success: function(response) {
+                        console.log("Response:", response);
+                        // Show the filtered table
+                        var tableContainer = document.createElement('div');
+                        var infoContainer = document.getElementById('info-container');
+                        tableContainer.innerHTML = response;
+                        infoContainer.appendChild(tableContainer);
+                    },
+                    error: function(error) {
+                        console.log("Error:", error);
+                    }
+                });
+              
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.5.3/dist/svg-pan-zoom.js"></script>
+
+</body>
+</html>

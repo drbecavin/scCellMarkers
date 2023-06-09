@@ -1,0 +1,157 @@
+digraph {
+	root [label=root color=black layer=lv_0]
+	subgraph cluster_Stroma {
+		color=lavender label="STROMAL-COPD_lvl0"
+		subgraph cluster_Stroma {
+			color=lightblue label="STROMA-HLCA_lvl1"
+			Stroma [label=Stroma color=black layer=lv_0]
+		}
+	}
+	root -> Stroma
+	subgraph cluster_CHONDROCYTE {
+		color=olive label="CHONDROCYTE-maddi_discovair"
+		CHONDROCYTE [label=CHONDROCYTE color=black layer=lv_1]
+	}
+	Stroma -> CHONDROCYTE
+	subgraph cluster_TRACHEOBRONCHIAL__CHONDROCYTE {
+		color=red label="TRACHEOBRONCHIAL__CHONDROCYTE-ref_redcap"
+		TRACHEOBRONCHIAL__CHONDROCYTE [label=TRACHEOBRONCHIAL__CHONDROCYTE color=black layer=lv_2]
+	}
+	CHONDROCYTE -> TRACHEOBRONCHIAL__CHONDROCYTE
+	subgraph "cluster_Fibroblast lineage" {
+		color=lightblue label="FIBROBLAST__LINEAGE-HLCA_lvl2"
+		"Fibroblast lineage" [label="Fibroblast lineage" color=black layer=lv_1]
+	}
+	Stroma -> "Fibroblast lineage"
+	subgraph cluster_Fibroblasts {
+		color=green label="FIBROBLAST-GenomeBiology_Maddi"
+		subgraph cluster_Fibroblasts {
+			color=brown label="FIBROBLAST-AJRCCM_Deprez"
+			subgraph cluster_Fibroblasts {
+				color=lightblue label="FIBROBLASTS-HLCA_lvl3"
+				subgraph cluster_Fibroblasts {
+					color=lavender label="FIBROBLAST-COPD_lvl1"
+					Fibroblasts [label=Fibroblasts color=black layer=lv_2]
+				}
+			}
+		}
+	}
+	"Fibroblast lineage" -> Fibroblasts
+	subgraph "cluster_Advential fibroblasts" {
+		color=blue label="ADVENTITIAL__FIBRO-HTAP_Yvon"
+		subgraph "cluster_Advential fibroblasts" {
+			color=lightblue label="ADVENTITIAL__FIBROBLASTS-HLCA_lvl4"
+			"Advential fibroblasts" [label="Advential fibroblasts" color=black layer=lv_3]
+		}
+	}
+	Fibroblasts -> "Advential fibroblasts"
+	subgraph "cluster_Alveolar fibroblasts" {
+		color=blue label="ALVEOLAR__FIBRO-HTAP_Yvon"
+		subgraph "cluster_Alveolar fibroblasts" {
+			color=lightblue label="ALVEOLAR__FIBROBLASTS-HLCA_lvl4"
+			"Alveolar fibroblasts" [label="Alveolar fibroblasts" color=black layer=lv_3]
+		}
+	}
+	Fibroblasts -> "Alveolar fibroblasts"
+	subgraph cluster_ALVEOLAR__TYPE__1__FIBROBLAST__CELL {
+		color=red label="ALVEOLAR__TYPE__1__FIBROBLAST__CELL-ref_redcap"
+		ALVEOLAR__TYPE__1__FIBROBLAST__CELL [label=ALVEOLAR__TYPE__1__FIBROBLAST__CELL color=black layer=lv_4]
+	}
+	"Alveolar fibroblasts" -> ALVEOLAR__TYPE__1__FIBROBLAST__CELL
+	subgraph cluster_ALVEOLAR__TYPE__2__FIBROBLAST__CELL {
+		color=red label="ALVEOLAR__TYPE__2__FIBROBLAST__CELL-ref_redcap"
+		ALVEOLAR__TYPE__2__FIBROBLAST__CELL [label=ALVEOLAR__TYPE__2__FIBROBLAST__CELL color=black layer=lv_4]
+	}
+	"Alveolar fibroblasts" -> ALVEOLAR__TYPE__2__FIBROBLAST__CELL
+	subgraph "cluster_Peribronchial fibroblasts" {
+		color=lightblue label="PERIBRONCHIAL__FIBROBLASTS-HLCA_lvl4"
+		"Peribronchial fibroblasts" [label="Peribronchial fibroblasts" color=black layer=lv_3]
+	}
+	Fibroblasts -> "Peribronchial fibroblasts"
+	subgraph cluster_Pericytes {
+		color=red label="LUNG__PERICYTE-ref_redcap"
+		subgraph cluster_Pericytes {
+			color=blue label="PERICYTES-HTAP_Yvon"
+			subgraph cluster_Pericytes {
+				color=brown label="PERICYTE-AJRCCM_Deprez"
+				subgraph cluster_Pericytes {
+					color=lightblue label="PERICYTES-HLCA_lvl4"
+					subgraph cluster_Pericytes {
+						color=lavender label="PERICYTE-COPD_lvl1"
+						Pericytes [label=Pericytes color=black layer=lv_3]
+					}
+				}
+			}
+		}
+	}
+	Fibroblasts -> Pericytes
+	subgraph "cluster_PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)" {
+		color=olive label="PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)-maddi_discovair"
+		"PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)" [label="PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)" color=black layer=lv_4]
+	}
+	Pericytes -> "PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)"
+	subgraph cluster_PERICYTE__AIRWAY__INTERMEDIATE {
+		color=olive label="PERICYTE__AIRWAY__INTERMEDIATE-maddi_discovair"
+		PERICYTE__AIRWAY__INTERMEDIATE [label=PERICYTE__AIRWAY__INTERMEDIATE color=black layer=lv_4]
+	}
+	Pericytes -> PERICYTE__AIRWAY__INTERMEDIATE
+	subgraph cluster_PERICYTE__AIRWAY__CCL {
+		color=olive label="PERICYTE__AIRWAY__CCL-maddi_discovair"
+		subgraph cluster_PERICYTE__AIRWAY__CCL {
+			color=lavender label="PERICYTE__CCL-COPD_lvl2"
+			PERICYTE__AIRWAY__CCL [label=PERICYTE__AIRWAY__CCL color=black layer=lv_4]
+		}
+	}
+	Pericytes -> PERICYTE__AIRWAY__CCL
+	subgraph "cluster_Subpleural fibroblasts" {
+		color=lightblue label="SUBPLEURAL__FIBROBLASTS-HLCA_lvl4"
+		"Subpleural fibroblasts" [label="Subpleural fibroblasts" color=black layer=lv_3]
+	}
+	Fibroblasts -> "Subpleural fibroblasts"
+	subgraph cluster_Myofibroblasts {
+		color=blue label="MYOFIBROBLASTS-HTAP_Yvon"
+		subgraph cluster_Myofibroblasts {
+			color=lightblue label="MYOFIBROBLASTS-HLCA_lvl3"
+			Myofibroblasts [label=Myofibroblasts color=black layer=lv_2]
+		}
+	}
+	"Fibroblast lineage" -> Myofibroblasts
+	subgraph cluster_Mesothelium {
+		color=lightblue label="MESOTHELIUM-HLCA_lvl2"
+		subgraph cluster_Mesothelium {
+			color=red label="MESOTHELIAL__CELL__OF__PLEURA-ref_redcap"
+			Mesothelium [label=Mesothelium color=black layer=lv_1]
+		}
+	}
+	Stroma -> Mesothelium
+	subgraph "cluster_Smooth muscle" {
+		color=blue label="AIRWAY__SMC-HTAP_Yvon"
+		subgraph "cluster_Smooth muscle" {
+			color=brown label="SMOOTH__MUSCLE-AJRCCM_Deprez"
+			subgraph "cluster_Smooth muscle" {
+				color=lightblue label="SMOOTH__MUSCLE-HLCA_lvl2"
+				subgraph "cluster_Smooth muscle" {
+					color=lavender label="SMOOTH__MUSCLE-COPD_lvl1"
+					subgraph "cluster_Smooth muscle" {
+						color=green label="MUSCLE_CELLS-GenomeBiology_Maddi"
+						subgraph "cluster_Smooth muscle" {
+							color=red label="VASCULAR__ASSOCIATED__SMOOTH__MUSCLE__CELL-ref_redcap"
+							"Smooth muscle" [label="Smooth muscle" color=black layer=lv_1]
+						}
+					}
+				}
+			}
+		}
+	}
+	Stroma -> "Smooth muscle"
+	subgraph cluster_Fibromyocytes {
+		color=lightblue label="FIBROMYOCYTES-HLCA_lvl3"
+		Fibromyocytes [label=Fibromyocytes color=black layer=lv_2]
+	}
+	"Smooth muscle" -> Fibromyocytes
+	subgraph "cluster_SM activated stress response" {
+		color=lightblue label="SM__ACTIVATED__STRESS__RESPONSE-HLCA_lvl3"
+		"SM activated stress response" [label="SM activated stress response" color=black layer=lv_2]
+	}
+	"Smooth muscle" -> "SM activated stress response"
+}

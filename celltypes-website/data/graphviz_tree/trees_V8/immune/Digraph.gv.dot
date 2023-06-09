@@ -1,0 +1,1216 @@
+digraph {
+	graph [bb="0,0,6649,1005"];
+	node [label="\N"];
+	subgraph cluster_Immune {
+		graph [bb="578,847,758,961",
+			color=lavender,
+			label="IMMUNE-COPD_lvl0",
+			lheight=0.21,
+			lp="668,949.5",
+			lwidth=2.07
+		];
+		subgraph cluster_Immune {
+			graph [bb="586,855,750,930",
+				color=lightblue,
+				label="IMMUNE-HLCA_lvl1",
+				lheight=0.21,
+				lp="668,918.5",
+				lwidth=2.06
+			];
+			Immune	[color=black,
+				height=0.5,
+				label=Immune,
+				layer=lv_0,
+				pos="668,881",
+				width=1.354];
+		}
+	}
+	subgraph cluster_HEMATOPOIETIC__STEM__CELLS {
+		graph [bb="84,764,482,839",
+			color=teal,
+			label="HEMATOPOIETIC__STEM__CELLS-sikkema_discovair",
+			lheight=0.21,
+			lp="283,827.5",
+			lwidth=5.31
+		];
+		HEMATOPOIETIC__STEM__CELLS	[color=black,
+			height=0.5,
+			label=HEMATOPOIETIC__STEM__CELLS,
+			layer=lv_1,
+			pos="302,790",
+			width=4.7482];
+	}
+	subgraph cluster_ERYTHROCYTE {
+		graph [bb="8,526,256,601",
+			color=olive,
+			label="ERYTHROCYTE-maddi_discovair",
+			lheight=0.21,
+			lp="132,589.5",
+			lwidth=3.22
+		];
+		ERYTHROCYTE	[color=black,
+			height=0.5,
+			label=ERYTHROCYTE,
+			layer=lv_2,
+			pos="165,552",
+			width=2.3109];
+	}
+	subgraph cluster_MEGAKARYOCYTE {
+		graph [bb="264,518,535,632",
+			color=olive,
+			label="MEGAKARYOCYTE-maddi_discovair",
+			lheight=0.21,
+			lp="399.5,620.5",
+			lwidth=3.54
+		];
+		subgraph cluster_MEGAKARYOCYTE {
+			graph [bb="315,526,527,601",
+				color=blue,
+				label="MEGAK-HTAP_Yvon",
+				lheight=0.21,
+				lp="421,589.5",
+				lwidth=1.97
+			];
+			MEGAKARYOCYTE	[color=black,
+				height=0.5,
+				label=MEGAKARYOCYTE,
+				layer=lv_2,
+				pos="421,552",
+				width=2.7261];
+		}
+	}
+	subgraph cluster_Lymphoid {
+		graph [bb="690,764,866,839",
+			color=lightblue,
+			label="LYMPHOID-HLCA_lvl2",
+			lheight=0.21,
+			lp="778,827.5",
+			lwidth=2.22
+		];
+		Lymphoid	[color=black,
+			height=0.5,
+			label=Lymphoid,
+			layer=lv_1,
+			pos="778,790",
+			width=1.5707];
+	}
+	subgraph "cluster_B cell lineage" {
+		graph [bb="543,526,783,601",
+			color=lightblue,
+			label="B__CELL__LINEAGE-HLCA_lvl3",
+			lheight=0.21,
+			lp="663,589.5",
+			lwidth=3.11
+		];
+		"B cell lineage"	[color=black,
+			height=0.5,
+			label="B cell lineage",
+			layer=lv_2,
+			pos="624,552",
+			width=2.0401];
+	}
+	subgraph "cluster_B cells" {
+		graph [bb="122,146,405,416",
+			color=red,
+			label="B__CELL-ref_redcap",
+			lheight=0.21,
+			lp="263.5,404.5",
+			lwidth=2.00
+		];
+		subgraph "cluster_B cells" {
+			graph [bb="130,154,397,385",
+				color=blue,
+				label="B__CELLS-HTAP_Yvon",
+				lheight=0.21,
+				lp="263.5,373.5",
+				lwidth=2.21
+			];
+			subgraph "cluster_B cells" {
+				graph [bb="138,162,389,354",
+					color=green,
+					label="B_CELLS-GenomeBiology_Maddi",
+					lheight=0.21,
+					lp="263.5,342.5",
+					lwidth=3.26
+				];
+				subgraph "cluster_B cells" {
+					graph [bb="169,170,381,323",
+						color=brown,
+						label="B__CELLS-AJRCCM_Deprez",
+						lheight=0.21,
+						lp="275,311.5",
+						lwidth=2.72
+					];
+					subgraph "cluster_B cells" {
+						graph [bb="187,178,373,292",
+							color=lightblue,
+							label="B__CELLS-HLCA_lvl4",
+							lheight=0.21,
+							lp="280,280.5",
+							lwidth=2.11
+						];
+						subgraph "cluster_B cells" {
+							graph [bb="195,186,365,261",
+								color=lavender,
+								label="B__CELLS-COPD_lvl1",
+								lheight=0.21,
+								lp="280,249.5",
+								lwidth=2.14
+							];
+							"B cells"	[color=black,
+								height=0.5,
+								label="B cells",
+								layer=lv_3,
+								pos="315,212",
+								width=1.1555];
+						}
+					}
+				}
+			}
+		}
+	}
+	subgraph "cluster_Plasma cells" {
+		graph [bb="413,138,747,447",
+			color=red,
+			label="PLASMA__CELL-ref_redcap",
+			lheight=0.21,
+			lp="580,435.5",
+			lwidth=2.72
+		];
+		subgraph "cluster_Plasma cells" {
+			graph [bb="421,146,739,416",
+				color=blue,
+				label="PLASMA__CELLS-HTAP_Yvon",
+				lheight=0.21,
+				lp="580,404.5",
+				lwidth=2.93
+			];
+			subgraph "cluster_Plasma cells" {
+				graph [bb="429,154,731,385",
+					color=green,
+					label="PLASMA_CELLS-GenomeBiology_Maddi",
+					lheight=0.21,
+					lp="580,373.5",
+					lwidth=3.97
+				];
+				subgraph "cluster_Plasma cells" {
+					graph [bb="459,162,723,354",
+						color=brown,
+						label="PLASMA__CELLS-AJRCCM_Deprez",
+						lheight=0.21,
+						lp="591,342.5",
+						lwidth=3.44
+					];
+					subgraph "cluster_Plasma cells" {
+						graph [bb="478,170,715,323",
+							color=lightblue,
+							label="PLASMA__CELLS-HLCA_lvl4",
+							lheight=0.21,
+							lp="596.5,311.5",
+							lwidth=2.83
+						];
+						subgraph "cluster_Plasma cells" {
+							graph [bb="486,178,707,292",
+								color=lavender,
+								label="PLASMA__CELLS-COPD_lvl1",
+								lheight=0.21,
+								lp="596.5,280.5",
+								lwidth=2.85
+							];
+							subgraph "cluster_Plasma cells" {
+								graph [bb="516,186,699,261",
+									color=lavender,
+									label="B__PLASMA-COPD_lvl2",
+									lheight=0.21,
+									lp="607.5,249.5",
+									lwidth=2.32
+								];
+								"Plasma cells"	[color=black,
+									height=0.5,
+									label="Plasma cells",
+									layer=lv_3,
+									pos="623,212",
+									width=1.8957];
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	subgraph "cluster_Innate lymphoid cell NK" {
+		graph [bb="791,518,1142,632",
+			color=red,
+			label="INNATE__LYMPHOID__CELL-ref_redcap",
+			lheight=0.21,
+			lp="966.5,620.5",
+			lwidth=3.97
+		];
+		subgraph "cluster_Innate lymphoid cell NK" {
+			graph [bb="799,526,1134,601",
+				color=lightblue,
+				label="INNATE__LYMPHOID__CELL__NK-HLCA_lvl3",
+				lheight=0.21,
+				lp="966.5,589.5",
+				lwidth=4.43
+			];
+			"Innate lymphoid cell NK"	[color=black,
+				height=0.5,
+				label="Innate lymphoid cell NK",
+				layer=lv_2,
+				pos="930,552",
+				width=3.4122];
+		}
+	}
+	subgraph "cluster_NK cells" {
+		graph [bb="755,130,1044,478",
+			color=red,
+			label="NATURAL__KILLER__CELL-ref_redcap",
+			lheight=0.21,
+			lp="899.5,466.5",
+			lwidth=3.79
+		];
+		subgraph "cluster_NK cells" {
+			graph [bb="791,138,1035,447",
+				color=blue,
+				label="NK-HTAP_Yvon",
+				lheight=0.21,
+				lp="913,435.5",
+				lwidth=1.50
+			];
+			subgraph "cluster_NK cells" {
+				graph [bb="799,146,1027,416",
+					color=blue,
+					label="NKT-HTAP_Yvon",
+					lheight=0.21,
+					lp="913,404.5",
+					lwidth=1.61
+				];
+				subgraph "cluster_NK cells" {
+					graph [bb="807,154,1019,385",
+						color=green,
+						label="NK-GenomeBiology_Maddi",
+						lheight=0.21,
+						lp="913,373.5",
+						lwidth=2.64
+					];
+					subgraph "cluster_NK cells" {
+						graph [bb="815,162,1011,354",
+							color=brown,
+							label="LT/NK-AJRCCM_Deprez",
+							lheight=0.21,
+							lp="913,342.5",
+							lwidth=2.32
+						];
+						subgraph "cluster_NK cells" {
+							graph [bb="823,170,1003,323",
+								color=lightblue,
+								label="NK__CELLS-HLCA_lvl4",
+								lheight=0.21,
+								lp="913,311.5",
+								lwidth=2.28
+							];
+							subgraph "cluster_NK cells" {
+								graph [bb="852,178,995,292",
+									color=lavender,
+									label="LT_NK-COPD_lvl1",
+									lheight=0.21,
+									lp="923.5,280.5",
+									lwidth=1.76
+								];
+								subgraph "cluster_NK cells" {
+									graph [bb="868,186,987,261",
+										color=lavender,
+										label="NK-COPD_lvl2",
+										lheight=0.21,
+										lp="927.5,249.5",
+										lwidth=1.43
+									];
+									"NK cells"	[color=black,
+										height=0.5,
+										label="NK cells",
+										layer=lv_3,
+										pos="930,212",
+										width=1.3721];
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	subgraph "cluster_T cell lineage" {
+		graph [bb="1326,518,1565,632",
+			color=lightblue,
+			label="T__CELL__LINEAGE-HLCA_lvl3",
+			lheight=0.21,
+			lp="1445.5,620.5",
+			lwidth=3.10
+		];
+		subgraph "cluster_T cell lineage" {
+			graph [bb="1361,526,1529,601",
+				color=lavender,
+				label="T__CELLS-COPD_lvl2",
+				lheight=0.21,
+				lp="1445,589.5",
+				lwidth=2.11
+			];
+			"T cell lineage"	[color=black,
+				height=0.5,
+				label="T cell lineage",
+				layer=lv_2,
+				pos="1445,552",
+				width=2.004];
+		}
+	}
+	subgraph "cluster_CD4 T cells" {
+		graph [bb="1052,154,1441,385",
+			color=red,
+			label="CD4-POSITIVE,__ALPHA-BETA__T__CELL-ref_redcap",
+			lheight=0.21,
+			lp="1246.5,373.5",
+			lwidth=5.18
+		];
+		subgraph "cluster_CD4 T cells" {
+			graph [bb="1186,162,1433,354",
+				color=blue,
+				label="CD4__T-HTAP_Yvon",
+				lheight=0.21,
+				lp="1309.5,342.5",
+				lwidth=1.92
+			];
+			subgraph "cluster_CD4 T cells" {
+				graph [bb="1194,170,1425,323",
+					color=green,
+					label="T_CD4-GenomeBiology_Maddi",
+					lheight=0.21,
+					lp="1309.5,311.5",
+					lwidth=2.99
+				];
+				subgraph "cluster_CD4 T cells" {
+					graph [bb="1206,178,1417,292",
+						color=lightblue,
+						label="CD4__T__CELLS-HLCA_lvl4",
+						lheight=0.21,
+						lp="1311.5,280.5",
+						lwidth=2.71
+					];
+					subgraph "cluster_CD4 T cells" {
+						graph [bb="1260,186,1409,261",
+							color=lavender,
+							label="CD4__T-COPD_lvl2",
+							lheight=0.21,
+							lp="1334.5,249.5",
+							lwidth=1.85
+						];
+						"CD4 T cells"	[color=black,
+							height=0.5,
+							label="CD4 T cells",
+							layer=lv_3,
+							pos="1337,212",
+							width=1.7693];
+					}
+				}
+			}
+		}
+	}
+	subgraph "cluster_CD8 T cells" {
+		graph [bb="1449,154,1838,385",
+			color=red,
+			label="CD8-POSITIVE,__ALPHA-BETA__T__CELL-ref_redcap",
+			lheight=0.21,
+			lp="1643.5,373.5",
+			lwidth=5.18
+		];
+		subgraph "cluster_CD8 T cells" {
+			graph [bb="1457,162,1764,354",
+				color=olive,
+				label="CD8-maddi_discovair",
+				lheight=0.21,
+				lp="1610.5,342.5",
+				lwidth=2.10
+			];
+			subgraph "cluster_CD8 T cells" {
+				graph [bb="1465,170,1756,323",
+					color=blue,
+					label="CD8__T-HTAP_Yvon",
+					lheight=0.21,
+					lp="1610.5,311.5",
+					lwidth=1.92
+				];
+				subgraph "cluster_CD8 T cells" {
+					graph [bb="1473,178,1748,292",
+						color=green,
+						label="T_CD8_CYTT-GenomeBiology_Maddi",
+						lheight=0.21,
+						lp="1610.5,280.5",
+						lwidth=3.60
+					];
+					subgraph "cluster_CD8 T cells" {
+						graph [bb="1481,186,1692,261",
+							color=lightblue,
+							label="CD8__T__CELLS-HLCA_lvl4",
+							lheight=0.21,
+							lp="1586.5,249.5",
+							lwidth=2.71
+						];
+						"CD8 T cells"	[color=black,
+							height=0.5,
+							label="CD8 T cells",
+							layer=lv_3,
+							pos="1553,212",
+							width=1.7693];
+					}
+				}
+			}
+		}
+	}
+	subgraph "cluster_T cells proliferating" {
+		graph [bb="1846,178,2189,292",
+			color=lightblue,
+			label="T__CELLS__PROLIFERATING-HLCA_lvl4",
+			lheight=0.21,
+			lp="2017.5,280.5",
+			lwidth=3.99
+		];
+		subgraph "cluster_T cells proliferating" {
+			graph [bb="1854,186,2181,261",
+				color=green,
+				label="T_CELLS_DIVIDING-GenomeBiology_Maddi",
+				lheight=0.21,
+				lp="2017.5,249.5",
+				lwidth=4.32
+			];
+			"T cells proliferating"	[color=black,
+				height=0.5,
+				label="T cells proliferating",
+				layer=lv_3,
+				pos="1964,212",
+				width=2.8345];
+		}
+	}
+	subgraph cluster_Myeloid {
+		graph [bb="4876,764,5042,839",
+			color=lightblue,
+			label="MYELOID-HLCA_lvl2",
+			lheight=0.21,
+			lp="4959,827.5",
+			lwidth=2.08
+		];
+		Myeloid	[color=black,
+			height=0.5,
+			label=Myeloid,
+			layer=lv_1,
+			pos="4959,790",
+			width=1.336];
+	}
+	subgraph "cluster_Dendritic cells" {
+		graph [bb="3031,510,3308,663",
+			color=brown,
+			label="DENDITRIC-AJRCCM_Deprez",
+			lheight=0.21,
+			lp="3169.5,651.5",
+			lwidth=2.90
+		];
+		subgraph "cluster_Dendritic cells" {
+			graph [bb="3039,518,3300,632",
+				color=lightblue,
+				label="DENDRITIC__CELLS-HLCA_lvl3",
+				lheight=0.21,
+				lp="3169.5,620.5",
+				lwidth=3.15
+			];
+			subgraph "cluster_Dendritic cells" {
+				graph [bb="3047,526,3292,601",
+					color=lavender,
+					label="DENDRITIC__CELLS-COPD_lvl1",
+					lheight=0.21,
+					lp="3169.5,589.5",
+					lwidth=3.18
+				];
+				"Dendritic cells"	[color=black,
+					height=0.5,
+					label="Dendritic cells",
+					layer=lv_2,
+					pos="3169,552",
+					width=2.1665];
+			}
+		}
+	}
+	subgraph cluster_DC1 {
+		graph [bb="2197,162,2590,354",
+			color=red,
+			label="CONVENTIONAL__DENDRITIC__CELL__1-ref_redcap",
+			lheight=0.21,
+			lp="2393.5,342.5",
+			lwidth=5.24
+		];
+		subgraph cluster_DC1 {
+			graph [bb="2254,170,2582,323",
+				color=green,
+				label="DC_1-GenomeBiology_Maddi",
+				lheight=0.21,
+				lp="2418,311.5",
+				lwidth=2.86
+			];
+			subgraph cluster_DC1 {
+				graph [bb="2262,178,2574,292",
+					color=lightblue,
+					label="DC1-HLCA_lvl4",
+					lheight=0.21,
+					lp="2418,280.5",
+					lwidth=1.53
+				];
+				subgraph cluster_DC1 {
+					graph [bb="2270,186,2566,261",
+						color=green,
+						label="DC_ACTIVATED-GenomeBiology_Maddi",
+						lheight=0.21,
+						lp="2418,249.5",
+						lwidth=3.89
+					];
+					DC1	[color=black,
+						height=0.5,
+						label=DC1,
+						layer=lv_3,
+						pos="2527,212",
+						width=0.84854];
+				}
+			}
+		}
+	}
+	subgraph cluster_DC2 {
+		graph [bb="2598,162,2991,354",
+			color=red,
+			label="CONVENTIONAL__DENDRITIC__CELL__2-ref_redcap",
+			lheight=0.21,
+			lp="2794.5,342.5",
+			lwidth=5.24
+		];
+		subgraph cluster_DC2 {
+			graph [bb="2745,170,2983,323",
+				color=blue,
+				label="DC2-HTAP_Yvon",
+				lheight=0.21,
+				lp="2864,311.5",
+				lwidth=1.62
+			];
+			subgraph cluster_DC2 {
+				graph [bb="2753,178,2975,292",
+					color=green,
+					label="DC_2-GenomeBiology_Maddi",
+					lheight=0.21,
+					lp="2864,280.5",
+					lwidth=2.86
+				];
+				subgraph cluster_DC2 {
+					graph [bb="2841,186,2967,261",
+						color=lightblue,
+						label="DC2-HLCA_lvl4",
+						lheight=0.21,
+						lp="2904,249.5",
+						lwidth=1.53
+					];
+					DC2	[color=black,
+						height=0.5,
+						label=DC2,
+						layer=lv_3,
+						pos="2928,212",
+						width=0.84854];
+				}
+			}
+		}
+	}
+	subgraph "cluster_Migratory DCs" {
+		graph [bb="2999,162,3337,354",
+			color=red,
+			label="MIGRATORY__DENDRITIC__CELL-ref_redcap",
+			lheight=0.21,
+			lp="3168,342.5",
+			lwidth=4.47
+		];
+		subgraph "cluster_Migratory DCs" {
+			graph [bb="3042,170,3295,323",
+				color=blue,
+				label="MIGRATORY__DCS-HTAP_Yvon",
+				lheight=0.21,
+				lp="3168.5,311.5",
+				lwidth=3.06
+			];
+			subgraph "cluster_Migratory DCs" {
+				graph [bb="3050,178,3287,292",
+					color=lightblue,
+					label="MIGRATORY__DCS-HLCA_lvl4",
+					lheight=0.21,
+					lp="3168.5,280.5",
+					lwidth=2.97
+				];
+				subgraph "cluster_Migratory DCs" {
+					graph [bb="3058,186,3279,261",
+						color=lavender,
+						label="MIGRATORY__DC-COPD_lvl2",
+						lheight=0.21,
+						lp="3168.5,249.5",
+						lwidth=2.85
+					];
+					"Migratory DCs"	[color=black,
+						height=0.5,
+						label="Migratory DCs",
+						layer=lv_3,
+						pos="3169,212",
+						width=2.2026];
+				}
+			}
+		}
+	}
+	subgraph "cluster_Plasmacytoid DCs" {
+		graph [bb="3345,154,3712,385",
+			color=red,
+			label="PLASMACYTOID__DENDRITIC__CELL-ref_redcap",
+			lheight=0.21,
+			lp="3528.5,373.5",
+			lwidth=4.88
+		];
+		subgraph "cluster_Plasmacytoid DCs" {
+			graph [bb="3353,162,3701,354",
+				color=blue,
+				label="PDC-HTAP_Yvon",
+				lheight=0.21,
+				lp="3527,342.5",
+				lwidth=1.64
+			];
+			subgraph "cluster_Plasmacytoid DCs" {
+				graph [bb="3361,170,3693,323",
+					color=green,
+					label="DC_PLASMACYTOID-GenomeBiology_Maddi",
+					lheight=0.21,
+					lp="3527,311.5",
+					lwidth=4.39
+				];
+				subgraph "cluster_Plasmacytoid DCs" {
+					graph [bb="3369,178,3629,292",
+						color=lightblue,
+						label="PLASMACYTOID__DCS-HLCA_lvl4",
+						lheight=0.21,
+						lp="3499,280.5",
+						lwidth=3.38
+					];
+					subgraph "cluster_Plasmacytoid DCs" {
+						graph [bb="3377,186,3621,261",
+							color=lavender,
+							label="DC_PLASMACYTOID-COPD_lvl2",
+							lheight=0.21,
+							lp="3499,249.5",
+							lwidth=3.17
+						];
+						"Plasmacytoid DCs"	[color=black,
+							height=0.5,
+							label="Plasmacytoid DCs",
+							layer=lv_3,
+							pos="3480,212",
+							width=2.6359];
+					}
+				}
+			}
+		}
+	}
+	subgraph cluster_Macrophages {
+		graph [bb="4675,502,4955,694",
+			color=brown,
+			label="MACROPHAGE-AJRCCM_Deprez",
+			lheight=0.21,
+			lp="4815,682.5",
+			lwidth=3.24
+		];
+		subgraph cluster_Macrophages {
+			graph [bb="4683,510,4947,663",
+				color=lightblue,
+				label="MACROPHAGES-HLCA_lvl3",
+				lheight=0.21,
+				lp="4815,651.5",
+				lwidth=2.76
+			];
+			subgraph cluster_Macrophages {
+				graph [bb="4691,518,4939,632",
+					color=lavender,
+					label="MACROPHAGES-COPD_lvl2",
+					lheight=0.21,
+					lp="4815,620.5",
+					lwidth=2.78
+				];
+				subgraph cluster_Macrophages {
+					graph [bb="4699,526,4931,601",
+						color=lavender,
+						label="MACROPHAGES_1-COPD_lvl2",
+						lheight=0.21,
+						lp="4815,589.5",
+						lwidth=3.00
+					];
+					Macrophages	[color=black,
+						height=0.5,
+						label=Macrophages,
+						layer=lv_2,
+						pos="4850,552",
+						width=2.0401];
+				}
+			}
+		}
+	}
+	subgraph cluster_MACROPHAGE_MARCOPOS {
+		graph [bb="3720,178,4108,292",
+			color=green,
+			label="MACROPHAGE_MARCOPOS-GenomeBiology_Maddi",
+			lheight=0.21,
+			lp="3914,280.5",
+			lwidth=5.17
+		];
+		subgraph cluster_MACROPHAGE_MARCOPOS {
+			graph [bb="3798,186,4100,261",
+				color=lavender,
+				label="MACROPHAGE__MARCO+-COPD_lvl2",
+				lheight=0.21,
+				lp="3949,249.5",
+				lwidth=3.78
+			];
+			MACROPHAGE_MARCOPOS	[color=black,
+				height=0.5,
+				label=MACROPHAGE_MARCOPOS,
+				layer=lv_3,
+				pos="3949,212",
+				width=3.9719];
+		}
+	}
+	subgraph cluster_MACROPHAGE_MARCONEG {
+		graph [bb="4116,186,4507,261",
+			color=green,
+			label="MACROPHAGE_MARCONEG-GenomeBiology_Maddi",
+			lheight=0.21,
+			lp="4311.5,249.5",
+			lwidth=5.21
+		];
+		MACROPHAGE_MARCONEG	[color=black,
+			height=0.5,
+			label=MACROPHAGE_MARCONEG,
+			layer=lv_3,
+			pos="4354,212",
+			width=4.026];
+	}
+	subgraph "cluster_Alveolar macrophages" {
+		graph [bb="4515,178,4837,292",
+			color=red,
+			label="ALVEOLAR__MACROPHAGE-ref_redcap",
+			lheight=0.21,
+			lp="4676,280.5",
+			lwidth=3.92
+		];
+		subgraph "cluster_Alveolar macrophages" {
+			graph [bb="4523,186,4829,261",
+				color=lightblue,
+				label="ALVEOLAR__MACROPHAGES-HLCA_lvl4",
+				lheight=0.21,
+				lp="4676,249.5",
+				lwidth=4.03
+			];
+			"Alveolar macrophages"	[color=black,
+				height=0.5,
+				label="Alveolar macrophages",
+				layer=lv_3,
+				pos="4653,212",
+				width=3.1594];
+		}
+	}
+	subgraph "cluster_Alveolar Mφ CCL3+" {
+		graph [bb="3904,16,4181,91",
+			color=lightblue,
+			label="ALVEOLAR__MΦ__CCL3+-HLCA_lvl5",
+			lheight=0.21,
+			lp="4042.5,79.5",
+			lwidth=3.62
+		];
+		"Alveolar Mφ CCL3+"	[color=black,
+			height=0.5,
+			label="Alveolar Mφ CCL3+",
+			layer=lv_4,
+			pos="4070,42",
+			width=2.8706];
+	}
+	subgraph "cluster_Alveolar Mφ MT-positive" {
+		graph [bb="4189,16,4512,91",
+			color=lightblue,
+			label="ALVEOLAR__MΦ__MT-POSITIVE-HLCA_lvl5",
+			lheight=0.21,
+			lp="4350.5,79.5",
+			lwidth=4.26
+		];
+		"Alveolar Mφ MT-positive"	[color=black,
+			height=0.5,
+			label="Alveolar Mφ MT-positive",
+			layer=lv_4,
+			pos="4380,42",
+			width=3.4483];
+	}
+	subgraph "cluster_Alveolar Mφ proliferating" {
+		graph [bb="4520,16,4869,91",
+			color=lightblue,
+			label="ALVEOLAR__MΦ__PROLIFERATING-HLCA_lvl5",
+			lheight=0.21,
+			lp="4694.5,79.5",
+			lwidth=4.62
+		];
+		"Alveolar Mφ proliferating"	[color=black,
+			height=0.5,
+			label="Alveolar Mφ proliferating",
+			layer=lv_4,
+			pos="4657,42",
+			width=3.5747];
+	}
+	subgraph "cluster_Interstitial macrophages" {
+		graph [bb="4845,170,5201,323",
+			color=red,
+			label="INTERSTITIAL__MACROPHAGE-ref_redcap",
+			lheight=0.21,
+			lp="5023,311.5",
+			lwidth=4.28
+		];
+		subgraph "cluster_Interstitial macrophages" {
+			graph [bb="4853,178,5193,292",
+				color=lightblue,
+				label="INTERSTITIAL__MACROPHAGES-HLCA_lvl4",
+				lheight=0.21,
+				lp="5023,280.5",
+				lwidth=4.39
+			];
+			subgraph "cluster_Interstitial macrophages" {
+				graph [bb="4861,186,5185,261",
+					color=lavender,
+					label="MACROPHAGE__INTERSTITIAL-COPD_lvl2",
+					lheight=0.21,
+					lp="5023,249.5",
+					lwidth=4.28
+				];
+				"Interstitial macrophages"	[color=black,
+					height=0.5,
+					label="Interstitial macrophages",
+					layer=lv_3,
+					pos="5048,212",
+					width=3.4844];
+			}
+		}
+	}
+	subgraph "cluster_Interstitial Mφ perivascular" {
+		graph [bb="4877,8,5261,122",
+			color=blue,
+			label="INTERSTITIAL__MAC__PERIVASCULAR-HTAP_Yvon",
+			lheight=0.21,
+			lp="5069,110.5",
+			lwidth=5.11
+		];
+		subgraph "cluster_Interstitial Mφ perivascular" {
+			graph [bb="4885,16,5253,91",
+				color=lightblue,
+				label="INTERSTITIAL__MΦ__PERIVASCULAR-HLCA_lvl5",
+				lheight=0.21,
+				lp="5069,79.5",
+				lwidth=4.89
+			];
+			"Interstitial Mφ perivascular"	[color=black,
+				height=0.5,
+				label="Interstitial Mφ perivascular",
+				layer=lv_4,
+				pos="5048,42",
+				width=3.8816];
+		}
+	}
+	subgraph "cluster_Monocyte-derived Mφ" {
+		graph [bb="5269,8,5581,122",
+			color=blue,
+			label="MONOCYTE-DERIV__MAC-HTAP_Yvon",
+			lheight=0.21,
+			lp="5425,110.5",
+			lwidth=3.81
+		];
+		subgraph "cluster_Monocyte-derived Mφ" {
+			graph [bb="5277,16,5573,91",
+				color=lightblue,
+				label="MONOCYTE-DERIVED__MΦ-HLCA_lvl5",
+				lheight=0.21,
+				lp="5425,79.5",
+				lwidth=3.89
+			];
+			"Monocyte-derived Mφ"	[color=black,
+				height=0.5,
+				label="Monocyte-derived Mφ",
+				layer=lv_4,
+				pos="5397,42",
+				width=3.1233];
+		}
+	}
+	subgraph cluster_MACROPHAGE_DIVIDING {
+		graph [bb="5209,186,5581,261",
+			color=green,
+			label="MACROPHAGE_DIVIDING-GenomeBiology_Maddi",
+			lheight=0.21,
+			lp="5395,249.5",
+			lwidth=4.94
+		];
+		MACROPHAGE_DIVIDING	[color=black,
+			height=0.5,
+			label=MACROPHAGE_DIVIDING,
+			layer=lv_3,
+			pos="5350,212",
+			width=3.683];
+	}
+	subgraph cluster_INFLAMMATORY__MACROPHAGES {
+		graph [bb="5589,186,5959,261",
+			color=lavender,
+			label="INFLAMMATORY__MACROPHAGES-COPD_lvl2",
+			lheight=0.21,
+			lp="5774,249.5",
+			lwidth=4.67
+		];
+		INFLAMMATORY__MACROPHAGES	[color=black,
+			height=0.5,
+			label=INFLAMMATORY__MACROPHAGES,
+			layer=lv_3,
+			pos="5774,212",
+			width=4.9107];
+	}
+	subgraph "cluster_Mast cells" {
+		graph [bb="4963,486,5297,756",
+			color=red,
+			label="MUCOSAL__TYPE__MAST__CELL-ref_redcap",
+			lheight=0.21,
+			lp="5130,744.5",
+			lwidth=4.42
+		];
+		subgraph "cluster_Mast cells" {
+			graph [bb="4971,494,5270,725",
+				color=blue,
+				label="MAST__CELLS-HTAP_Yvon",
+				lheight=0.21,
+				lp="5120.5,713.5",
+				lwidth=2.65
+			];
+			subgraph "cluster_Mast cells" {
+				graph [bb="4979,502,5262,694",
+					color=green,
+					label="MAST_CELLS-GenomeBiology_Maddi",
+					lheight=0.21,
+					lp="5120.5,682.5",
+					lwidth=3.71
+				];
+				subgraph "cluster_Mast cells" {
+					graph [bb="4987,510,5232,663",
+						color=brown,
+						label="MAST__CELLS-AJRCCM_Deprez",
+						lheight=0.21,
+						lp="5109.5,651.5",
+						lwidth=3.18
+					];
+					subgraph "cluster_Mast cells" {
+						graph [bb="4995,518,5213,632",
+							color=lightblue,
+							label="MAST__CELLS-HLCA_lvl3",
+							lheight=0.21,
+							lp="5104,620.5",
+							lwidth=2.56
+						];
+						subgraph "cluster_Mast cells" {
+							graph [bb="5003,526,5205,601",
+								color=lavender,
+								label="MAST__CELLS-COPD_lvl2",
+								lheight=0.21,
+								lp="5104,589.5",
+								lwidth=2.58
+							];
+							"Mast cells"	[color=black,
+								height=0.5,
+								label="Mast cells",
+								layer=lv_2,
+								pos="5069,552",
+								width=1.6068];
+						}
+					}
+				}
+			}
+		}
+	}
+	subgraph cluster_Monocytes {
+		graph [bb="5709,502,5981,694",
+			color=green,
+			label="MONOCYTE-GenomeBiology_Maddi",
+			lheight=0.21,
+			lp="5845,682.5",
+			lwidth=3.56
+		];
+		subgraph cluster_Monocytes {
+			graph [bb="5746,510,5973,663",
+				color=brown,
+				label="MONOCYTE-AJRCCM_Deprez",
+				lheight=0.21,
+				lp="5859.5,651.5",
+				lwidth=2.93
+			];
+			subgraph cluster_Monocytes {
+				graph [bb="5755,518,5965,632",
+					color=lightblue,
+					label="MONOCYTES-HLCA_lvl3",
+					lheight=0.21,
+					lp="5860,620.5",
+					lwidth=2.46
+				];
+				subgraph cluster_Monocytes {
+					graph [bb="5763,526,5957,601",
+						color=lavender,
+						label="MONOCYTES-COPD_lvl2",
+						lheight=0.21,
+						lp="5860,589.5",
+						lwidth=2.47
+					];
+					Monocytes	[color=black,
+						height=0.5,
+						label=Monocytes,
+						layer=lv_2,
+						pos="5888,552",
+						width=1.6971];
+				}
+			}
+		}
+	}
+	subgraph "cluster_Classical monocytes" {
+		graph [bb="5967,178,6272,292",
+			color=blue,
+			label="CMONOCYTES-HTAP_Yvon",
+			lheight=0.21,
+			lp="6119.5,280.5",
+			lwidth=2.69
+		];
+		subgraph "cluster_Classical monocytes" {
+			graph [bb="5975,186,6264,261",
+				color=lightblue,
+				label="CLASSICAL__MONOCYTES-HLCA_lvl4",
+				lheight=0.21,
+				lp="6119.5,249.5",
+				lwidth=3.79
+			];
+			"Classical monocytes"	[color=black,
+				height=0.5,
+				label="Classical monocytes",
+				layer=lv_3,
+				pos="6088,212",
+				width=2.9067];
+		}
+	}
+	subgraph "cluster_Non-classical monocytes" {
+		graph [bb="6280,170,6641,323",
+			color=blue,
+			label="NCMONOCYTES-HTAP_Yvon",
+			lheight=0.21,
+			lp="6460.5,311.5",
+			lwidth=2.86
+		];
+		subgraph "cluster_Non-classical monocytes" {
+			graph [bb="6288,178,6633,292",
+				color=red,
+				label="PATROLLING__MONOCYTE-ref_redcap",
+				lheight=0.21,
+				lp="6460.5,280.5",
+				lwidth=3.85
+			];
+			subgraph "cluster_Non-classical monocytes" {
+				graph [bb="6296,186,6625,261",
+					color=lightblue,
+					label="NON-CLASSICAL__MONOCYTES-HLCA_lvl4",
+					lheight=0.21,
+					lp="6460.5,249.5",
+					lwidth=4.35
+				];
+				"Non-classical monocytes"	[color=black,
+					height=0.5,
+					label="Non-classical monocytes",
+					layer=lv_3,
+					pos="6428,212",
+					width=3.4483];
+			}
+		}
+	}
+	subgraph cluster_NEUTROPHIL {
+		graph [bb="5989,518,6213,632",
+			color=red,
+			label="NEUTROPHIL-ref_redcap",
+			lheight=0.21,
+			lp="6101,620.5",
+			lwidth=2.53
+		];
+		subgraph cluster_NEUTROPHIL {
+			graph [bb="5997,526,6205,601",
+				color=lavender,
+				label="NEUTROPHILS-COPD_lvl2",
+				lheight=0.21,
+				lp="6101,589.5",
+				lwidth=2.67
+			];
+			NEUTROPHIL	[color=black,
+				height=0.5,
+				label=NEUTROPHIL,
+				layer=lv_2,
+				pos="6082,552",
+				width=2.1304];
+		}
+	}
+	root	[color=black,
+		height=0.5,
+		label=root,
+		layer=lv_0,
+		pos="668,987",
+		width=0.83048];
+	root -> Immune	[pos="e,668,899.2 668,968.83 668,952.64 668,928.13 668,909.27"];
+	Immune -> HEMATOPOIETIC__STEM__CELLS	[pos="e,359.39,806.99 626.51,871.4 588.74,863.43 531.48,851.04 482,839 444.53,829.88 402.92,818.84 369.15,809.65"];
+	ERYTHROID	[height=0.5,
+		pos="559,790",
+		width=1.8957];
+	Immune -> ERYTHROID	[pos="e,579.15,807.45 648.76,864.29 631.65,850.32 606.41,829.71 587.05,813.9"];
+	Immune -> Lymphoid	[pos="e,758.04,807.15 687.41,864.29 704.79,850.23 730.47,829.45 750.06,813.61"];
+	Immune -> Myeloid	[pos="e,4910.9,792 716.56,878.99 1154.8,869.9 4422.8,802.12 4900.7,792.21"];
+	ERYTHROID -> ERYTHROCYTE	[pos="e,171.22,570.1 523.53,774.59 511.78,770.43 498.5,766.38 486,764 466.88,760.37 328.11,765.27 311,756 238.96,716.97 193.79,625.16 \
+175.02,579.6"];
+	ERYTHROID -> MEGAKARYOCYTE	[pos="e,430.84,570.17 548.56,771.91 545.46,766.8 542.08,761.18 539,756 501.5,692.82 458.32,617.99 436.04,579.22"];
+	Lymphoid -> "B cell lineage"	[pos="e,634.97,569.82 766.92,772.03 740.23,731.12 672.22,626.89 640.61,578.46"];
+	Lymphoid -> "Innate lymphoid cell NK"	[pos="e,918.96,570.14 788.93,772.03 815.21,731.22 882.08,627.4 913.38,578.81"];
+	Lymphoid -> "T cell lineage"	[pos="e,1427,569.67 834.13,787.19 920.94,783.84 1083.4,775.16 1138,756 1254.2,715.18 1369.5,620.73 1419.3,576.56"];
+	"B cell lineage" -> "B cells"	[pos="e,323.28,229.7 603.4,534.7 585.09,520.67 557.21,500.47 531,486 522.98,481.57 519.21,483.65 512,478 423.67,408.73 355.21,290.39 327.9,\
+238.57"];
+	"B cell lineage" -> "Plasma cells"	[pos="e,623.05,230.19 623.95,533.77 623.79,478.85 623.28,307.55 623.08,240.4"];
+	"Innate lymphoid cell NK" -> "NK cells"	[pos="e,930,230.19 930,533.77 930,478.85 930,307.55 930,240.4"];
+	"T cell lineage" -> "CD4 T cells"	[pos="e,1342.5,230.19 1439.5,533.77 1421.9,478.74 1367,306.85 1345.6,239.99"];
+	"T cell lineage" -> "CD8 T cells"	[pos="e,1547.5,230.19 1450.5,533.77 1468.1,478.74 1523,306.85 1544.4,239.99"];
+	"T cell lineage" -> "T cells proliferating"	[pos="e,1951.6,230.18 1505.4,542.1 1558.4,532.33 1636.2,513.13 1696,478 1807.1,412.67 1906,290.93 1945.6,238.31"];
+	Myeloid -> "Dendritic cells"	[pos="e,3234.4,561.89 4914.1,783.5 4861.6,777.04 4772,765.93 4695,756 4137.6,684.09 3466.4,593.36 3244.3,563.24"];
+	Myeloid -> Macrophages	[pos="e,4857.9,570.14 4951.2,772.03 4932.4,731.39 4884.8,628.26 4862.2,579.42"];
+	Myeloid -> "Mast cells"	[pos="e,5061,570.14 4966.9,772.03 4985.9,731.39 5033.9,628.26 5056.7,579.42"];
+	Myeloid -> Monocytes	[pos="e,5851,566.34 5005.5,785.1 5055.9,780.34 5138.8,771.03 5209,756 5451.1,704.18 5732.1,608.41 5841.3,569.79"];
+	Myeloid -> NEUTROPHIL	[pos="e,6077.8,570.06 5007.1,788.69 5201.3,787.29 5919.5,780.46 5961,756 6027.5,716.73 6061.7,625.38 6075.1,579.82"];
+	"Dendritic cells" -> DC1	[pos="e,2540,228.51 3096.3,545.29 3026.7,537.51 2920.2,519.42 2837,478 2710,414.81 2592,288.29 2546.6,236.21"];
+	"Dendritic cells" -> DC2	[pos="e,2932.5,230.06 3134.7,535.69 3109.7,523.13 3076.4,503.32 3054,478 2988.8,404.3 2950.2,290.92 2935.3,239.72"];
+	"Dendritic cells" -> "Migratory DCs"	[pos="e,3169,230.19 3169,533.77 3169,478.85 3169,307.55 3169,240.4"];
+	"Dendritic cells" -> "Plasmacytoid DCs"	[pos="e,3470.3,230.16 3199.7,535.38 3223.9,522.14 3257.7,501.56 3283,478 3364.3,402.17 3435.5,289.16 3465.2,238.81"];
+	Macrophages -> MACROPHAGE_MARCOPOS	[pos="e,3953.7,230.11 4776.4,551.85 4612.1,552.46 4221.4,546.45 4112,478 4021.9,421.62 3974,295.3 3956.7,239.9"];
+	Macrophages -> MACROPHAGE_MARCONEG	[pos="e,4359.4,230.25 4776.7,550.78 4704.9,547.14 4595.5,532.11 4519,478 4432.3,416.71 4381.7,294.07 4362.7,239.84"];
+	Macrophages -> "Alveolar macrophages"	[pos="e,4663,230.19 4840,533.77 4807.8,478.51 4706.9,305.43 4668.3,239.17"];
+	Macrophages -> "Interstitial macrophages"	[pos="e,5037.9,230.19 4860.1,533.77 4892.5,478.51 4993.9,305.43 5032.7,239.17"];
+	Macrophages -> MACROPHAGE_DIVIDING	[pos="e,5345.7,230.03 4877.5,535.3 4906.6,519.58 4954.4,496.28 4999,486 5019.6,481.25 5170.8,488.74 5189,478 5280.4,423.99 5326.6,295.84 \
+5342.9,239.9"];
+	Macrophages -> INFLAMMATORY__MACROPHAGES	[pos="e,5768.1,230.26 4877.2,535.19 4906.2,519.26 4954.2,495.67 4999,486 5030.8,479.13 5556.2,493.11 5585,478 5684,426.17 5742.8,296.35 \
+5764.5,239.91"];
+	"Alveolar macrophages" -> "Alveolar Mφ CCL3+"	[pos="e,4087.3,59.8 4631.4,194.1 4604.8,174.41 4557.5,142.94 4511,130 4441.2,110.57 4253.9,144.33 4185,122 4150.3,110.77 4116.7,85.433 \
+4094.8,66.463"];
+	"Alveolar macrophages" -> "Alveolar Mφ MT-positive"	[pos="e,4407.1,59.655 4625.8,194.28 4576.3,163.77 4471.2,99.109 4415.8,65.048"];
+	"Alveolar macrophages" -> "Alveolar Mφ proliferating"	[pos="e,4656.6,60.078 4653.4,193.97 4654.1,164.91 4655.5,105.52 4656.3,70.518"];
+	"Interstitial macrophages" -> "Interstitial Mφ perivascular"	[pos="e,5048,60.078 5048,193.97 5048,164.91 5048,105.52 5048,70.518"];
+	"Interstitial macrophages" -> "Monocyte-derived Mφ"	[pos="e,5373.5,59.809 5073.8,194.35 5104,175.66 5156.1,145.89 5205,130 5227.2,122.77 5234.9,129.65 5257,122 5296.5,108.33 5337.7,83.609 \
+5365.1,65.451"];
+	Monocytes -> "Classical monocytes"	[pos="e,6082.3,230.26 5908.1,534.95 5924.4,521.15 5947.3,500.04 5963,478 6019.6,398.76 6061.4,289.89 6078.9,239.98"];
+	Monocytes -> "Non-classical monocytes"	[pos="e,6423.8,230.08 5907,534.89 5926.9,519.08 5959.9,495.93 5993,486 6022.3,477.21 6241.6,493.41 6268,478 6359.6,424.55 6405,296.1 6421.1,\
+239.99"];
+}

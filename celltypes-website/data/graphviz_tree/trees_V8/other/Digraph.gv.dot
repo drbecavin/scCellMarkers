@@ -1,0 +1,98 @@
+digraph {
+	graph [bb="0,0,1086,354"];
+	node [label="\N"];
+	subgraph cluster_SCHWANN {
+		graph [bb="215,91,431,166",
+			color=olive,
+			label="SCHWANN-maddi_discovair",
+			lheight=0.21,
+			lp="323,154.5",
+			lwidth=2.78
+		];
+		SCHWANN	[color=black,
+			height=0.5,
+			label=SCHWANN,
+			layer=lv_2,
+			pos="361,117",
+			width=1.7332];
+	}
+	subgraph cluster_MYELINATING__SCHWANN {
+		graph [bb="8,8,344,83",
+			color=olive,
+			label="MYELINATING__SCHWANN-maddi_discovair",
+			lheight=0.21,
+			lp="176,71.5",
+			lwidth=4.44
+		];
+		MYELINATING__SCHWANN	[color=black,
+			height=0.5,
+			label=MYELINATING__SCHWANN,
+			layer=lv_3,
+			pos="196,34",
+			width=3.8997];
+	}
+	subgraph "cluster_NON-MYELINATING__SCHWANN" {
+		graph [bb="352,8,728,83",
+			color=olive,
+			label="NON-MYELINATING__SCHWANN-maddi_discovair",
+			lheight=0.21,
+			lp="540,71.5",
+			lwidth=5.00
+		];
+		"NON-MYELINATING__SCHWANN"	[color=black,
+			height=0.5,
+			label="NON-MYELINATING__SCHWANN",
+			layer=lv_3,
+			pos="526,34",
+			width=4.6218];
+	}
+	subgraph cluster_NAF1__ENDONEURIAL {
+		graph [bb="439,91,744,166",
+			color=olive,
+			label="NAF1__ENDONEURIAL-maddi_discovair",
+			lheight=0.21,
+			lp="591.5,154.5",
+			lwidth=4.01
+		];
+		NAF1__ENDONEURIAL	[color=black,
+			height=0.5,
+			label=NAF1__ENDONEURIAL,
+			layer=lv_2,
+			pos="591,117",
+			width=3.34];
+	}
+	subgraph "cluster_NAF2__PERI/EPINEURIAL" {
+		graph [bb="752,91,1078,166",
+			color=olive,
+			label="NAF2__PERI/EPINEURIAL-maddi_discovair",
+			lheight=0.21,
+			lp="915,154.5",
+			lwidth=4.31
+		];
+		"NAF2__PERI/EPINEURIAL"	[color=black,
+			height=0.5,
+			label="NAF2__PERI/EPINEURIAL",
+			layer=lv_2,
+			pos="894,117",
+			width=3.7191];
+	}
+	root	[color=black,
+		height=0.5,
+		label=root,
+		layer=lv_0,
+		pos="591,336",
+		width=0.83048];
+	OTHER	[height=0.5,
+		pos="591,264",
+		width=1.2638];
+	root -> OTHER	[pos="e,591,282.1 591,317.7 591,309.98 591,300.71 591,292.11"];
+	NERVOUS	[height=0.5,
+		pos="591,192",
+		width=1.661];
+	OTHER -> NERVOUS	[pos="e,591,210.1 591,245.7 591,237.98 591,228.71 591,220.11"];
+	NERVOUS -> SCHWANN	[pos="e,380.79,134.13 532.82,187.46 502.82,184.2 466.1,177.96 435,166 418.7,159.73 402.24,149.53 389,140.13"];
+	NERVOUS -> NAF1__ENDONEURIAL	[pos="e,591,135.18 591,173.7 591,165.25 591,154.87 591,145.37"];
+	NERVOUS -> "NAF2__PERI/EPINEURIAL"	[pos="e,851.08,134.12 645.56,184.49 675.95,180.33 714.34,174.16 748,166 779.55,158.35 814.08,147.14 841.64,137.47"];
+	SCHWANN -> MYELINATING__SCHWANN	[pos="e,229.77,51.576 330.74,101.14 304.96,88.491 267.64,70.167 238.8,56.013"];
+	SCHWANN -> "NON-MYELINATING__SCHWANN"	[pos="e,491.94,51.719 391.26,101.14 416.95,88.533 454.12,70.287 482.91,56.151"];
+}

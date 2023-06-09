@@ -1,0 +1,35 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E125" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tools.preprocessing_data.dict_celltypes_GB_Maddi" />
+          <option value="tools.preprocessing_data.dict_celltypes_AJ_Deprez" />
+          <option value="tools.preprocessing_data.dict_celltypes_HLCA" />
+          <option value="tools.preprocessing_data.dict_celltypes_COPD" />
+          <option value="tools.preprocessing_data.dict_celltypes_HTAP" />
+          <option value="tools.preprocessing_data.maddi_discovair" />
+          <option value="tools.preprocessing_data.sikkema_discovair" />
+          <option value="tools.preprocessing_data.deprez_discovair" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

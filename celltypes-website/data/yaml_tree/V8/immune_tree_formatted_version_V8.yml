@@ -1,0 +1,145 @@
+root:
+    Immune: 
+        - 'IMMUNE; COPD_lvl0'
+        - 'IMMUNE; HLCA_lvl1'
+        - HEMATOPOIETIC__STEM__CELLS:
+            - 'HEMATOPOIETIC__STEM__CELLS; sikkema_discovair'
+        ## WE DO NOT HAVE MARKERS FOR ERYTHROID
+        - ERYTHROID:
+            - ERYTHROCYTE:
+                - 'ERYTHROCYTE; maddi_discovair'
+            - MEGAKARYOCYTE:
+                - 'MEGAKARYOCYTE; maddi_discovair'
+                - 'MEGAK; HTAP_Yvon'
+        - Lymphoid:
+            - 'LYMPHOID; HLCA_lvl2'
+            - B cell lineage:
+                - 'B__CELL__LINEAGE; HLCA_lvl3'
+                - B cells: 
+                    - 'B__CELL; ref_redcap'
+                    - 'B__CELLS; HTAP_Yvon'
+                    - 'B_CELLS; GenomeBiology_Maddi'
+                    - 'B__CELLS; AJRCCM_Deprez'
+                    - 'B__CELLS; HLCA_lvl4'
+                    - 'B__CELLS; COPD_lvl1'
+                - Plasma cells: 
+                    - 'PLASMA__CELL; ref_redcap'
+                    - 'PLASMA__CELLS; HTAP_Yvon'
+                    - 'PLASMA_CELLS; GenomeBiology_Maddi'
+                    - 'PLASMA__CELLS; AJRCCM_Deprez'
+                    - 'PLASMA__CELLS; HLCA_lvl4'
+                    - 'PLASMA__CELLS; COPD_lvl1'
+                    - 'B__PLASMA; COPD_lvl2'
+
+            - Innate lymphoid cell NK: 
+                - 'INNATE__LYMPHOID__CELL; ref_redcap'
+                - 'INNATE__LYMPHOID__CELL__NK; HLCA_lvl3'
+                - NK cells: 
+                    - 'NATURAL__KILLER__CELL; ref_redcap'
+                    - 'NK; HTAP_Yvon'
+                    - 'NKT; HTAP_Yvon'
+                    - 'NK; GenomeBiology_Maddi'
+                    - 'LT/NK; AJRCCM_Deprez'
+                    - 'NK__CELLS; HLCA_lvl4'
+                    - 'LT_NK; COPD_lvl1'
+                    - 'NK; COPD_lvl2' 
+            - T cell lineage: 
+                - 'T__CELL__LINEAGE; HLCA_lvl3'
+                - 'T__CELLS; COPD_lvl2'
+                - CD4 T cells: 
+                    - 'CD4-POSITIVE,__ALPHA-BETA__T__CELL; ref_redcap'
+                    - 'CD4__T; HTAP_Yvon'
+                    - 'T_CD4; GenomeBiology_Maddi'
+                    - 'CD4__T__CELLS; HLCA_lvl4'
+                    - 'CD4__T; COPD_lvl2'
+                - CD8 T cells: 
+                    - 'CD8-POSITIVE,__ALPHA-BETA__T__CELL; ref_redcap' 
+                    - 'CD8; maddi_discovair'
+                    - 'CD8__T; HTAP_Yvon'
+                    - 'T_CD8_CYTT; GenomeBiology_Maddi'
+                    - 'CD8__T__CELLS; HLCA_lvl4'
+                - T cells proliferating: 
+                    - 'T__CELLS__PROLIFERATING; HLCA_lvl4'
+                    - 'T_CELLS_DIVIDING; GenomeBiology_Maddi'
+        - Myeloid: 
+            - 'MYELOID; HLCA_lvl2'
+            - Dendritic cells: 
+                - 'DENDITRIC; AJRCCM_Deprez'
+                - 'DENDRITIC__CELLS; HLCA_lvl3'
+                - 'DENDRITIC__CELLS; COPD_lvl1'
+                - DC1: 
+                    - 'CONVENTIONAL__DENDRITIC__CELL__1; ref_redcap'
+                    - 'DC_1; GenomeBiology_Maddi'
+                    - 'DC1; HLCA_lvl4'
+                    - 'DC_ACTIVATED; GenomeBiology_Maddi'
+                - DC2: 
+                    - 'CONVENTIONAL__DENDRITIC__CELL__2; ref_redcap'
+                    - 'DC2; HTAP_Yvon'
+                    - 'DC_2; GenomeBiology_Maddi'
+                    - 'DC2; HLCA_lvl4'
+                - Migratory DCs: 
+                    - 'MIGRATORY__DENDRITIC__CELL; ref_redcap'
+                    - 'MIGRATORY__DCS; HTAP_Yvon'
+                    - 'MIGRATORY__DCS; HLCA_lvl4'
+                    - 'MIGRATORY__DC; COPD_lvl2'
+                - Plasmacytoid DCs: 
+                    - 'PLASMACYTOID__DENDRITIC__CELL; ref_redcap'
+                    - 'PDC; HTAP_Yvon'
+                    - 'DC_PLASMACYTOID; GenomeBiology_Maddi'
+                    - 'PLASMACYTOID__DCS; HLCA_lvl4'
+                    - 'DC_PLASMACYTOID; COPD_lvl2'
+            - Macrophages: 
+                - 'MACROPHAGE; AJRCCM_Deprez'
+                - 'MACROPHAGES; HLCA_lvl3'
+                - 'MACROPHAGES; COPD_lvl2'
+                - 'MACROPHAGES_1; COPD_lvl2'
+                - MACROPHAGE_MARCOPOS:
+                    - 'MACROPHAGE_MARCOPOS; GenomeBiology_Maddi'
+                    - 'MACROPHAGE__MARCO+; COPD_lvl2' 
+                - MACROPHAGE_MARCONEG:
+                    - 'MACROPHAGE_MARCONEG; GenomeBiology_Maddi'
+                - Alveolar macrophages: 
+                    - 'ALVEOLAR__MACROPHAGE; ref_redcap'
+                    - 'ALVEOLAR__MACROPHAGES; HLCA_lvl4' 
+                    - Alveolar Mφ CCL3+: 
+                        - 'ALVEOLAR__MΦ__CCL3+; HLCA_lvl5'
+                    - Alveolar Mφ MT-positive: 
+                        - 'ALVEOLAR__MΦ__MT-POSITIVE; HLCA_lvl5'
+                    - Alveolar Mφ proliferating: 
+                        - 'ALVEOLAR__MΦ__PROLIFERATING; HLCA_lvl5'
+                - Interstitial macrophages:           
+                    - 'INTERSTITIAL__MACROPHAGE; ref_redcap'
+                    - 'INTERSTITIAL__MACROPHAGES; HLCA_lvl4'
+                    - 'MACROPHAGE__INTERSTITIAL; COPD_lvl2'
+                    - Interstitial Mφ perivascular: 
+                        - 'INTERSTITIAL__MAC__PERIVASCULAR; HTAP_Yvon'
+                        - 'INTERSTITIAL__MΦ__PERIVASCULAR; HLCA_lvl5'
+                    - Monocyte-derived Mφ: 
+                        - 'MONOCYTE-DERIV__MAC; HTAP_Yvon'
+                        - 'MONOCYTE-DERIVED__MΦ; HLCA_lvl5'
+                - MACROPHAGE_DIVIDING:
+                    - 'MACROPHAGE_DIVIDING; GenomeBiology_Maddi'
+                - INFLAMMATORY__MACROPHAGES:
+                    - 'INFLAMMATORY__MACROPHAGES; COPD_lvl2'
+            - Mast cells: 
+                - 'MUCOSAL__TYPE__MAST__CELL; ref_redcap'
+                - 'MAST__CELLS; HTAP_Yvon'
+                - 'MAST_CELLS; GenomeBiology_Maddi'
+                - 'MAST__CELLS; AJRCCM_Deprez'
+                - 'MAST__CELLS; HLCA_lvl3'
+                - 'MAST__CELLS; COPD_lvl2'
+            - Monocytes: 
+                - 'MONOCYTE; GenomeBiology_Maddi'
+                - 'MONOCYTE; AJRCCM_Deprez'
+                - 'MONOCYTES; HLCA_lvl3'
+                - 'MONOCYTES; COPD_lvl2'
+                - Classical monocytes: 
+                    - 'CMONOCYTES; HTAP_Yvon'
+                    - 'CLASSICAL__MONOCYTES; HLCA_lvl4'
+                - Non-classical monocytes: 
+                    - 'NCMONOCYTES; HTAP_Yvon'
+                    - 'PATROLLING__MONOCYTE; ref_redcap'
+                    - 'NON-CLASSICAL__MONOCYTES; HLCA_lvl4'
+            - NEUTROPHIL:
+                - 'NEUTROPHIL; ref_redcap'
+                - 'NEUTROPHILS; COPD_lvl2'

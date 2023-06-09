@@ -1,0 +1,128 @@
+digraph {
+	root [label=root color=black layer=lv_0]
+	subgraph cluster_Endothelial {
+		color=brown label="ENDOTHELIAL-AJRCCM_Deprez"
+		subgraph cluster_Endothelial {
+			color=lavender label="ENDOTHELIAL-COPD_lvl0"
+			subgraph cluster_Endothelial {
+				color=lightblue label="ENDOTHELIAL-HLCA_lvl1"
+				Endothelial [label=Endothelial color=black layer=lv_0]
+			}
+		}
+	}
+	root -> Endothelial
+	subgraph "cluster_Blood vessels EC" {
+		color=green label="BLOOD_VESSEL-GenomeBiology_Maddi"
+		subgraph "cluster_Blood vessels EC" {
+			color=lightblue label="BLOOD__VESSELS-HLCA_lvl2"
+			"Blood vessels EC" [label="Blood vessels EC" color=black layer=lv_1]
+		}
+	}
+	Endothelial -> "Blood vessels EC"
+	subgraph "cluster_EC arterial" {
+		color=blue label="EC__ARTERIAL-HTAP_Yvon"
+		subgraph "cluster_EC arterial" {
+			color=red label="PULMONARY__ARTERY__ENDOTHELIAL__CELL-ref_redcap"
+			subgraph "cluster_EC arterial" {
+				color=lightblue label="EC__ARTERIAL-HLCA_lvl3"
+				subgraph "cluster_EC arterial" {
+					color=lavender label="ARTERIAL-COPD_lvl2"
+					"EC arterial" [label="EC arterial" color=black layer=lv_2]
+				}
+			}
+		}
+	}
+	"Blood vessels EC" -> "EC arterial"
+	subgraph "cluster_EC capillary" {
+		color=lightblue label="EC__CAPILLARY-HLCA_lvl3"
+		subgraph "cluster_EC capillary" {
+			color=lavender label="CAPILLARY-COPD_lvl2"
+			"EC capillary" [label="EC capillary" color=black layer=lv_2]
+		}
+	}
+	"Blood vessels EC" -> "EC capillary"
+	subgraph "cluster_EC aerocyte capillary" {
+		color=blue label="EC__ACAP-HTAP_Yvon"
+		subgraph "cluster_EC aerocyte capillary" {
+			color=lightblue label="EC__AEROCYTE__CAPILLARY-HLCA_lvl4"
+			subgraph "cluster_EC aerocyte capillary" {
+				color=red label="ALVEOLAR__CAPILLARY__TYPE__2__ENDOTHELIAL__CELL-ref_redcap"
+				"EC aerocyte capillary" [label="EC aerocyte capillary" color=black layer=lv_3]
+			}
+		}
+	}
+	"EC capillary" -> "EC aerocyte capillary"
+	subgraph "cluster_EC general capillary" {
+		color=blue label="EC__GCAP-HTAP_Yvon"
+		subgraph "cluster_EC general capillary" {
+			color=lightblue label="EC__GENERAL__CAPILLARY-HLCA_lvl4"
+			subgraph "cluster_EC general capillary" {
+				color=red label="ALVEOLAR__CAPILLARY__TYPE__1__ENDOTHELIAL__CELL-ref_redcap"
+				"EC general capillary" [label="EC general capillary" color=black layer=lv_3]
+			}
+		}
+	}
+	"EC capillary" -> "EC general capillary"
+	subgraph "cluster_EC venous" {
+		color=lightblue label="EC__VENOUS-HLCA_lvl3"
+		subgraph "cluster_EC venous" {
+			color=lavender label="VEINOUS-COPD_lvl2"
+			"EC venous" [label="EC venous" color=black layer=lv_2]
+		}
+	}
+	"Blood vessels EC" -> "EC venous"
+	subgraph "cluster_EC venous pulmonary" {
+		color=red label="ENDOTHELIAL__CELL__OF__PULMONARY__VEIN-ref_redcap"
+		subgraph "cluster_EC venous pulmonary" {
+			color=blue label="EC__VENOUS__PULMONARY-HTAP_Yvon"
+			subgraph "cluster_EC venous pulmonary" {
+				color=lightblue label="EC__VENOUS__PULMONARY-HLCA_lvl4"
+				"EC venous pulmonary" [label="EC venous pulmonary" color=black layer=lv_3]
+			}
+		}
+	}
+	"EC venous" -> "EC venous pulmonary"
+	subgraph "cluster_EC venous systemic" {
+		color=red label="ENDOTHELIAL__CELL__OF__SYSTEMIC__VEINS__OF__LUNG-ref_redcap"
+		subgraph "cluster_EC venous systemic" {
+			color=blue label="EC__VENOUS__SYSTEMIC-HTAP_Yvon"
+			subgraph "cluster_EC venous systemic" {
+				color=lightblue label="EC__VENOUS__SYSTEMIC-HLCA_lvl4"
+				"EC venous systemic" [label="EC venous systemic" color=black layer=lv_3]
+			}
+		}
+	}
+	"EC venous" -> "EC venous systemic"
+	subgraph "cluster_Lymphatic EC" {
+		color=blue label="EC__LYMPHATICS-HTAP_Yvon"
+		subgraph "cluster_Lymphatic EC" {
+			color=green label="LYMPH_VESSEL-GenomeBiology_Maddi"
+			subgraph "cluster_Lymphatic EC" {
+				color=lightblue label="LYMPHATIC__EC-HLCA_lvl2"
+				subgraph "cluster_Lymphatic EC" {
+					color=lavender label="LYMPHATIC-COPD_lvl2"
+					"Lymphatic EC" [label="Lymphatic EC" color=black layer=lv_1]
+				}
+			}
+		}
+	}
+	Endothelial -> "Lymphatic EC"
+	subgraph "cluster_Lymphatic EC differentiating" {
+		color=lightblue label="LYMPHATIC__EC__DIFFERENTIATING-HLCA_lvl3"
+		"Lymphatic EC differentiating" [label="Lymphatic EC differentiating" color=black layer=lv_2]
+	}
+	"Lymphatic EC" -> "Lymphatic EC differentiating"
+	subgraph "cluster_Lymphatic EC mature" {
+		color=red label="ENDOTHELIAL__CELL__OF__RESPIRATORY__SYSTEM__LYMPHATIC__VESSEL-ref_redcap"
+		subgraph "cluster_Lymphatic EC mature" {
+			color=lightblue label="LYMPHATIC__EC__MATURE-HLCA_lvl3"
+			"Lymphatic EC mature" [label="Lymphatic EC mature" color=black layer=lv_2]
+		}
+	}
+	"Lymphatic EC" -> "Lymphatic EC mature"
+	subgraph "cluster_Lymphatic EC proliferating" {
+		color=lightblue label="LYMPHATIC__EC__PROLIFERATING-HLCA_lvl3"
+		"Lymphatic EC proliferating" [label="Lymphatic EC proliferating" color=black layer=lv_2]
+	}
+	"Lymphatic EC" -> "Lymphatic EC proliferating"
+}

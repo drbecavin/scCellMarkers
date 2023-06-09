@@ -1,0 +1,497 @@
+digraph {
+	graph [bb="0,0,2171,1005"];
+	node [label="\N"];
+	subgraph cluster_Stroma {
+		graph [bb="1025,847,1201,961",
+			color=lavender,
+			label="STROMAL-COPD_lvl0",
+			lheight=0.21,
+			lp="1113,949.5",
+			lwidth=2.14
+		];
+		subgraph cluster_Stroma {
+			graph [bb="1033,855,1193,930",
+				color=lightblue,
+				label="STROMA-HLCA_lvl1",
+				lheight=0.21,
+				lp="1113,918.5",
+				lwidth=2.00
+			];
+			Stroma	[color=black,
+				height=0.5,
+				label=Stroma,
+				layer=lv_0,
+				pos="1113,881",
+				width=1.2457];
+		}
+	}
+	subgraph cluster_CHONDROCYTE {
+		graph [bb="551,609,805,684",
+			color=olive,
+			label="CHONDROCYTE-maddi_discovair",
+			lheight=0.21,
+			lp="678,672.5",
+			lwidth=3.31
+		];
+		CHONDROCYTE	[color=black,
+			height=0.5,
+			label=CHONDROCYTE,
+			layer=lv_1,
+			pos="689,635",
+			width=2.4192];
+	}
+	subgraph cluster_TRACHEOBRONCHIAL__CHONDROCYTE {
+		graph [bb="446,393,868,468",
+			color=red,
+			label="TRACHEOBRONCHIAL__CHONDROCYTE-ref_redcap",
+			lheight=0.21,
+			lp="657,456.5",
+			lwidth=5.22
+		];
+		TRACHEOBRONCHIAL__CHONDROCYTE	[color=black,
+			height=0.5,
+			label=TRACHEOBRONCHIAL__CHONDROCYTE,
+			layer=lv_2,
+			pos="657,419",
+			width=5.6328];
+	}
+	subgraph "cluster_Fibroblast lineage" {
+		graph [bb="845,609,1117,684",
+			color=lightblue,
+			label="FIBROBLAST__LINEAGE-HLCA_lvl2",
+			lheight=0.21,
+			lp="981,672.5",
+			lwidth=3.56
+		];
+		"Fibroblast lineage"	[color=black,
+			height=0.5,
+			label="Fibroblast lineage",
+			layer=lv_1,
+			pos="1014,635",
+			width=2.6359];
+	}
+	subgraph cluster_Fibroblasts {
+		graph [bb="876,369,1154,561",
+			color=green,
+			label="FIBROBLAST-GenomeBiology_Maddi",
+			lheight=0.21,
+			lp="1015,549.5",
+			lwidth=3.64
+		];
+		subgraph cluster_Fibroblasts {
+			graph [bb="898,377,1131,530",
+				color=brown,
+				label="FIBROBLAST-AJRCCM_Deprez",
+				lheight=0.21,
+				lp="1014.5,518.5",
+				lwidth=3.01
+			];
+			subgraph cluster_Fibroblasts {
+				graph [bb="911,385,1118,499",
+					color=lightblue,
+					label="FIBROBLASTS-HLCA_lvl3",
+					lheight=0.21,
+					lp="1014.5,487.5",
+					lwidth=2.56
+				];
+				subgraph cluster_Fibroblasts {
+					graph [bb="919,393,1110,468",
+						color=lavender,
+						label="FIBROBLAST-COPD_lvl1",
+						lheight=0.21,
+						lp="1014.5,456.5",
+						lwidth=2.43
+					];
+					Fibroblasts	[color=black,
+						height=0.5,
+						label=Fibroblasts,
+						layer=lv_2,
+						pos="1014,419",
+						width=1.7693];
+				}
+			}
+		}
+	}
+	subgraph "cluster_Advential fibroblasts" {
+		graph [bb="190,154,520,268",
+			color=blue,
+			label="ADVENTITIAL__FIBRO-HTAP_Yvon",
+			lheight=0.21,
+			lp="355,256.5",
+			lwidth=3.44
+		];
+		subgraph "cluster_Advential fibroblasts" {
+			graph [bb="198,162,512,237",
+				color=lightblue,
+				label="ADVENTITIAL__FIBROBLASTS-HLCA_lvl4",
+				lheight=0.21,
+				lp="355,225.5",
+				lwidth=4.14
+			];
+			"Advential fibroblasts"	[color=black,
+				height=0.5,
+				label="Advential fibroblasts",
+				layer=lv_3,
+				pos="397,188",
+				width=2.9608];
+		}
+	}
+	subgraph "cluster_Alveolar fibroblasts" {
+		graph [bb="528,154,836,268",
+			color=blue,
+			label="ALVEOLAR__FIBRO-HTAP_Yvon",
+			lheight=0.21,
+			lp="682,256.5",
+			lwidth=3.14
+		];
+		subgraph "cluster_Alveolar fibroblasts" {
+			graph [bb="536,162,828,237",
+				color=lightblue,
+				label="ALVEOLAR__FIBROBLASTS-HLCA_lvl4",
+				lheight=0.21,
+				lp="682,225.5",
+				lwidth=3.83
+			];
+			"Alveolar fibroblasts"	[color=black,
+				height=0.5,
+				label="Alveolar fibroblasts",
+				layer=lv_3,
+				pos="682,188",
+				width=2.7984];
+		}
+	}
+	subgraph cluster_ALVEOLAR__TYPE__1__FIBROBLAST__CELL {
+		graph [bb="8,16,452,91",
+			color=red,
+			label="ALVEOLAR__TYPE__1__FIBROBLAST__CELL-ref_redcap",
+			lheight=0.21,
+			lp="230,79.5",
+			lwidth=5.47
+		];
+		ALVEOLAR__TYPE__1__FIBROBLAST__CELL	[color=black,
+			height=0.5,
+			label=ALVEOLAR__TYPE__1__FIBROBLAST__CELL,
+			layer=lv_4,
+			pos="230,42",
+			width=5.9578];
+	}
+	subgraph cluster_ALVEOLAR__TYPE__2__FIBROBLAST__CELL {
+		graph [bb="460,16,904,91",
+			color=red,
+			label="ALVEOLAR__TYPE__2__FIBROBLAST__CELL-ref_redcap",
+			lheight=0.21,
+			lp="682,79.5",
+			lwidth=5.47
+		];
+		ALVEOLAR__TYPE__2__FIBROBLAST__CELL	[color=black,
+			height=0.5,
+			label=ALVEOLAR__TYPE__2__FIBROBLAST__CELL,
+			layer=lv_4,
+			pos="682,42",
+			width=5.9578];
+	}
+	subgraph "cluster_Peribronchial fibroblasts" {
+		graph [bb="844,162,1185,237",
+			color=lightblue,
+			label="PERIBRONCHIAL__FIBROBLASTS-HLCA_lvl4",
+			lheight=0.21,
+			lp="1014.5,225.5",
+			lwidth=4.51
+		];
+		"Peribronchial fibroblasts"	[color=black,
+			height=0.5,
+			label="Peribronchial fibroblasts",
+			layer=lv_3,
+			pos="1014,188",
+			width=3.4664];
+	}
+	subgraph cluster_Pericytes {
+		graph [bb="1193,130,1440,361",
+			color=red,
+			label="LUNG__PERICYTE-ref_redcap",
+			lheight=0.21,
+			lp="1316.5,349.5",
+			lwidth=2.96
+		];
+		subgraph cluster_Pericytes {
+			graph [bb="1201,138,1432,330",
+				color=blue,
+				label="PERICYTES-HTAP_Yvon",
+				lheight=0.21,
+				lp="1316.5,318.5",
+				lwidth=2.38
+			];
+			subgraph cluster_Pericytes {
+				graph [bb="1209,146,1424,299",
+					color=brown,
+					label="PERICYTE-AJRCCM_Deprez",
+					lheight=0.21,
+					lp="1316.5,287.5",
+					lwidth=2.76
+				];
+				subgraph cluster_Pericytes {
+					graph [bb="1222,154,1410,268",
+						color=lightblue,
+						label="PERICYTES-HLCA_lvl4",
+						lheight=0.21,
+						lp="1316,256.5",
+						lwidth=2.28
+					];
+					subgraph cluster_Pericytes {
+						graph [bb="1230,162,1402,237",
+							color=lavender,
+							label="PERICYTE-COPD_lvl1",
+							lheight=0.21,
+							lp="1316,225.5",
+							lwidth=2.17
+						];
+						Pericytes	[color=black,
+							height=0.5,
+							label=Pericytes,
+							layer=lv_3,
+							pos="1316,188",
+							width=1.4985];
+					}
+				}
+			}
+		}
+	}
+	subgraph "cluster_PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)" {
+		graph [bb="912,16,1408,91",
+			color=olive,
+			label="PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)-maddi_discovair",
+			lheight=0.21,
+			lp="1160,79.5",
+			lwidth=6.58
+		];
+		"PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)"	[color=black,
+			height=0.5,
+			label="PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)",
+			layer=lv_4,
+			pos="1160,42",
+			width=6.68];
+	}
+	subgraph cluster_PERICYTE__AIRWAY__INTERMEDIATE {
+		graph [bb="1416,16,1829,91",
+			color=olive,
+			label="PERICYTE__AIRWAY__INTERMEDIATE-maddi_discovair",
+			lheight=0.21,
+			lp="1622.5,79.5",
+			lwidth=5.51
+		];
+		PERICYTE__AIRWAY__INTERMEDIATE	[color=black,
+			height=0.5,
+			label=PERICYTE__AIRWAY__INTERMEDIATE,
+			layer=lv_4,
+			pos="1614,42",
+			width=5.2898];
+	}
+	subgraph cluster_PERICYTE__AIRWAY__CCL {
+		graph [bb="1837,8,2163,122",
+			color=olive,
+			label="PERICYTE__AIRWAY__CCL-maddi_discovair",
+			lheight=0.21,
+			lp="2000,110.5",
+			lwidth=4.31
+		];
+		subgraph cluster_PERICYTE__AIRWAY__CCL {
+			graph [bb="1845,16,2129,91",
+				color=lavender,
+				label="PERICYTE__CCL-COPD_lvl2",
+				lheight=0.21,
+				lp="1987,79.5",
+				lwidth=2.76
+			];
+			PERICYTE__AIRWAY__CCL	[color=black,
+				height=0.5,
+				label=PERICYTE__AIRWAY__CCL,
+				layer=lv_4,
+				pos="1987,42",
+				width=3.7191];
+		}
+	}
+	subgraph "cluster_Subpleural fibroblasts" {
+		graph [bb="1448,162,1765,237",
+			color=lightblue,
+			label="SUBPLEURAL__FIBROBLASTS-HLCA_lvl4",
+			lheight=0.21,
+			lp="1606.5,225.5",
+			lwidth=4.18
+		];
+		"Subpleural fibroblasts"	[color=black,
+			height=0.5,
+			label="Subpleural fibroblasts",
+			layer=lv_3,
+			pos="1570,188",
+			width=3.1594];
+	}
+	subgraph cluster_Myofibroblasts {
+		graph [bb="1162,385,1413,499",
+			color=blue,
+			label="MYOFIBROBLASTS-HTAP_Yvon",
+			lheight=0.21,
+			lp="1287.5,487.5",
+			lwidth=3.14
+		];
+		subgraph cluster_Myofibroblasts {
+			graph [bb="1170,393,1405,468",
+				color=lightblue,
+				label="MYOFIBROBLASTS-HLCA_lvl3",
+				lheight=0.21,
+				lp="1287.5,456.5",
+				lwidth=3.04
+			];
+			Myofibroblasts	[color=black,
+				height=0.5,
+				label=Myofibroblasts,
+				layer=lv_2,
+				pos="1258,419",
+				width=2.2206];
+		}
+	}
+	subgraph cluster_Mesothelium {
+		graph [bb="1125,601,1510,715",
+			color=lightblue,
+			label="MESOTHELIUM-HLCA_lvl2",
+			lheight=0.21,
+			lp="1317.5,703.5",
+			lwidth=2.74
+		];
+		subgraph cluster_Mesothelium {
+			graph [bb="1133,609,1502,684",
+				color=red,
+				label="MESOTHELIAL__CELL__OF__PLEURA-ref_redcap",
+				lheight=0.21,
+				lp="1317.5,672.5",
+				lwidth=4.90
+			];
+			Mesothelium	[color=black,
+				height=0.5,
+				label=Mesothelium,
+				layer=lv_1,
+				pos="1212,635",
+				width=1.9859];
+		}
+	}
+	subgraph "cluster_Smooth muscle" {
+		graph [bb="1518,569,2097,839",
+			color=blue,
+			label="AIRWAY__SMC-HTAP_Yvon",
+			lheight=0.21,
+			lp="1807.5,827.5",
+			lwidth=2.67
+		];
+		subgraph "cluster_Smooth muscle" {
+			graph [bb="1526,577,2089,808",
+				color=brown,
+				label="SMOOTH__MUSCLE-AJRCCM_Deprez",
+				lheight=0.21,
+				lp="1807.5,796.5",
+				lwidth=3.76
+			];
+			subgraph "cluster_Smooth muscle" {
+				graph [bb="1534,585,2081,777",
+					color=lightblue,
+					label="SMOOTH__MUSCLE-HLCA_lvl2",
+					lheight=0.21,
+					lp="1807.5,765.5",
+					lwidth=3.14
+				];
+				subgraph "cluster_Smooth muscle" {
+					graph [bb="1542,593,2073,746",
+						color=lavender,
+						label="SMOOTH__MUSCLE-COPD_lvl1",
+						lheight=0.21,
+						lp="1807.5,734.5",
+						lwidth=3.17
+					];
+					subgraph "cluster_Smooth muscle" {
+						graph [bb="1550,601,2065,715",
+							color=green,
+							label="MUSCLE_CELLS-GenomeBiology_Maddi",
+							lheight=0.21,
+							lp="1807.5,703.5",
+							lwidth=4.03
+						];
+						subgraph "cluster_Smooth muscle" {
+							graph [bb="1558,609,2057,684",
+								color=red,
+								label="VASCULAR__ASSOCIATED__SMOOTH__MUSCLE__CELL-ref_redcap",
+								lheight=0.21,
+								lp="1807.5,672.5",
+								lwidth=6.71
+							];
+							"Smooth muscle"	[color=black,
+								height=0.5,
+								label="Smooth muscle",
+								layer=lv_1,
+								pos="1648,635",
+								width=2.2748];
+						}
+					}
+				}
+			}
+		}
+	}
+	subgraph cluster_Fibromyocytes {
+		graph [bb="1444,393,1670,468",
+			color=lightblue,
+			label="FIBROMYOCYTES-HLCA_lvl3",
+			lheight=0.21,
+			lp="1557,456.5",
+			lwidth=2.92
+		];
+		Fibromyocytes	[color=black,
+			height=0.5,
+			label=Fibromyocytes,
+			layer=lv_2,
+			pos="1583,419",
+			width=2.2026];
+	}
+	subgraph "cluster_SM activated stress response" {
+		graph [bb="1678,393,2064,468",
+			color=lightblue,
+			label="SM__ACTIVATED__STRESS__RESPONSE-HLCA_lvl3",
+			lheight=0.21,
+			lp="1871,456.5",
+			lwidth=5.14
+		];
+		"SM activated stress response"	[color=black,
+			height=0.5,
+			label="SM activated stress response",
+			layer=lv_2,
+			pos="1834,419",
+			width=4.1163];
+	}
+	root	[color=black,
+		height=0.5,
+		label=root,
+		layer=lv_0,
+		pos="1113,987",
+		width=0.83048];
+	root -> Stroma	[pos="e,1113,899.2 1113,968.83 1113,952.64 1113,928.13 1113,909.27"];
+	Stroma -> CHONDROCYTE	[pos="e,696.25,653.19 1069,877.41 1002.1,872.8 878.61,861.48 841,839 770.03,796.57 721.39,707.15 700.51,662.51"];
+	Stroma -> "Fibroblast lineage"	[pos="e,1021,653.14 1106,862.84 1089,820.93 1045.3,713.09 1024.8,662.7"];
+	Stroma -> Mesothelium	[pos="e,1205,653.14 1120,862.84 1137,820.93 1180.7,713.09 1201.2,662.7"];
+	Stroma -> "Smooth muscle"	[pos="e,1641.8,653.1 1158.1,879.92 1248.5,879.02 1448.1,873.11 1506,839 1575.8,797.91 1619.7,707.47 1638.1,662.49"];
+	CHONDROCYTE -> TRACHEOBRONCHIAL__CHONDROCYTE	[pos="e,659.58,437.23 686.44,616.85 680.9,579.83 667.79,492.18 661.1,447.39"];
+	"Fibroblast lineage" -> Fibroblasts	[pos="e,1014,437.23 1014,616.85 1014,579.83 1014,492.18 1014,447.39"];
+	"Fibroblast lineage" -> Myofibroblasts	[pos="e,1242.3,436.87 1038.6,617.54 1059.3,603.32 1089.4,581.84 1114,561 1159.1,522.76 1207.5,473.52 1235.1,444.49"];
+	Fibroblasts -> "Advential fibroblasts"	[pos="e,404.18,206.03 981.21,403.43 952.92,391.66 910.63,375.95 872,369 853.4,365.66 548.89,369.46 532,361 469.76,329.82 427.42,255.05 \
+408.4,215.14"];
+	Fibroblasts -> "Alveolar fibroblasts"	[pos="e,692.54,205.96 976.92,404.21 948.43,393.86 908,379.69 872,369 857.95,364.83 852.6,368.49 840,361 776.6,323.3 723.52,252.33 698.11,\
+214.41"];
+	Fibroblasts -> "Peribronchial fibroblasts"	[pos="e,1014,206.1 1014,400.79 1014,361.32 1014,264.03 1014,216.3"];
+	Fibroblasts -> Pericytes	[pos="e,1308.1,205.9 1054.6,404.94 1105.9,388.43 1187.6,362.03 1189,361 1243.2,321.93 1283.9,252.82 1303.4,215.19"];
+	Fibroblasts -> "Subpleural fibroblasts"	[pos="e,1560.2,206.07 1048.6,403.78 1079,392.05 1124.6,376.21 1166,369 1192.3,364.42 1381.7,371.91 1406,361 1475.3,329.93 1529.8,254.56 \
+1554.9,214.7"];
+	"Alveolar fibroblasts" -> ALVEOLAR__TYPE__1__FIBROBLAST__CELL	[pos="e,270.08,59.812 643.4,171.3 610.16,158.38 560.63,140.53 516,130 489.82,123.82 482.17,128.25 456,122 393.85,107.16 324.85,81.657 \
+279.64,63.648"];
+	"Alveolar fibroblasts" -> ALVEOLAR__TYPE__2__FIBROBLAST__CELL	[pos="e,682,60.062 682,169.92 682,145.34 682,99.753 682,70.427"];
+	Pericytes -> "PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE)"	[pos="e,1178.7,60.296 1298.4,170.76 1271.1,145.54 1218.3,96.785 1186.4,67.34"];
+	Pericytes -> PERICYTE__AIRWAY__INTERMEDIATE	[pos="e,1579.4,59.734 1345.4,172.8 1398,147.35 1508.7,93.882 1570.3,64.123"];
+	Pericytes -> PERICYTE__AIRWAY__CCL	[pos="e,1962.8,59.864 1341.4,172.02 1366.5,158.13 1406.5,138.38 1444,130 1528.4,111.15 1749.2,143.16 1833,122 1877.8,110.69 1924.4,84.449 \
+1954.4,65.305"];
+	"Smooth muscle" -> Fibromyocytes	[pos="e,1588.2,437.23 1642.8,616.85 1631.5,579.68 1604.7,491.44 1591.1,446.82"];
+	"Smooth muscle" -> "SM activated stress response"	[pos="e,1819.2,437.01 1662.6,617.21 1695.2,579.64 1774.3,488.67 1812.6,444.66"];
+}

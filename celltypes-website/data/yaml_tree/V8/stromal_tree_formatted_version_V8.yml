@@ -1,0 +1,59 @@
+root:
+    Stroma:
+        - 'STROMAL; COPD_lvl0'
+        - 'STROMA; HLCA_lvl1'
+        - CHONDROCYTE:
+            - 'CHONDROCYTE; maddi_discovair'
+            - TRACHEOBRONCHIAL__CHONDROCYTE:
+                - 'TRACHEOBRONCHIAL__CHONDROCYTE; ref_redcap'
+        - Fibroblast lineage:
+            - 'FIBROBLAST__LINEAGE; HLCA_lvl2'
+            - Fibroblasts: 
+                - 'FIBROBLAST; GenomeBiology_Maddi'
+                - 'FIBROBLAST; AJRCCM_Deprez'
+                - 'FIBROBLASTS; HLCA_lvl3'
+                - 'FIBROBLAST; COPD_lvl1'
+                - Advential fibroblasts: 
+                    - 'ADVENTITIAL__FIBRO; HTAP_Yvon'
+                    - 'ADVENTITIAL__FIBROBLASTS; HLCA_lvl4'
+                - Alveolar fibroblasts: 
+                    - 'ALVEOLAR__FIBRO; HTAP_Yvon'
+                    - 'ALVEOLAR__FIBROBLASTS; HLCA_lvl4'
+                    - ALVEOLAR__TYPE__1__FIBROBLAST__CELL:
+                        - 'ALVEOLAR__TYPE__1__FIBROBLAST__CELL; ref_redcap'
+                    - ALVEOLAR__TYPE__2__FIBROBLAST__CELL:
+                        - 'ALVEOLAR__TYPE__2__FIBROBLAST__CELL; ref_redcap'
+                - Peribronchial fibroblasts: 
+                    - 'PERIBRONCHIAL__FIBROBLASTS; HLCA_lvl4'
+                - Pericytes: 
+                    - 'LUNG__PERICYTE; ref_redcap'
+                    - 'PERICYTES; HTAP_Yvon'
+                    - 'PERICYTE; AJRCCM_Deprez'
+                    - 'PERICYTES; HLCA_lvl4'
+                    - 'PERICYTE; COPD_lvl1'
+                    - PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE):
+                        - 'PERICYTE_PARENCHYMA__(CSPG4__NEGATIVE); maddi_discovair'
+                    - PERICYTE__AIRWAY__INTERMEDIATE:
+                        - 'PERICYTE__AIRWAY__INTERMEDIATE; maddi_discovair'
+                    - PERICYTE__AIRWAY__CCL:
+                        - 'PERICYTE__AIRWAY__CCL; maddi_discovair'
+                        - 'PERICYTE__CCL; COPD_lvl2'
+                - Subpleural fibroblasts: 
+                    - 'SUBPLEURAL__FIBROBLASTS; HLCA_lvl4'
+            - Myofibroblasts: 
+                - 'MYOFIBROBLASTS; HTAP_Yvon'
+                - 'MYOFIBROBLASTS; HLCA_lvl3'
+        - Mesothelium: 
+            - 'MESOTHELIUM; HLCA_lvl2'
+            - 'MESOTHELIAL__CELL__OF__PLEURA; ref_redcap'
+        - Smooth muscle: 
+            - 'AIRWAY__SMC; HTAP_Yvon'
+            - 'SMOOTH__MUSCLE; AJRCCM_Deprez'
+            - 'SMOOTH__MUSCLE; HLCA_lvl2'
+            - 'SMOOTH__MUSCLE; COPD_lvl1'
+            - 'MUSCLE_CELLS; GenomeBiology_Maddi'
+            - 'VASCULAR__ASSOCIATED__SMOOTH__MUSCLE__CELL; ref_redcap'
+            - Fibromyocytes:
+                - 'FIBROMYOCYTES; HLCA_lvl3'
+            - SM activated stress response:
+                - 'SM__ACTIVATED__STRESS__RESPONSE; HLCA_lvl3'

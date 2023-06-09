@@ -1,0 +1,400 @@
+digraph {
+	graph [bb="0,0,2750,766"];
+	node [label="\N"];
+	subgraph cluster_Endothelial {
+		graph [bb="1292,569,1541,722",
+			color=brown,
+			label="ENDOTHELIAL-AJRCCM_Deprez",
+			lheight=0.21,
+			lp="1416.5,710.5",
+			lwidth=3.24
+		];
+		subgraph cluster_Endothelial {
+			graph [bb="1306,577,1527,691",
+				color=lavender,
+				label="ENDOTHELIAL-COPD_lvl0",
+				lheight=0.21,
+				lp="1416.5,679.5",
+				lwidth=2.64
+			];
+			subgraph cluster_Endothelial {
+				graph [bb="1314,585,1519,660",
+					color=lightblue,
+					label="ENDOTHELIAL-HLCA_lvl1",
+					lheight=0.21,
+					lp="1416.5,648.5",
+					lwidth=2.62
+				];
+				Endothelial	[color=black,
+					height=0.5,
+					label=Endothelial,
+					layer=lv_0,
+					pos="1416,611",
+					width=1.7693];
+			}
+		}
+	}
+	subgraph "cluster_Blood vessels EC" {
+		graph [bb="976,385,1279,499",
+			color=green,
+			label="BLOOD_VESSEL-GenomeBiology_Maddi",
+			lheight=0.21,
+			lp="1127.5,487.5",
+			lwidth=3.99
+		];
+		subgraph "cluster_Blood vessels EC" {
+			graph [bb="1012,393,1242,468",
+				color=lightblue,
+				label="BLOOD__VESSELS-HLCA_lvl2",
+				lheight=0.21,
+				lp="1127,456.5",
+				lwidth=2.97
+			];
+			"Blood vessels EC"	[color=black,
+				height=0.5,
+				label="Blood vessels EC",
+				layer=lv_1,
+				pos="1127,419",
+				width=2.5095];
+		}
+	}
+	subgraph "cluster_EC arterial" {
+		graph [bb="448,169,904,361",
+			color=blue,
+			label="EC__ARTERIAL-HTAP_Yvon",
+			lheight=0.21,
+			lp="676,349.5",
+			lwidth=2.71
+		];
+		subgraph "cluster_EC arterial" {
+			graph [bb="456,177,896,330",
+				color=red,
+				label="PULMONARY__ARTERY__ENDOTHELIAL__CELL-ref_redcap",
+				lheight=0.21,
+				lp="676,318.5",
+				lwidth=5.89
+			];
+			subgraph "cluster_EC arterial" {
+				graph [bb="684,185,888,299",
+					color=lightblue,
+					label="EC__ARTERIAL-HLCA_lvl3",
+					lheight=0.21,
+					lp="786,287.5",
+					lwidth=2.61
+				];
+				subgraph "cluster_EC arterial" {
+					graph [bb="709,193,880,268",
+						color=lavender,
+						label="ARTERIAL-COPD_lvl2",
+						lheight=0.21,
+						lp="794.5,256.5",
+						lwidth=2.15
+					];
+					"EC arterial"	[color=black,
+						height=0.5,
+						label="EC arterial",
+						layer=lv_2,
+						pos="810,219",
+						width=1.7151];
+				}
+			}
+		}
+	}
+	subgraph "cluster_EC capillary" {
+		graph [bb="912,185,1122,299",
+			color=lightblue,
+			label="EC__CAPILLARY-HLCA_lvl3",
+			lheight=0.21,
+			lp="1017,287.5",
+			lwidth=2.69
+		];
+		subgraph "cluster_EC capillary" {
+			graph [bb="920,193,1097,268",
+				color=lavender,
+				label="CAPILLARY-COPD_lvl2",
+				lheight=0.21,
+				lp="1008.5,256.5",
+				lwidth=2.24
+			];
+			"EC capillary"	[color=black,
+				height=0.5,
+				label="EC capillary",
+				layer=lv_2,
+				pos="996,219",
+				width=1.8776];
+		}
+	}
+	subgraph "cluster_EC aerocyte capillary" {
+		graph [bb="8,8,560,161",
+			color=blue,
+			label="EC__ACAP-HTAP_Yvon",
+			lheight=0.21,
+			lp="284,149.5",
+			lwidth=2.22
+		];
+		subgraph "cluster_EC aerocyte capillary" {
+			graph [bb="16,16,552,130",
+				color=lightblue,
+				label="EC__AEROCYTE__CAPILLARY-HLCA_lvl4",
+				lheight=0.21,
+				lp="284,118.5",
+				lwidth=4.01
+			];
+			subgraph "cluster_EC aerocyte capillary" {
+				graph [bb="24,24,544,99",
+					color=red,
+					label="ALVEOLAR__CAPILLARY__TYPE__2__ENDOTHELIAL__CELL-ref_redcap",
+					lheight=0.21,
+					lp="284,87.5",
+					lwidth=7.00
+				];
+				"EC aerocyte capillary"	[color=black,
+					height=0.5,
+					label="EC aerocyte capillary",
+					layer=lv_3,
+					pos="426,50",
+					width=3.0692];
+			}
+		}
+	}
+	subgraph "cluster_EC general capillary" {
+		graph [bb="568,8,1120,161",
+			color=blue,
+			label="EC__GCAP-HTAP_Yvon",
+			lheight=0.21,
+			lp="844,149.5",
+			lwidth=2.24
+		];
+		subgraph "cluster_EC general capillary" {
+			graph [bb="576,16,1112,130",
+				color=lightblue,
+				label="EC__GENERAL__CAPILLARY-HLCA_lvl4",
+				lheight=0.21,
+				lp="844,118.5",
+				lwidth=3.90
+			];
+			subgraph "cluster_EC general capillary" {
+				graph [bb="584,24,1104,99",
+					color=red,
+					label="ALVEOLAR__CAPILLARY__TYPE__1__ENDOTHELIAL__CELL-ref_redcap",
+					lheight=0.21,
+					lp="844,87.5",
+					lwidth=7.00
+				];
+				"EC general capillary"	[color=black,
+					height=0.5,
+					label="EC general capillary",
+					layer=lv_3,
+					pos="991,50",
+					width=2.9247];
+			}
+		}
+	}
+	subgraph "cluster_EC venous" {
+		graph [bb="1140,185,1335,299",
+			color=lightblue,
+			label="EC__VENOUS-HLCA_lvl3",
+			lheight=0.21,
+			lp="1237.5,287.5",
+			lwidth=2.49
+		];
+		subgraph "cluster_EC venous" {
+			graph [bb="1160,193,1327,268",
+				color=lavender,
+				label="VEINOUS-COPD_lvl2",
+				lheight=0.21,
+				lp="1243.5,256.5",
+				lwidth=2.10
+			];
+			"EC venous"	[color=black,
+				height=0.5,
+				label="EC venous",
+				layer=lv_2,
+				pos="1259,219",
+				width=1.661];
+		}
+	}
+	subgraph "cluster_EC venous pulmonary" {
+		graph [bb="1128,8,1582,161",
+			color=red,
+			label="ENDOTHELIAL__CELL__OF__PULMONARY__VEIN-ref_redcap",
+			lheight=0.21,
+			lp="1355,149.5",
+			lwidth=6.08
+		];
+		subgraph "cluster_EC venous pulmonary" {
+			graph [bb="1136,16,1455,130",
+				color=blue,
+				label="EC__VENOUS__PULMONARY-HTAP_Yvon",
+				lheight=0.21,
+				lp="1295.5,118.5",
+				lwidth=4.08
+			];
+			subgraph "cluster_EC venous pulmonary" {
+				graph [bb="1144,24,1447,99",
+					color=lightblue,
+					label="EC__VENOUS__PULMONARY-HLCA_lvl4",
+					lheight=0.21,
+					lp="1295.5,87.5",
+					lwidth=3.99
+				];
+				"EC venous pulmonary"	[color=black,
+					height=0.5,
+					label="EC venous pulmonary",
+					layer=lv_3,
+					pos="1264,50",
+					width=3.1233];
+			}
+		}
+	}
+	subgraph "cluster_EC venous systemic" {
+		graph [bb="1590,8,2127,161",
+			color=red,
+			label="ENDOTHELIAL__CELL__OF__SYSTEMIC__VEINS__OF__LUNG-ref_redcap",
+			lheight=0.21,
+			lp="1858.5,149.5",
+			lwidth=7.24
+		];
+		subgraph "cluster_EC venous systemic" {
+			graph [bb="1598,16,1901,130",
+				color=blue,
+				label="EC__VENOUS__SYSTEMIC-HTAP_Yvon",
+				lheight=0.21,
+				lp="1749.5,118.5",
+				lwidth=3.85
+			];
+			subgraph "cluster_EC venous systemic" {
+				graph [bb="1606,24,1893,99",
+					color=lightblue,
+					label="EC__VENOUS__SYSTEMIC-HLCA_lvl4",
+					lheight=0.21,
+					lp="1749.5,87.5",
+					lwidth=3.76
+				];
+				"EC venous systemic"	[color=black,
+					height=0.5,
+					label="EC venous systemic",
+					layer=lv_3,
+					pos="1718,50",
+					width=2.8886];
+			}
+		}
+	}
+	subgraph "cluster_Lymphatic EC" {
+		graph [bb="1546,369,1865,561",
+			color=blue,
+			label="EC__LYMPHATICS-HTAP_Yvon",
+			lheight=0.21,
+			lp="1705.5,549.5",
+			lwidth=3.01
+		];
+		subgraph "cluster_Lymphatic EC" {
+			graph [bb="1554,377,1857,530",
+				color=green,
+				label="LYMPH_VESSEL-GenomeBiology_Maddi",
+				lheight=0.21,
+				lp="1705.5,518.5",
+				lwidth=3.99
+			];
+			subgraph "cluster_Lymphatic EC" {
+				graph [bb="1597,385,1814,499",
+					color=lightblue,
+					label="LYMPHATIC__EC-HLCA_lvl2",
+					lheight=0.21,
+					lp="1705.5,487.5",
+					lwidth=2.79
+				];
+				subgraph "cluster_Lymphatic EC" {
+					graph [bb="1613,393,1797,468",
+						color=lavender,
+						label="LYMPHATIC-COPD_lvl2",
+						lheight=0.21,
+						lp="1705,456.5",
+						lwidth=2.33
+					];
+					"Lymphatic EC"	[color=black,
+						height=0.5,
+						label="Lymphatic EC",
+						layer=lv_1,
+						pos="1705,419",
+						width=2.1123];
+				}
+			}
+		}
+	}
+	subgraph "cluster_Lymphatic EC differentiating" {
+		graph [bb="1343,193,1714,268",
+			color=lightblue,
+			label="LYMPHATIC__EC__DIFFERENTIATING-HLCA_lvl3",
+			lheight=0.21,
+			lp="1528.5,256.5",
+			lwidth=4.93
+		];
+		"Lymphatic EC differentiating"	[color=black,
+			height=0.5,
+			label="Lymphatic EC differentiating",
+			layer=lv_2,
+			pos="1560,219",
+			width=4.0441];
+	}
+	subgraph "cluster_Lymphatic EC mature" {
+		graph [bb="1722,185,2381,299",
+			color=red,
+			label="ENDOTHELIAL__CELL__OF__RESPIRATORY__SYSTEM__LYMPHATIC__VESSEL-ref_redcap",
+			lheight=0.21,
+			lp="2051.5,287.5",
+			lwidth=8.93
+		];
+		subgraph "cluster_Lymphatic EC mature" {
+			graph [bb="1730,193,2026,268",
+				color=lightblue,
+				label="LYMPHATIC__EC__MATURE-HLCA_lvl3",
+				lheight=0.21,
+				lp="1878,256.5",
+				lwidth=3.89
+			];
+			"Lymphatic EC mature"	[color=black,
+				height=0.5,
+				label="Lymphatic EC mature",
+				layer=lv_2,
+				pos="1850,219",
+				width=3.1233];
+		}
+	}
+	subgraph "cluster_Lymphatic EC proliferating" {
+		graph [bb="2389,193,2742,268",
+			color=lightblue,
+			label="LYMPHATIC__EC__PROLIFERATING-HLCA_lvl3",
+			lheight=0.21,
+			lp="2565.5,256.5",
+			lwidth=4.68
+		];
+		"Lymphatic EC proliferating"	[color=black,
+			height=0.5,
+			label="Lymphatic EC proliferating",
+			layer=lv_2,
+			pos="2535,219",
+			width=3.8274];
+	}
+	root	[color=black,
+		height=0.5,
+		label=root,
+		layer=lv_0,
+		pos="1416,748",
+		width=0.83048];
+	root -> Endothelial	[pos="e,1416,629.39 1416,729.9 1416,707.1 1416,666.48 1416,639.39"];
+	Endothelial -> "Blood vessels EC"	[pos="e,1152.1,436.5 1391.9,594.13 1340.4,560.28 1219.7,480.94 1160.7,442.14"];
+	Endothelial -> "Lymphatic EC"	[pos="e,1680.3,436.23 1440.1,594.13 1491.8,560.19 1612.9,480.54 1671.8,441.85"];
+	"Blood vessels EC" -> "EC arterial"	[pos="e,818.13,237.25 1049.9,409.61 1007.5,402.08 955.67,387.85 916,361 872.56,331.6 839.8,278.42 822.87,246.45"];
+	"Blood vessels EC" -> "EC capillary"	[pos="e,1007.1,236.84 1115.8,401.12 1092.8,366.27 1039.8,286.2 1012.7,245.2"];
+	"Blood vessels EC" -> "EC venous"	[pos="e,1247.8,236.84 1138.3,401.12 1161.5,366.27 1214.9,286.2 1242.2,245.2"];
+	"EC capillary" -> "EC aerocyte capillary"	[pos="e,442.52,68.073 968.49,202.37 946.42,190.73 914.24,175.74 884,169 851.02,161.65 612.04,171.73 580,161 527.89,143.54 478.13,101.93 \
+449.89,75.19"];
+	"EC capillary" -> "EC general capillary"	[pos="e,991.52,68.399 995.48,200.76 994.62,171.88 992.87,113.5 991.83,78.775"];
+	"EC venous" -> "EC venous pulmonary"	[pos="e,1263.5,68.399 1259.5,200.76 1260.4,171.88 1262.1,113.5 1263.2,78.775"];
+	"EC venous" -> "EC venous systemic"	[pos="e,1687.4,67.401 1279,201.95 1294.5,190.57 1316.8,176.11 1339,169 1386.5,153.76 1402.4,172.43 1451,161 1535.3,141.17 1627.4,98.012 \
+1678.4,72.041"];
+	"Lymphatic EC" -> "Lymphatic EC differentiating"	[pos="e,1572.5,237.12 1692.6,401.12 1667.1,366.28 1608.5,286.27 1578.5,245.25"];
+	"Lymphatic EC" -> "Lymphatic EC mature"	[pos="e,1837.5,237.12 1717.4,401.12 1742.9,366.28 1801.5,286.27 1831.5,245.25"];
+	"Lymphatic EC" -> "Lymphatic EC proliferating"	[pos="e,2484.9,235.77 1768,408.84 1833.7,398.84 1939.6,381.49 2030,361 2192.7,324.12 2381.3,267.78 2475.3,238.75"];
+}
